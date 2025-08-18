@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Travel website</title>
+    <link rel="stylesheet" href="deco.css">
+    <link rel="stylesheet" href="swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand" style="color: white;">Travel safe</div>
+        <div class="links">
+           <a href="#home" >Home</a>
+           <a href="#about">About</a>
+           <a href="#destinations">Destinations</a>
+        </div>
+        <div class="action_btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="dropdown_menu">
+            <li><a href="#home" >Home</a></li>
+           <li><a href="#about">About</a></li>
+            <li><a href="#destinations">Destinations</a></li>
+        </div>
+    </nav>
+    <script src="html/js/nav.js" defer></script>
+    
+
+    <section id="home">
+        <div class="back_page">
+           
+            <div class="text">
+                <h2 style="color: black; font-style: italic;" id="heading">
+
+                    Welcome to my travel page. Get inspiration for vacations. 
+                </h2>
+         
+            </div>
+            <div class="box">
+                <input type="text" placeholder="Search...">
+                <a href="#">
+                    <i class="fas fa-search"></i>
+                </a>
+            </div>
+            <div id="text-container">
+                <span id="typed-text"></span>
+            </div>
+        
+        </div>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const textToType = document.querySelector('.text h2').textContent.trim();
+        const typedTextElement = document.querySelector('.text h2');
+        let currentIndex = 0;
+        typedTextElement.textContent="";
+      
+        function typeText() {
+          if (currentIndex < textToType.length) {
+            const span = document.createElement('span');
+            span.textContent = textToType[currentIndex];
+            typedTextElement.appendChild(span);
+            span.classList.add('typed');
+            currentIndex++;
+            setTimeout(typeText, 30); // Adjust the delay for typing speed (in milliseconds)
+          }
+        }
+      
+        typeText(); // Start typing as soon as the page is loaded
+      });
+    
+    
+</script>
+</section>
+
+<section id="destinations">
+      
+
+
+    <div class="destination_pic">
+        
+        <div class="destina"><h2 id="heading_2"> Destinations</h2>
+        </div>
+       
+            <div class="containers">
+                <div class="sliding">
+                  
+                    <div class="destination_items" style="background-image: url(https://www.cheapoair.com/miles-away/wp-content/uploads/2019/11/Winter-in-New-York-3.jpg);">
+                        <div class="contents">
+                            <div class="texts" id="headings_7"> Where icy expanses meet endless adventure.</div>
+                            <div class="name" id="heading_10">Antarctica</div>
+                            <a href="Antarctica.html"><button id="heading_4">see more</button></a>
+                        </div>
+                    </div>
+                    <div class="destination_items" style="background-image: url(ick.jpg);">
+                        <div class="contents">
+                            <div class="texts" id="headings_6"> Where stunning coasts meet vibrant cities. </div>
+                            <div class="name" id="heading_11">Austrailia</div>
+                            <a href="Austrailia.html"><button id="heading_4">see more</button></a>
+                        </div>
+                    </div>
+                    <div class="destination_items" style="background-image: url(5d.jpg);">
+                        <div class="contents">
+                            <div class="texts" id="headings_5">Where ancient meets modern.</div>
+                            <div class="name" id="heading_5">Asia</div>
+                            <a href="Asia.html"><button id="heading_4">see more</button></a>
+                        </div>
+                    </div>
+                    <div class="destination_items" style="background-image: url(d1.jpg);">
+                        <div class="contents">
+                            <div class="texts" id="headings_4">Where history meets modernity. </div>
+                            <div class="name" id="heading_6">Europe</div>
+                            <a href="Europe.html"><button id="heading_4">see more</button></a>
+                        </div>
+                    </div>
+                    <div class="destination_items" style="background-image: url(R.png);">
+                        <div class="contents">
+                            <div class="texts" id="headings_3">Where diverse landscapes meet vibrant cities. </div>
+                            <div class="name" id="heading_7">North America</div>
+                            <a href="North America.html"><button id="heading_4">see more</button></a>
+                        </div>
+                    </div>
+                    <div class="destination_items" style="background-image: url(ick.jpg);">
+                        <div class="contents">
+                            <div class="texts" id="headings_2"> This is a breathtaking place for natural wonders </div>
+                            <div class="name" id="heading_8">South America</div>
+                            <a href="South America.html"><button id="heading_4">see more</button></a>
+                            
+                        </div>
+                    </div>
+                    <div class="destination_items" style="background-image: url(https://vibrantholidaysafaris.com/wp-content/uploads/2023/07/Africa-Wildlife-Holidays-Vibrant-Holiday-Safaris.jpg);">
+                        <div class="contents">
+                            <div class="texts" id="headings_1"> This has a very stunning wildlife safaris </div>
+                            <div class="name"><p id="heading_9"> Africa </p></div>
+                            <a href="Africa.html"><button id="heading_4">see more</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button class="next"><i class="fa-sharp-duotone fa-solid fa-arrow-right"></i></button>
+                </div>
+                <script src="html/js/scripto.js"></script>
+            </div>
+                <!--<div class="destination">
+                    <img src="https://th.bing.com/th/id/OIP.TGU1Cmx7ASFN1bcXiz0hBQAAAA?w=304&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Paris, France">
+                    <h2>Paris, France</h2>
+                    <div class="popup">
+                        <h3>Paris, France</h3>
+                        <p>Paris, the capital of France, is a global center for art, fashion, and culture. The city is famous for its iconic landmarks like the Eiffel Tower, Notre-Dame Cathedral, and the Louvre Museum.</p>
+                    </div>
+                </div>
+                <div class="destination">
+                    <img src="https://th.bing.com/th/id/OIP.vY8GNAHgxgPXQsjNLurNXwHaE8?w=295&h=197&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="New York City, USA">
+                    <h2>New York City, USA</h2>
+                    <div class="popup">
+                        <h3>New York City, USA</h3>
+                        <p>Paris, the capital of France, is a global center for art, fashion, and culture. The city is famous for its iconic landmarks like the Eiffel Tower, Notre-Dame Cathedral, and the Louvre Museum.</p>
+                    </div>
+                </div>
+                <div class="destination">
+                    <img src="https://www.planetware.com/wpimages/2019/10/japan-in-pictures-most-beautiful-places-takachiho-gorge.jpg" alt="Tokyo, Japan">
+                    <h2>Tokyo, Japan</h2>
+                    <div class="popup">
+                        <h3>Paris, France</h3>
+                        <p>Paris, the capital of France, is a global center for art, fashion, and culture. The city is famous for its iconic landmarks like the Eiffel Tower, Notre-Dame Cathedral, and the Louvre Museum.</p>
+                    </div>
+                </div>
+                <div class="destination">
+                    <img src="https://www.tourist-destinations.com/wp-content/uploads/2011/06/I.jpg" alt="Bali, Indonesia">
+                    <h2>Bali, Indonesia</h2>
+                    <div class="popup">
+                        <h3>Paris, France</h3>
+                        <p>Paris, the capital of France, is a global center for art, fashion, and culture. The city is famous for its iconic landmarks like the Eiffel Tower, Notre-Dame Cathedral, and the Louvre Museum.</p>
+                    </div>
+                </div>
+                <div class="destination">
+                    <img src="https://th.bing.com/th/id/OIP.LpS9rbWYT6oCDfEdoB98owHaFj?rs=1&pid=ImgDetMain" alt="Maui, Hawaii">
+                    <h2>Maui, Hawaii</h2>
+                    <div class="popup">
+                        <h3>Paris, France</h3>
+                        <p>Paris, the capital of France, is a global center for art, fashion, and culture. The city is famous for its iconic landmarks like the Eiffel Tower, Notre-Dame Cathedral, and the Louvre Museum.</p>
+                    </div>
+                </div>
+                <div class="destination">
+                    <img src="https://www.celebritycruises.com/content/dam/celebrity/new-images/itinerary-images/europe/santorini-by-night-3840x2160.jpg" alt="Santorini, Greece">
+                    <h2>Santorini, Greece</h2>
+                <div class="popup">
+                    <h3>New York City, USA</h3>
+                    <p>New York City, also known as the Big Apple, is a global hub for finance, media, art, and culture. The city is famous for its iconic landmarks like the Statue of Liberty, Central Park, and Times Square.</p>
+                </div>
+                </div>
+                <div class="destination">
+                    <img src="https://www.celebritycruises.com/content/dam/celebrity/new-images/itinerary-images/europe/santorini-by-night-3840x2160.jpg" alt="Santorini, Greece">
+                    <h2>Santorini, Greece</h2>
+                <div class="popup">
+                    <h3>New York City, USA</h3>
+                    <p>New York City, also known as the Big Apple, is a global hub for finance, media, art, and culture. The city is famous for its iconic landmarks like the Statue of Liberty, Central Park, and Times Square.</p>
+                </div>
+                </div>
+                <div class="destination">
+                    <img src="https://www.celebritycruises.com/content/dam/celebrity/new-images/itinerary-images/europe/santorini-by-night-3840x2160.jpg" alt="Santorini, Greece">
+                    <h2>Santorini, Greece</h2>
+                <div class="popup">
+                    <h3>New York City, USA</h3>
+                    <p>New York City, also known as the Big Apple, is a global hub for finance, media, art, and culture. The city is famous for its iconic landmarks like the Statue of Liberty, Central Park, and Times Square.</p>
+                </div>
+                </div>
+                <div class="destination">
+                    <img src="https://www.celebritycruises.com/content/dam/celebrity/new-images/itinerary-images/europe/santorini-by-night-3840x2160.jpg" alt="Santorini, Greece">
+                    <h2>Santorini, Greece</h2>
+                <div class="popup">
+                    <h3>New York City, USA</h3>
+                    <p>New York City, also known as the Big Apple, is a global hub for finance, media, art, and culture. The city is famous for its iconic landmarks like the Statue of Liberty, Central Park, and Times Square.</p>
+                </div>
+                </div>
+                <div class="destination">
+                    <img src="https://www.celebritycruises.com/content/dam/celebrity/new-images/itinerary-images/europe/santorini-by-night-3840x2160.jpg" alt="Santorini, Greece">
+                    <h2>Santorini, Greece</h2>
+                <div class="popup">
+                    <h3>New York City, USA</h3>
+                    <p>New York City, also known as the Big Apple, is a global hub for finance, media, art, and culture. The city is famous for its iconic landmarks like the Statue of Liberty, Central Park, and Times Square.</p>
+                </div>
+                </div>-->
+            
+           
+            </div>
+           
+
+      </section>
+
+      <!--<section id="review" class="review">
+        <div class="testimonials-container myswiper">
+            <div class="testimonial-card swipper-wrapper">
+                <div class="swiper-slide">
+                    <div class="client-photo">
+                        <img src="https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://fdczvxmwwjwpwbeeqcth.supabase.co/storage/v1/object/public/images/e0edadda-bfe2-43fa-beb8-5705300d4795/47f9e62c-0090-4469-87d5-227260fd0d68.png" alt="Client 1">
+                    </div>
+                    <div class="testimonial-content">
+                        <i class="fa-solid fa-quote-left"></i><p>"This company has exceeded all my expectations. The service was excellent and the product quality was top-notch!"</p><i class="fa-solid fa-quote-right"></i>
+                    
+                    </div>
+                </div>
+              
+             <div class="clients_details">
+                <div class="name">Lammy</div>
+                <div class="job">WEb developer</div>
+             </div>
+                <div class="star-rating">
+                    <span>&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                </div>
+            </div>
+            <div class="swiper-slide">
+            <div class="testimonial-card">
+                <div class="client-photo">
+                    <img src="https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://fdczvxmwwjwpwbeeqcth.supabase.co/storage/v1/object/public/images/e0edadda-bfe2-43fa-beb8-5705300d4795/47f9e62c-0090-4469-87d5-227260fd0d68.png" alt="Client 2">
+                </div>
+                <div class="testimonial-content">
+                    <p>"Professional, reliable, and always willing to go the extra mile. I couldn't be happier with my experience."</p>
+                </div>
+                <div class="star-rating">
+                    <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                </div>
+            </div>
+            </div>
+            <div class="swiper-slide">
+    
+                <div class="testimonial-card">
+                    <div class="client-photo">
+                        <img src="https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://fdczvxmwwjwpwbeeqcth.supabase.co/storage/v1/object/public/images/e0edadda-bfe2-43fa-beb8-5705300d4795/47f9e62c-0090-4469-87d5-227260fd0d68.png" alt="Client 3">
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"A truly exceptional service. The team was knowledgeable and responsive. Highly recommended!"</p>
+                    </div>
+                    <div class="star-rating">
+                        <span>&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="testimonial-card">
+                    <div class="client-photo">
+                        <img src="https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://fdczvxmwwjwpwbeeqcth.supabase.co/storage/v1/object/public/images/e0edadda-bfe2-43fa-beb8-5705300d4795/47f9e62c-0090-4469-87d5-227260fd0d68.png" alt="Client 3">
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"A truly exceptional service. The team was knowledgeable and responsive. Highly recommended!"</p>
+                    </div>
+                    <div class="star-rating">
+                        <span>&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="testimonial-card">
+                    <div class="client-photo">
+                        <img src="https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://fdczvxmwwjwpwbeeqcth.supabase.co/storage/v1/object/public/images/e0edadda-bfe2-43fa-beb8-5705300d4795/47f9e62c-0090-4469-87d5-227260fd0d68.png" alt="Client 3">
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"A truly exceptional service. The team was knowledgeable and responsive. Highly recommended!"</p>
+                    </div>
+                    <div class="star-rating">
+                        <span>&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+        
+		
+    </section>-->
+    <section class="container_1">
+        
+        <div class="testimonial mySwiper">
+            <div class="testi-content swiper-wrapper">
+                <div class="slide swiper-slide">
+                    <img src="member-2.png" class="image" alt="">
+                <p id="paragraph_2">this is my review about this company</p>
+                <i class="fa-solid fa-quote-left quote-icon"></i>
+                    <div class="details_2">
+                        <span class="names">Lammy</span>
+                        <span class="jobs">Web dev</span>
+                    </div>
+                    <div class="star-rating">
+                        <span>&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                    </div>
+                </div>
+                <div class="slide swiper-slide">
+                    <img src="member-1.png" class="image" alt="">
+                <p id="paragraph_3">this is my review about this company</p>
+                <i class="fa-solid fa-quote-left quote-icon"></i>
+                    <div class="details_2">
+                        <span class="names">Lamshi</span>
+                        <span class="jobs">Web dev</span>
+                    </div>
+                    <div class="star-rating">
+                        <span>&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                    </div>
+                </div>
+                <div class="slide swiper-slide">
+                    <img src="photo2.png" class="image" alt="">
+                    <p id="paragraph_4">"A truly exceptional service. The team was knowledgeable and responsive. Highly recommended!"</p>
+                <i class="fa-solid fa-quote-left quote-icon"></i>
+                    <div class="details_2">
+                        <span class="names">Lammy</span>
+                        <span class="jobs">Web dev</span>
+                    </div>
+                    <div class="star-rating">
+                        <span>&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                    </div>
+                </div>
+                <div class="slide swiper-slide">
+                    <img src="member-4.png" class="image" alt="">
+                <p id="paragraph_">this is my review about this company</p>
+                <i class="fa-solid fa-quote-left quote-icon"></i>
+                    <div class="details_2">
+                        <span class="names">Lammy</span>
+                        <span class="jobs">Web dev</span>
+                    </div>
+                    <div class="star-rating">
+                        <span>&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                    </div>
+                </div>
+                <div class="slide swiper-slide">
+                    <img src="member-8.png" class="image" alt="">
+                    <p id="paragraph_5">"Professional, reliable, and always willing to go the extra mile. I couldn't be happier with my experience."</p>
+                <i class="fa-solid fa-quote-left quote-icon"></i>
+                    <div class="details_2">
+                        <span class="names">Lammy</span>
+                        <span class="jobs">Web dev</span>
+                    </div>
+                    <div class="star-rating">
+                        <span>&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                    </div>
+                </div>
+                <div class="slide swiper-slide">
+                    <img src="member-7.png" class="image" alt="">
+                <p id="paragraph_">this is my review about this company</p>
+                <i class="fa-solid fa-quote-left quote-icon"></i>
+                    <div class="details_2">
+                        <span class="names">Lammy</span>
+                        <span class="jobs">Web dev</span>
+                    </div>
+                    <div class="star-rating">
+                        <span>&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+         
+        <script src="html/js/swiper-bundle.min.js"></script>
+
+        <script src="html/js/swipe.js"></script>    
+    </video>
+    </section>
+    <section class="About">
+        <div class="wht">
+
+        </div>
+
+    </section>
+   
+
+
+    <footer class="footer">
+        <section class="Under">
+            <div class="under_class">
+    
+                <a href="contact.html">
+                    <u><p id="paragraph_6">Contact us</p></u>
+                </a>
+                <a href="#">
+                    <u><p id="paragraph_7">About</p></u>
+                </a>
+                <a href="#">
+                    <u><p id="paragraph_8">Privacy and Cookies Statement</p></u>
+                </a>
+                <a href="terms and conditions .html">
+                    <u><p id="paragraph_9">Terms of Use </p></u>
+                </a>
+                <a href="terms and conditions .html">
+                   <u> <p id="paragraph_10">Terms And Conditions</p></u>
+                </a>
+
+            </div>
+           
+    
+        </section>
+        <div class="language-selector">
+            <!--<label for="language" style="color: black;">Select Language:</label>-->
+            <select id="language" onchange="changeLanguage()" class="language_1">
+                <option value="en">English</option>
+                <option value="fr">French</option>
+                <option value="es">Spanish</option>
+                <option value="de">German</option>
+            </select>
+        </div>
+        <script src="html/js/language.js"></script>
+        <div class="icons_1">
+            <ul class="social_icons">
+            <li><a href="https://www.instagram.com/emmanuelwisdom8462/"><i class="fa-brands fa-instagram"></i></a></li>
+        <li><a href="//web.facebook.com/index.php/?_rdc=1&_rdrclass="><i class=" fa-brands fa-facebook"></i></a></li>
+           <li> <a href="https://x.com/Emmanuel176757"><i class="fa-brands fa-x-twitter"></i></a></li>
+        </ul>
+        <p id="paragraph_11"> Copyright &copy; 2024 Travel safe | All rights reserved. </p>
+        </div>
+        
+    </footer>
+  
+</body>
+</html>
+position: relative; /* changed from sticky to relative to avoid overlap */
+  
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  z-index: 1;
+  text-align: center;
+  padding: 1rem;
+  background: #023e8a;
+
+  <footer class="footer">
+    <section class="Under">
+        <div class="under_class">
+
+            <a href="contact.html">
+                <u><p id="paragraph_6">Contact us</p></u>
+            </a>
+            <a href="#">
+                <u><p id="paragraph_7">About</p></u>
+            </a>
+            <a href="#">
+                <u><p id="paragraph_8">Privacy and Cookies Statement</p></u>
+            </a>
+            <a href="terms and conditions .html">
+                <u><p id="paragraph_9">Terms of Use </p></u>
+            </a>
+            <a href="terms and conditions .html">
+               <u> <p id="paragraph_10">Terms And Conditions</p></u>
+            </a>
+
+        </div>
+       
+
+    </section>
+    <div class="language-selector">
+        <!--<label for="language" style="color: black;">Select Language:</label>-->
+        <select id="language" onchange="changeLanguage()" class="language_1">
+            <option value="en">English</option>
+            <option value="fr">French</option>
+            <option value="es">Spanish</option>
+            <option value="de">German</option>
+        </select>
+    </div>
+    <script src="html/js/language.js"></script>
+    <div class="icons_1">
+        <ul class="social_icons">
+        <li><a href="https://www.instagram.com/emmanuelwisdom8462/"><i class="fa-brands fa-instagram"></i></a></li>
+    <li><a href="//web.facebook.com/index.php/?_rdc=1&_rdrclass="><i class=" fa-brands fa-facebook"></i></a></li>
+       <li> <a href="https://x.com/Emmanuel176757"><i class="fa-brands fa-x-twitter"></i></a></li>
+    </ul>
+    <p id="paragraph_11"> Copyright &copy; 2024 Travel safe | All rights reserved. </p>
+    </div>
+    
+</footer>
+
+
+ <!--<div class="destination">
+                    <img src="https://th.bing.com/th/id/OIP.TGU1Cmx7ASFN1bcXiz0hBQAAAA?w=304&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Paris, France">
+                    <h2>Paris, France</h2>
+                    <div class="popup">
+                        <h3>Paris, France</h3>
+                        <p>Paris, the capital of France, is a global center for art, fashion, and culture. The city is famous for its iconic landmarks like the Eiffel Tower, Notre-Dame Cathedral, and the Louvre Museum.</p>
+                    </div>
+                </div>
+                <div class="destination">
+                    <img src="https://th.bing.com/th/id/OIP.vY8GNAHgxgPXQsjNLurNXwHaE8?w=295&h=197&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="New York City, USA">
+                    <h2>New York City, USA</h2>
+                    <div class="popup">
+                        <h3>New York City, USA</h3>
+                        <p>Paris, the capital of France, is a global center for art, fashion, and culture. The city is famous for its iconic landmarks like the Eiffel Tower, Notre-Dame Cathedral, and the Louvre Museum.</p>
+                    </div>
+                </div>
+                <div class="destination">
+                    <img src="https://www.planetware.com/wpimages/2019/10/japan-in-pictures-most-beautiful-places-takachiho-gorge.jpg" alt="Tokyo, Japan">
+                    <h2>Tokyo, Japan</h2>
+                    <div class="popup">
+                        <h3>Paris, France</h3>
+                        <p>Paris, the capital of France, is a global center for art, fashion, and culture. The city is famous for its iconic landmarks like the Eiffel Tower, Notre-Dame Cathedral, and the Louvre Museum.</p>
+                    </div>
+                </div>
+                <div class="destination">
+                    <img src="https://www.tourist-destinations.com/wp-content/uploads/2011/06/I.jpg" alt="Bali, Indonesia">
+                    <h2>Bali, Indonesia</h2>
+                    <div class="popup">
+                        <h3>Paris, France</h3>
+                        <p>Paris, the capital of France, is a global center for art, fashion, and culture. The city is famous for its iconic landmarks like the Eiffel Tower, Notre-Dame Cathedral, and the Louvre Museum.</p>
+                    </div>
+                </div>
+                <div class="destination">
+                    <img src="https://th.bing.com/th/id/OIP.LpS9rbWYT6oCDfEdoB98owHaFj?rs=1&pid=ImgDetMain" alt="Maui, Hawaii">
+                    <h2>Maui, Hawaii</h2>
+                    <div class="popup">
+                        <h3>Paris, France</h3>
+                        <p>Paris, the capital of France, is a global center for art, fashion, and culture. The city is famous for its iconic landmarks like the Eiffel Tower, Notre-Dame Cathedral, and the Louvre Museum.</p>
+                    </div>
+                </div>
+                <div class="destination">
+                    <img src="https://www.celebritycruises.com/content/dam/celebrity/new-images/itinerary-images/europe/santorini-by-night-3840x2160.jpg" alt="Santorini, Greece">
+                    <h2>Santorini, Greece</h2>
+                <div class="popup">
+                    <h3>New York City, USA</h3>
+                    <p>New York City, also known as the Big Apple, is a global hub for finance, media, art, and culture. The city is famous for its iconic landmarks like the Statue of Liberty, Central Park, and Times Square.</p>
+                </div>
+                </div>
+                <div class="destination">
+                    <img src="https://www.celebritycruises.com/content/dam/celebrity/new-images/itinerary-images/europe/santorini-by-night-3840x2160.jpg" alt="Santorini, Greece">
+                    <h2>Santorini, Greece</h2>
+                <div class="popup">
+                    <h3>New York City, USA</h3>
+                    <p>New York City, also known as the Big Apple, is a global hub for finance, media, art, and culture. The city is famous for its iconic landmarks like the Statue of Liberty, Central Park, and Times Square.</p>
+                </div>
+                </div>
+                <div class="destination">
+                    <img src="https://www.celebritycruises.com/content/dam/celebrity/new-images/itinerary-images/europe/santorini-by-night-3840x2160.jpg" alt="Santorini, Greece">
+                    <h2>Santorini, Greece</h2>
+                <div class="popup">
+                    <h3>New York City, USA</h3>
+                    <p>New York City, also known as the Big Apple, is a global hub for finance, media, art, and culture. The city is famous for its iconic landmarks like the Statue of Liberty, Central Park, and Times Square.</p>
+                </div>
+                </div>
+                <div class="destination">
+                    <img src="https://www.celebritycruises.com/content/dam/celebrity/new-images/itinerary-images/europe/santorini-by-night-3840x2160.jpg" alt="Santorini, Greece">
+                    <h2>Santorini, Greece</h2>
+                <div class="popup">
+                    <h3>New York City, USA</h3>
+                    <p>New York City, also known as the Big Apple, is a global hub for finance, media, art, and culture. The city is famous for its iconic landmarks like the Statue of Liberty, Central Park, and Times Square.</p>
+                </div>
+                </div>
+                <div class="destination">
+                    <img src="https://www.celebritycruises.com/content/dam/celebrity/new-images/itinerary-images/europe/santorini-by-night-3840x2160.jpg" alt="Santorini, Greece">
+                    <h2>Santorini, Greece</h2>
+                <div class="popup">
+                    <h3>New York City, USA</h3>
+                    <p>New York City, also known as the Big Apple, is a global hub for finance, media, art, and culture. The city is famous for its iconic landmarks like the Statue of Liberty, Central Park, and Times Square.</p>
+                </div>
+                </div>-->
+                <div class="destination_items" style="background-image: url(https://www.cheapoair.com/miles-away/wp-content/uploads/2019/11/Winter-in-New-York-3.jpg);">
+                    <div class="contents">
+                        <div class="texts" id="headings_7"> Where icy expanses meet endless adventure.</div>
+                        <div class="name" id="heading_10">Antarctica</div>
+                        <a href="Antarctica.html"><button id="heading_4">see more</button></a>
+                    </div>
+                  </div>
+                  <div class="destination_items" style="background-image: url(ick.jpg);">
+                    <div class="contents">
+                        <div class="texts" id="headings_6"> Where stunning coasts meet vibrant cities. </div>
+                        <div class="name" id="heading_11">Austrailia</div>
+                        <a href="Austrailia.html"><button id="heading_4">see more</button></a>
+                    </div>
+                  </div>
+                  <div class="destination_items" style="background-image: url(5d.jpg);">
+                    <div class="contents">
+                        <div class="texts" id="headings_5">Where ancient meets modern.</div>
+                        <div class="name" id="heading_5">Asia</div>
+                        <a href="Asia.html"><button id="heading_4">see more</button></a>
+                    </div>
+                  </div>
+                  <div class="destination_items" style="background-image: url(d1.jpg);">
+                    <div class="contents">
+                        <div class="texts" id="headings_4">Where history meets modernity. </div>
+                        <div class="name" id="heading_6">Europe</div>
+                        <a href="Europe.html"><button id="heading_4">see more</button></a>
+                    </div>
+                  </div>
+                  <div class="destination_items" style="background-image: url(R.png);">
+                    <div class="contents">
+                        <div class="texts" id="headings_3">Where diverse landscapes meet vibrant cities. </div>
+                        <div class="name" id="heading_7">North America</div>
+                        <a href="North America.html"><button id="heading_4">see more</button></a>
+                    </div>
+                  </div>
+                  <div class="destination_items" style="background-image: url(ick.jpg);">
+                    <div class="contents">
+                        <div class="texts" id="headings_2"> This is a breathtaking place for natural wonders </div>
+                        <div class="name" id="heading_8">South America</div>
+                        <a href="South America.html"><button id="heading_4">see more</button></a>
+                        
+                    </div>
+                  </div>
+                  <div class="destination_items" style="background-image: url(https://vibrantholidaysafaris.com/wp-content/uploads/2023/07/Africa-Wildlife-Holidays-Vibrant-Holiday-Safaris.jpg);">
+                    <div class="contents">
+                        <div class="texts" id="headings_1"> This has a very stunning wildlife safaris </div>
+                        <div class="name"><p id="heading_9"> Africa </p></div>
+                        <a href="Africa.html"><button id="heading_4">see more</button></a>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="buttons">
+                  <button class="prev"><i class="fa-sharp-duotone fa-solid fa-arrow-left"></i></button>
+                  <button class="next"><i class="fa-sharp-duotone fa-solid fa-arrow-right"></i></button>
+                  </div>
+                  <script src="html/js/scripto.js"></script>
+                  
+                  </body>
+                  </html>
+                  

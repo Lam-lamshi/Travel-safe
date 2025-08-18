@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <title>Travel website</title>
+    <link rel="stylesheet" href="deco.css">
+    <link rel="stylesheet" href="swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+<header>
+    
+</header>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand" style="color: white;">Travel safe</div>
+        <div style="margin-left: auto; padding-right: 0.5rem; padding-bottom:0.7em;">
+        <button id="darkToggle" title="Toggle Dark mode" >🌙 </button>
+      </div>
+        <div class="links">
+           <a href="#home" >Home</a>
+           <a href="about.html">About</a>
+           <a href="destination.html">Destinations</a>
+           <a href="blog.html">Blog</a>
+           
+        </div>
+        <div class="action_btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+       
+        <div class="dropdown_menu">
+            <li><a href="#home" >Home</a></li>
+           <li><a href="about.html">About</a></li>
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </div>
+       
+    </nav>
+    <script src="html/js/nav.js" defer></script>
+    <script src="darkmode.js"></script>
+
+    <section id="home">
+        <div class="back_page">
+           
+            <div class="text">
+                <h2 style="color: black;" id="heading;" font-style ="italics;">
+                    Welcome to my travel page. Get inspiration for vacations. 
+                </h2>
+         
+            </div>
+            <div class="box" style="position: relative; display: flex; align-items: center;">
+                <input type="text" id="searchInput" placeholder="Search for a country..." style="padding-right: 40px;">
+                <span id="searchBtn" style="position: absolute; right: 10px; cursor: pointer; color: #0077b6;">
+                  <i class="fas fa-search"></i>
+                </span>
+                <ul id="suggestions" style="
+                  position: absolute;
+                  top: 100%;
+                  left: 0;
+                  right: 0;
+                  background: white;
+                  border: 1px solid #ccc;
+                  border-top: none;
+                  z-index: 9999;
+                  list-style: none;
+                  padding: 0;
+                  margin: 0;
+                  display: none;
+                  max-height: 200px;
+                  overflow-y: auto;
+                "></ul>
+              </div>
+            <div id="text-container">
+                <span id="typed-text"></span>
+            </div>
+        
+        </div>
+        <script src="search.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const textToType = document.querySelector('.text h2').textContent.trim();
+        const typedTextElement = document.querySelector('.text h2');
+        let currentIndex = 0;
+        typedTextElement.textContent="";
+      
+        function typeText() {
+          if (currentIndex < textToType.length) {
+            const span = document.createElement('span');
+            span.textContent = textToType[currentIndex];
+            typedTextElement.appendChild(span);
+            span.classList.add('typed');
+            currentIndex++;
+            setTimeout(typeText, 30); // Adjust the delay for typing speed (in milliseconds)
+          }
+        }
+      
+        typeText(); // Start typing as soon as the page is loaded
+      });
+    
+    
+</script>
+
+</section>
+
+<section id="destinations">
+      
+
+
+    <div class="destination_pic">
+        
+        <div class="destina"><h2 id="heading_2">Top Destinations at the moment </h2>
+        </div>
+       
+            <div class="containers">
+                <div class="sliding">
+                  
+                    <div id="suggestion">
+                        <span class="loader"></span> Fetching best weather destination...
+                      </div>
+                    
+                      <div class="sliding"></div>
+                      <div id="selected-continent" style="text-align:center; font-size:1.2rem; margin-bottom:2rem;">
+                        🌍 Displaying destinations in: <span id="continent-flag"></span>
+                      </div>
+                      
+
+                      <div class="popup" id="popup">
+                        <h3 id="popup-title"></h3>
+                        <p id="popup-description">
+                          Here's some amazing information about this destination. Enjoy the sights, food, and culture!
+                        </p>
+                        <button id="close-popup-btn">Close</button>
+                      </div>
+            <script src="weather-destination.js"></script> 
+</section>
+<section id="filterable-destinations" style="padding: 3rem 1rem; background: #e8f7ff;" class="dest">
+    <h2 style="text-align:center; font-size: 2rem; color: #0077b6;">🔍 Find Your Perfect Destination</h2>
+    <p style="text-align:center; color: #555; margin-bottom: 1.5rem;">Use filters below to explore destinations based on your travel mood.</p>
+  
+    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin-bottom:2rem;">
+      <select id="regionFilter" class="filter-dropdown">
+        <option value="">🌐 Region</option>
+        <option value="Africa">Africa</option>
+        <option value="Asia">Asia</option>
+        <option value="Europe">Europe</option>
+        <option value="America">America</option>
+      </select>
+  
+      <select id="typeFilter" class="filter-dropdown">
+        <option value="">🏞️ Type</option>
+        <option value="City">City</option>
+        <option value="Nature">Nature</option>
+        <option value="Beach">Beach</option>
+      </select>
+  
+      <select id="budgetFilter" class="filter-dropdown">
+        <option value="">💰 Budget</option>
+        <option value="Budget">Budget</option>
+        <option value="Luxury">Luxury</option>
+      </select>
+    </div>
+      <div class="swiper mySwiper">
+    <div class="swiper-wrapper" id="destinationSlider">
+    </div>
+ 
+     <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    
+  </div>
+  </section>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  
+  <script src="all cards.js"></script>
+  
+  <section id="map-section" style="padding: 3rem 1rem; background: #f0f8ff; border-top: 1px solid #ccc;" class="world">
+    <h2 style="text-align:center; font-size: 2rem; color: #0077b6; margin-bottom: 1rem;">
+      🌍 Explore the World
+    </h2>
+    <p style="text-align:center; margin-bottom: 2rem; color: #555;">
+      Click on a country to view travel highlights
+    </p>
+    <div id="map" style="height: 400px; align-items:center; width: 80%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);"></div>
+  </section>
+  
+  <script>
+    const map = L.map('map').setView([10, 0], 2);
+  
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap'
+    }).addTo(map);
+  
+    const destinations = [
+      { name: "Masai Mara, Kenya", coords: [-1.4, 35.1] },
+      { name: "Tokyo, Japan", coords: [35.68, 139.76] },
+      { name: "Paris, France", coords: [48.85, 2.35] },
+      { name: "New York City, USA", coords: [40.71, -74.00] },
+      { name: "Machu Picchu, Peru", coords: [-13.16, -72.54] },
+      { name: "Sydney, Australia", coords: [-33.87, 151.21] },
+      { name: "Antarctica", coords: [-75.25, -0.07] }
+    ];
+  
+    destinations.forEach(dest => {
+      const marker = L.marker(dest.coords).addTo(map);
+      marker.bindPopup(`<strong style="color:#0077b6">${dest.name}</strong><br><a href="destination.html" style="color:#00b4d8;">View Destination</a>`);
+    });
+  </script>
+  
+   
+    <section class="container_1">
+        <div class="testimonials-container myswiper">
+            <div class="testimonial-card swipper-wrapper">
+            <div class="swiper-slide">
+        <div class="testimonial mySwiper">
+            <div class="testi-content swiper-wrapper">
+                <div class="slide swiper-slide">
+                    <img src="member-2.png" class="image" alt="">
+                <h4 id="paragraph_2">this is my review about this company</h4>
+                <i class="fa-solid fa-quote-left quote-icon"></i>
+                    <div class="details_2">
+                        <span class="names">Lammy</span>
+                        <span class="jobs">Web dev</span>
+                    </div>
+                    <div class="star-rating">
+                        <span>&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                    </div>
+                </div>
+                <div class="slide swiper-slide">
+                    <img src="member-1.png" class="image" alt="">
+                <h4 id="paragraph_3">this is my review about this company</h4>
+                <i class="fa-solid fa-quote-left quote-icon"></i>
+                    <div class="details_2">
+                        <span class="names">Lamshi</span>
+                        <span class="jobs">Web dev</span>
+                    </div>
+                    <div class="star-rating">
+                        <span>&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                    </div>
+                </div>
+                <div class="slide swiper-slide">
+                    <img src="photo2.png" class="image" alt="">
+                    <h4 id="paragraph_4">"A truly exceptional service. The team was knowledgeable and responsive. Highly recommended!"</h4>
+                <i class="fa-solid fa-quote-left quote-icon"></i>
+                    <div class="details_2">
+                        <span class="names">Lammy</span>
+                        <span class="jobs">Web dev</span>
+                    </div>
+                    <div class="star-rating">
+                        <span>&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                    </div>
+                </div>
+                <div class="slide swiper-slide">
+                    <img src="member-4.png" class="image" alt="">
+                <h4 id="paragraph_">this is my review about this company</h4>
+                <i class="fa-solid fa-quote-left quote-icon"></i>
+                    <div class="details_2">
+                        <span class="names">Lammy</span>
+                        <span class="jobs">Web dev</span>
+                    </div>
+                    <div class="star-rating">
+                        <span>&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                    </div>
+                </div>
+                <div class="slide swiper-slide">
+                    <img src="member-8.png" class="image" alt="">
+                    <h4 id="paragraph_5">"Professional, reliable, and always willing to go the extra mile. I couldn't be happier with my experience."</h4>
+                <i class="fa-solid fa-quote-left quote-icon"></i>
+                    <div class="details_2">
+                        <span class="names">Lammy</span>
+                        <span class="jobs">Web dev</span>
+                    </div>
+                    <div class="star-rating">
+                        <span>&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                    </div>
+                </div>
+                <div class="slide swiper-slide">
+                    <img src="member-7.png" class="image" alt="">
+                <h4 id="paragraph_">this is my review about this company</h4>
+                <i class="fa-solid fa-quote-left quote-icon"></i>
+                    <div class="details_2">
+                        <span class="names">Lammy</span>
+                        <span class="jobs">Web dev</span>
+                    </div>
+                    <div class="star-rating">
+                        <span>&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+         
+        <script src="html/js/swiper-bundle.min.js"></script>
+
+        <script src="html/js/swipe.js"></script>    
+  
+    </section>
+    <section class="About">
+        <div class="wht">
+
+        </div>
+
+    </section>
+   
+   <footer style="background: #065986; color: white; padding: 2rem 1rem;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-around; max-width: 1200px; margin: auto;">
+    
+    <div style="flex: 1; min-width: 200px; margin-bottom: 1.5rem;">
+      <h3 style="color: #fcbf49;">Travel Safe</h3>
+      <p>Your go-to destination for unforgettable travel experiences around the world. Explore, dream, and discover with us.</p>
+    </div>
+
+    <div style="flex: 1; min-width: 200px; margin-bottom: 1.5rem;">
+      <h4>Company</h4>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="about.html" style="color: white; text-decoration: none;">About Us</a></li>
+        <li><a href="contact.html" style="color: white; text-decoration: none;">Contact</a></li>
+        <li><a href="terms and conditions.html" style="color: white; text-decoration: none;">Terms & Conditions</a></li>
+        <li><a href="#" style="color: white; text-decoration: none;">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <div style="flex: 1; min-width: 200px; margin-bottom: 1.5rem;">
+      <h4>Destinations</h4>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="destination.html" style="color: white; text-decoration: none;">Top Picks</a></li>
+        <li><a href="#filterable-destinations" style="color: white; text-decoration: none;">Find Your Mood</a></li>
+        <li><a href="#map-section" style="color: white; text-decoration: none;">Explore Map</a></li>
+      </ul>
+    </div>
+
+    <div style="flex: 1; min-width: 200px; margin-bottom: 1.5rem;">
+      <h4>Follow Us</h4>
+      <a href="https://web.facebook.com" style="color: #fcbf49; margin-right: 10px;"><i class="fab fa-facebook fa-lg"></i></a>
+      <a href="https://x.com/Emmanuel176757" style="color: #fcbf49; margin-right: 10px;"><i class="fab fa-twitter fa-lg"></i></a>
+      <a href="https://www.instagram.com/emmanuelwisdom8462/" style="color: #fcbf49; margin-right: 10px;"><i class="fab fa-instagram fa-lg"></i></a>
+    </div>
+
+  </div>
+
+  <div style="text-align: center; border-top: 1px solid #fcbf49; margin-top: 2rem; padding-top: 1rem; font-size: 0.9rem;">
+    &copy; 2025 Travel Safe. All rights reserved.
+  </div>
+</footer>
+
+      
+  
+</body>
+</html>

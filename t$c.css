@@ -1,0 +1,19 @@
+.t&c{
+
+
+margin-top: 5rem; 
+display: flex; 
+justify-content: center;
+    max-width: 900px;
+    background: url('scroll.jpg') no-repeat center/cover;
+    padding: 3rem 2rem;
+    background-size:cover ;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.1), 0 12px 20px rgba(0,0,0,0.1);
+    font-family: 'Georgia', serif;
+    line-height: 1.5;
+    color: #3c2f2f;
+    max-height:fit-content;
+    }

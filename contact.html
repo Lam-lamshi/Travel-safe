@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+  <title>Contact</title>
+
+  <!-- EmailJS -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("5av7T-XsHe6n4fMmT"); // Replace with your actual public key
+    })();
+  </script>
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #798188, #5b5d60); /* Soft blue background */
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;     /* vertical center */
+      justify-content: center; /* horizontal center */
+      padding: 2rem;
+      margin: 0;
+    }
+    
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      max-width: 1200px;
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 102, 204, 0.3); /* Blue shadow */
+      width: 100%;
+    }
+    
+
+    .us, .id-box {
+      flex: 1 1 400px;
+    }
+
+    .contact-title h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #0077b6;
+    }
+
+    .icon_sec, .mail {
+      display: flex;
+      align-items: center;
+      margin: 1rem 0;
+    }
+
+    .icon_sec img, .mail img {
+      width: 24px;
+      margin-right: 10px;
+    }
+
+    .icons a {
+      margin-right: 15px;
+      font-size: 1.5rem;
+      color: #0077b6;
+      transition: transform 0.3s, color 0.3s;
+    }
+
+    .icons a:hover {
+      color: #023e8a;
+      transform: scale(1.1);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .input_box {
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+
+    .input_box input,
+    .input_box textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .input_box label {
+      position: absolute;
+      top: -1.2rem;
+      left: 10px;
+      background: #fff;
+      padding: 0 5px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    input[type="submit"] {
+      background-color: #00b4d8;
+      color: white;
+      border: none;
+      padding: 0.75rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0077b6;
+    }
+
+    @media (max-width: 768px) {
+      .contact {
+        flex-direction: column;
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-brand" style="color: white;">Travel safe</div>
+    <div class="links">
+       <a href="travel.html" >Home</a>
+       <a href="about.html">About</a>
+       <a href="destination.html">Destinations</a>
+       <a href="blog.html">Blog</a>
+    </div>
+    <div class="action_btn">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="dropdown_menu">
+        <li><a href="travel.html" >Home</a></li>
+       <li><a href="about.html">About</a></li>
+        <li><a href="destination.html">Destinations</a></li>
+        <li><a href="blog.html">Blog</a></li>
+    </div>
+</nav>
+<script src="html/js/nav.js" defer></script>
+
+
+  <div class="contact">
+    <div class="us">
+      <div class="contact-title">
+        <h2>Contact Me</h2>
+      </div>
+      <div class="icon_sec">
+        <img src="phone_bk (2).png" alt="Phone icon">
+        <p>+234 9025618500</p>
+      </div>
+      <div class="mail">
+        <img src="mail.png" alt="Mail icon">
+        <p>emmanuelwisdomolamide@gmail.com</p>
+      </div>
+      <div class="icons">
+        <a href="https://www.instagram.com/emmanuelwisdom8462/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://web.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://x.com/Emmanuel176757" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://github.com/Lam-lamshi" target="_blank"><i class="fa-brands fa-github"></i></a>
+      </div>
+    </div>
+
+    <div class="id-box">
+      <form id="contact-form">
+        <div class="input_box">
+          <input type="text" id="full_name" name="full_name" required>
+          <label for="full_name">Full Name:</label>
+        </div>
+        <div class="input_box">
+          <input type="email" id="email" name="email" required>
+          <label for="email">Email:</label>
+        </div>
+        <div class="input_box">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      emailjs.sendForm('service_va1gc4h', 'template_z93tkwc', this)
+        .then(function(response) {
+          alert("Message sent successfully!");
+          document.getElementById('contact-form').reset();
+        }, function(error) {
+          alert("Failed to send message. Please try again.");
+          console.error(error);
+        });
+    });
+  </script>
+
+</body>
+</html>
