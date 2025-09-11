@@ -1,161 +1,447 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="html/css/deco.css">
-    <link rel="stylesheet" href="swiper-bundle.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
-    <title>Antarctica</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Antarctica</title>
+  <link rel="stylesheet" href="deco.css">
+  <link rel="stylesheet" href="destination.css">
+  <link href="gen_dest.css" rel="stylesheet"/>
+<link href="navbar.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body style="background-color:#D3D3D3;">
-    
-    <nav class="navbar">
-        <div class="navbar-brand" style="color: #444;">Travel safe</div>
-        <div class="links">
-           <a href="#home" >Home</a>
-           <a href="#Food">Food</a>
-           <a href="#Available Hotels">Hotels</a>
-        </div>
-        <div class="action_btn">
-            <i class="fa-solid fa-bars"></i>
-        </div>
-        <div class="dropdown_menu">
-            <li><a href="#home" >Home</a></li>
-            <li><a href="#Food">Food</a></li>
-            <li><a href="#Available Hotels">Hotels</a></li>
-        </div>
-    </nav>
-    <script src="js/nav.js" defer></script>
 
-<section class="afric">
-    <div class="welcome">
-        <h1>Welcome to Antarctica</h1>
-        <p>Here are different states with the best vacational sites.</p>
-        <img src="https://cdn.adventure-life.com/16/06/73/ANT-Day3-DangerIsland_20/index.webp" class="imge">
-    </div>
-</section>
-
-<section class="bdy">
-    
-        <div class="contain">
-            <div class="contain_1">
-                <img src="https://www.travelstart.co.za/blog/wp-content/uploads/2014/12/san-lameer.jpg" class="image_1">
-            </div><div class="contain_2">
-                <h2>South Africa</h2>
-                <p>South Africa offers diverse vacation resorts from Cape Town’s beachside luxury hotels to the exclusive safari lodges in Kruger National Park, as well as the winelands retreats in Stellenbosch.</p>
-            </div>
-            <div class="contain_1">
-                <img src="https://timbuktutravel.imgix.net/2017/07/khwai-tented-camp-okavango-delta-botswana-timbuktu-travel-copy.jpg?auto=compress%2Cformat&ixlib=php-1.1.0&q=50" class="image_1">
-            </div><div class="contain_2">
-                <h2>Botswana</h2>
-                <p>Known for its luxury safari lodges in the Okavango Delta and Chobe National Park, Botswana offers exclusive wildlife experiences with high-end accommodations that blend seamlessly with nature.</p>
-            </div>
-            <div class="contain_1">
-                <img src="https://media-cdn.tripadvisor.com/media/photo-s/25/8e/8a/24/beautiful.jpg" class="image_1">
-            </div><div class="contain_2">
-                <h2>Tanzania</h2>
-                <p>Tanzania is home to world-class resorts on the beaches of Zanzibar and the serene shores of Lake Tanganyika. Safari lodges near the Serengeti and Ngorongoro Crater offer breathtaking views and luxurious stays.</p>
-            </div>
-            <div class="contain_1">
-                <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/e9/24/c0/steigenberger-aqua-magic.jpg" class="image_1">
-            </div><div class="contain_2">
-                <h2>Egypt</h2>
-                <p>Egypt’s Red Sea resorts, like those in Sharm El Sheikh and Hurghada, provide stunning beach experiences, diving, and historical tours. The Nile cruise ships also offer a unique blend of luxury and ancient history.</p>
-            </div>
-            <div class="contain_1">
-                <img src="https://www.bucketlistplaces.com/wp-content/uploads/2021/04/bluenilefallsethiopia.jpeg" class="image_1">
-            </div><div class="contain_2">
-                <h2>Ethiopia</h2>
-                <p>Resorts around Lake Tana and the Simien Mountains offer a combination of cultural exploration and natural beauty, with many accommodations providing rich experiences of Ethiopian history and landscape.</p>
-            </div>
-            <div class="contain_1">
-                <img src="https://gassitours.wordpress.com/wp-content/uploads/2022/12/luxury-tour-in-madagascar.jpg?w=1024" class="image_1">
-            </div><div class="contain_2">
-                <h2>Madagascar</h2>
-                <p> Madagascar’s resorts, particularly on Nosy Be and Île Sainte-Marie, offer pristine beaches, unique wildlife encounters, and luxury eco-lodges that highlight the island’s biodiversity.</p>
-            </div>
-            <div class="contain_1">
-                <img src="https://image.urlaubspiraten.de/640/image/upload/v1603293749/mediavault_images/gksis7ufgkiu2ux9cbmb.jpg" class="image_1">
-            </div><div class="contain_2">
-                <h2>Cape Verde</h2>
-                <p> This island nation boasts beach resorts on Sal and Boa Vista islands, known for their white sandy beaches, water sports, and laid-back atmosphere with an Afro-Portuguese cultural mix.</p>
-            </div>
-            <div class="contain_1">
-                <img src="https://blog.tiketi.com/wp-content/uploads/2019/08/malawi-holidays-and-safari-guide-malawi-sea-242567_1280-1024x682.jpg" class="image_1">
-               </div><div class="contain_2">
-                <h2>Malawi</h2>
-                <p>In Malawi, beyond Kaya Mawa and Pumulani Lodge, the country is known for its warm hospitality and stunning natural beauty, particularly around Lake Malawi.
-                <br> The lake itself is a UNESCO World Heritage site, known as the "Lake of Stars" due to its clear waters and abundant fish species.</p>
-            </div>
-            <div class="contain_1">
-                <img src="https://www.visitrwanda.com/wp-content/uploads/2020/03/IMG-20200310-WA0003.jpg" class="image_1">
-            </div><div class="contain_2">
-                <h2>Rwanda</h2>
-                <p>Luxury lodges near Volcanoes National Park offer close encounters with mountain gorillas, while Lake Kivu resorts provide stunning lakeside retreats in a peaceful environment.</p>
-            </div>
-            <div class="contain_1">
-                <img src="https://www.tripsavvy.com/thmb/fNsdbjMNzBA8dVWyuIGDcNW0Nyw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-143922110-5bf7964146e0fb0026a2df41.jpg" class="image_1">
-            </div><div class="contain_2">
-                <h2>Zimbabwe</h2>
-                <p>Victoria Falls resorts offer dramatic views of the falls with nearby safari experiences in Hwange National Park, combining adventure with luxury accommodations.</p>
-            </div>
-            <div class="contain_1">
-                <img src="https://qph.cf2.quoracdn.net/main-qimg-9a90c72c85aab8555015809496d4e901-lq" class="image_1">
-            </div><div class="contain_2">
-                <h2>Zambia</h2>
-                <p>Known for its proximity to Victoria Falls, Zambia’s lodges and resorts provide intimate settings with direct access to wildlife and the falls, often offering river-based activities like canoeing and fishing. </p>
-            </div>
-            <div class="contain_1">
-                <img src="https://nairametrics.com/wp-content/uploads/2022/07/Whispering-palms.jpg" class="image_1">
-            </div><div class="contain_2">
-                <h2>Nigeria</h2>
-                <p>Nigeria’s resorts, such as those in Lagos and Calabar, offer a mix of beach, city, and nature experiences. Resorts like Obudu Mountain Resort are known for their scenic views and temperate climate.</p>
-            </div>
-        </div>
-</section>
-<footer class="footer">
-    <section class="Under">
-        <div class="under_class">
-
-            <a href="html/contact.html">
-                <u><p id="paragraph_6">Contact us</p></u>
-            </a>
-            <a href="#">
-                <u><p id="paragraph_7">About</p></u>
-            </a>
-            <a href="#">
-                <u><p id="paragraph_8">Privacy and Cookies Statement</p></u>
-            </a>
-            <a href="#">
-                <u><p id="paragraph_9">Terms of Use </p></u>
-            </a>
-            <a href="#">
-               <u> <p id="paragraph_10">Terms And Conditions</p></u>
-            </a>
-
-        </div>
-       
-<div class="language-selector">
-    <!--<label for="language" style="color: black;">Select Language:</label>-->
-    <select id="language" onchange="changeLanguage()" class="language_1">
-        <option value="en">English</option>
-        <option value="fr">French</option>
-        <option value="es">Spanish</option>
-        <option value="de">German</option>
-    </select>
+  
+<nav class="navbar">
+<div class="navbar-brand" style="color: #444;">Travel safe</div>
+<div class="links">
+<a href="travel.html">Home</a>
+<a href="about.html">About</a>
+<a href="destination.html">Destinations</a>
+<a href="blog.html">Blog</a>
 </div>
-<script src="html/js/language.js"></script>
-    </section>
-    <div class="icons_1">
-        <ul class="social_icons">
-        <li><a href="https://www.instagram.com/emmanuelwisdom8462/"><i class="fa-brands fa-instagram"></i></a></li>
-    <li><a href="//web.facebook.com/index.php/?_rdc=1&_rdrclass="><i class=" fa-brands fa-facebook"></i></a></li>
-       <li> <a href="https://x.com/Emmanuel176757"><i class="fa-brands fa-x-twitter"></i></a></li>
-    </ul>
-    <p id="paragraph_11"> Copyright &copy; 2024 Travel safe | All rights reserved. </p>
+<div class="action_btn">
+<i class="fa-solid fa-bars"></i>
+</div>
+<div class="dropdown_menu">
+<li><a href="travel.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="destination.html">Destinations</a></li>
+<li><a href="blog.html">Blog</a></li>
+</div>
+<script defer="" src="html/js/nav.js"></script>
+</nav>
+  <!-- Welcome section -->
+  
+<!----  <section class="afric">
+    <div class="welcome">
+      <h1>Welcome to Antarctica</h1>
+      <p>Here are different regions with the most fascinating vacational sites on the frozen continent.</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Antarctica_Iceberg.jpg" class="imge">
     </div>
-    
+  </section>-->
+
+  
+  <div data-aos="fade-up-left" class="blog-container">
+  <!-- South Pole Destination with Attraction List -->
+  <div class="blog-post" data-title="South Pole">
+    <div class="slider" data-slider="">
+      <img alt="South Pole Station" class="active" src="https://cdn.pixabay.com/photo/2024/11/25/10/46/icebergs-9223068_1280.jpg"/>
+    </div>
+    <div class="blog-content">
+      <h2>South Pole <span class="weather-status" id="weather-SouthPole">Loading...</span></h2>
+      <p>
+        "Standing at the South Pole was surreal – the bottom of the world! From the iconic Ceremonial Pole with treaty flags to the cutting-edge IceCube Neutrino Observatory, it was a journey blending history, science, and wonder."
+      </p>
+      <div class="destination-links">
+        <a href="https://www.booking.com/searchresults.html?ss=Antarctica"  onclick="return  travel()"   target="_blank">Travel</a> |
+        <a href="https://en.wikipedia.org/wiki/South_Pole" onclick="return  travel()" target="_blank">Learn More</a>
+      </div>
+      <div class="toggle-btn">Show Top 5 Attractions</div>
+      <ul class="attractions">
+        <li>
+          <strong><a href="https://en.wikipedia.org/wiki/South_Pole" target="_blank">Geographic South Pole Marker</a></strong>
+          <br/>
+          <img alt="Geographic South Pole Marker" id="southPoleAttraction1" src=""/>
+        </li>
+        <li>
+          <strong><a href="https://en.wikipedia.org/wiki/South_Pole#Ceremonial_South_Pole" target="_blank">Ceremonial South Pole & Treaty Flags</a></strong>
+          <br/>
+          <img alt="Ceremonial South Pole" id="southPoleAttraction2" src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Ceremonial_South_Pole_2016.jpg"/>
+        </li>
+        <li>
+          <strong><a href="https://en.wikipedia.org/wiki/Amundsen%E2%80%93Scott_South_Pole_Station" target="_blank">Amundsen–Scott South Pole Station</a></strong>
+          <br/>
+          <img alt="Amundsen–Scott Station" id="southPoleAttraction3" src="https://upload.wikimedia.org/wikipedia/commons/2/22/Amundsen-Scott_South_Pole_Station_from_berm.jpg"/>
+        </li>
+        <li>
+          <strong><a href="https://en.wikipedia.org/wiki/South_Pole_Telescope" target="_blank">South Pole Telescope (SPT)</a></strong>
+          <br/>
+          <img alt="South Pole Telescope" id="southPoleAttraction4" src="https://upload.wikimedia.org/wikipedia/commons/5/54/South_Pole_Telescope.jpg"/>
+        </li>
+        <li>
+          <strong><a href="https://en.wikipedia.org/wiki/IceCube_Neutrino_Observatory" target="_blank">IceCube Neutrino Observatory</a></strong>
+          <br/>
+          <img alt="IceCube Neutrino Observatory" id="southPoleAttraction5" src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1280&q=60"/>
+        </li>
+      </ul>
+    </div>
+  </div>
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+  AOS.init();
+</script>
+</div>
+
+
+ <!-- Ross Ice Shelf -->
+<div data-aos="fade-down-right" class="blog-container">
+  <div class="blog-post" data-title="Ross Ice Shelf">
+    <div class="slider" data-slider="">
+      <img alt="Ross Ice Shelf" class="active" src="https://cdn.pixabay.com/photo/2025/07/22/22/21/iceberg-9729316_1280.jpg"/>
+    </div>
+    <div class="blog-content">
+      <h2>Ross Ice Shelf <span class="weather-status" id="weather-RossIceShelf">Loading...</span></h2>
+      <p>"The vast Ross Ice Shelf stretches endlessly, a frozen frontier of dazzling white cliffs and drifting icebergs. Standing here felt like peering into infinity."</p>
+      <div class="destination-links">
+        <a href="https://www.booking.com/searchresults.html?ss=Ross+Ice+Shelf+Antarctica" onclick="return  travel()"target="_blank">Travel</a> |
+        <a href="https://en.wikipedia.org/wiki/Ross_Ice_Shelf" onclick="return  travel()" target="_blank">Learn More</a>
+      </div>
+      <div class="toggle-btn">Show Top 5 Attractions</div>
+    <ul class="attractions">
+  <li>
+    <strong>Ross Sea Coastline</strong><br/>
+    <img id="rossIceShelfAttraction1" src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Ross_Sea.jpg"/>
+  </li>
+  <li>
+    <strong>Ice Cliffs of Ross Shelf</strong><br/>
+    <img id="rossIceShelfAttraction2" src="https://upload.wikimedia.org/wikipedia/commons/6/68/Ross_Ice_Shelf.jpg"/>
+  </li>
+  <li>
+    <strong>Penguin Colonies</strong><br/>
+    <img id="rossIceShelfAttraction3" src="https://cdn.pixabay.com/photo/2017/02/07/20/14/penguin-2041915_1280.jpg"/>
+  </li>
+  <li>
+    <strong>Whale Watching Ross Sea</strong><br/>
+    <img id="rossIceShelfAttraction4" src="https://cdn.pixabay.com/photo/2016/03/09/09/22/humpback-whale-1245670_1280.jpg"/>
+  </li>
+  <li>
+    <strong>Scott Base (nearby)</strong><br/>
+    <img id="rossIceShelfAttraction5" src="https://upload.wikimedia.org/wikipedia/commons/2/26/Scott_Base.jpg"/>
+  </li>
+</ul>
+
+    </div>
+  </div>
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+  AOS.init();
+</script>
+</div>
+
+<!-- Marie Byrd Land -->
+<div  data-aos="fade-up-left" class="blog-container">
+  <div class="blog-post" data-title="Marie Byrd Land">
+    <div class="slider" data-slider="">
+      <img alt="Marie Byrd Land" class="active" src="https://cdn.pixabay.com/photo/2017/10/21/00/49/crystal-falls-2873481_1280.jpg"/>
+    </div>
+    <div class="blog-content">
+      <h2>Marie Byrd Land <span class="weather-status" id="weather-MarieByrdLand">Loading...</span></h2>
+      <p>"One of the most remote places on Earth, Marie Byrd Land is untouched and mysterious, with vast ice plains and towering mountains."</p>
+      <div class="destination-links">
+        <a href="https://www.booking.com/searchresults.html?ss=Marie+Byrd+Land" onclick="return  travel()" target="_blank">Travel</a> |
+        <a href="https://en.wikipedia.org/wiki/Marie_Byrd_Land" onclick="return  travel()" target="_blank">Learn More</a>
+      </div>
+      <div class="toggle-btn">Show Top 5 Attractions</div>
+    <ul class="attractions">
+  <li><strong>Mount Sidley Volcano</strong><br/><img id="marieByrdLandAttraction1" src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Mount_Sidley.jpg"/></li>
+  <li><strong>Executive Committee Range</strong><br/><img id="marieByrdLandAttraction2" src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Marie_Byrd_Land.png"/></li>
+  <li><strong>Remote Ice Fields</strong><br/><img id="marieByrdLandAttraction3" src="https://cdn.pixabay.com/photo/2018/03/27/22/07/iceberg-3267034_1280.jpg"/></li>
+  <li><strong>Unclaimed Territory</strong><br/><img id="marieByrdLandAttraction4" src="https://upload.wikimedia.org/wikipedia/commons/c/c4/Antarctica_blank_map.png"/></li>
+  <li><strong>Wildlife on Coast</strong><br/><img id="marieByrdLandAttraction5" src="https://cdn.pixabay.com/photo/2017/06/28/02/25/seals-2450908_1280.jpg"/></li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
+<!-- Ellsworth Mountains -->
+<div data-aos="fade-down-right" class="blog-container">
+  <div class="blog-post" data-title="Ellsworth Mountains">
+    <div class="slider" data-slider="">
+      <img alt="Ellsworth Mountains" class="active" src="https://cdn.pixabay.com/photo/2025/05/21/15/34/snow-mountain-9614087_1280.jpg"/>
+    </div>
+    <div class="blog-content">
+      <h2>Ellsworth Mountains <span class="weather-status" id="weather-EllsworthMountains">Loading...</span></h2>
+      <p>"The Ellsworth Mountains rise dramatically from the ice, crowned by Mount Vinson – the highest peak in Antarctica."</p>
+      <div class="destination-links">
+        <a href="https://www.booking.com/searchresults.html?ss=Ellsworth+Mountains" onclick="return  travel()" target="_blank">Travel</a> |
+        <a href="https://en.wikipedia.org/wiki/Ellsworth_Mountains" onclick="return  travel()" target="_blank">Learn More</a>
+      </div>
+      <div class="toggle-btn">Show Top 5 Attractions</div>
+   <ul class="attractions">
+  <li><strong>Mount Vinson</strong><br/><img id="ellsworthMountainsAttraction1" src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Vinson_Massif_Antarctica_by_Vincent_van_Zalinge_unsplash.jpg"/></li>
+  <li><strong>Sentinel Range</strong><br/><img id="ellsworthMountainsAttraction2" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Ellsworth_Mountains_-_Sentinel_Range.jpg"/></li>
+  <li><strong>Heritage Range</strong><br/><img id="ellsworthMountainsAttraction3" src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Heritage_Range.jpg"/></li>
+  <li><strong>Climbing Expeditions</strong><br/><img id="ellsworthMountainsAttraction4" src="https://cdn.pixabay.com/photo/2016/11/29/02/08/climb-1868723_1280.jpg"/></li>
+  <li><strong>Glacial Valleys</strong><br/><img id="ellsworthMountainsAttraction5" src=""/></li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
+<!-- McMurdo Station -->
+<div data-aos="fade-up-left" class="blog-container">
+  <div class="blog-post" data-title="McMurdo Station">
+    <div class="slider" data-slider="">
+      <img alt="McMurdo Station" class="active" src="https://cdn.pixabay.com/photo/2022/08/22/19/02/landscape-7404347_1280.jpg"/>
+    </div>
+    <div class="blog-content">
+      <h2>McMurdo Station <span class="weather-status" id="weather-McMurdo">Loading...</span></h2>
+      <p>"As Antarctica’s largest research base, McMurdo Station buzzes with science, logistics, and a unique community spirit."</p>
+      <div class="destination-links">
+        <a href="https://www.booking.com/searchresults.html?ss=McMurdo+Station" onclick="return  travel()" target="_blank">Travel</a> |
+        <a href="https://en.wikipedia.org/wiki/McMurdo_Station" onclick="return  travel()" target="_blank">Learn More</a>
+      </div>
+      <div class="toggle-btn">Show Top 5 Attractions</div>
+    <ul class="attractions">
+  <li><strong>Observation Hill</strong><br/><img id="mcMurdoStationAttraction1" src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Observation_Hill%2C_McMurdo_Station%2C_Antarctica.jpg"/></li>
+  <li><strong>Discovery Hut</strong><br/><img id="mcMurdoStationAttraction2" src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Discovery_Hut_Exterior.jpg"/></li>
+  <li><strong>Scott’s Hut</strong><br/><img id="mcMurdoStationAttraction3" src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Scott%27s_Hut%2C_Antarctica.jpg"/></li>
+  <li><strong>Winter Quarters Bay</strong><br/><img id="mcMurdoStationAttraction4" src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Winter_Quarters_Bay.jpg"/></li>
+  <li><strong>McMurdo Sound Wildlife</strong><br/><img id="mcMurdoStationAttraction5" src="https://cdn.pixabay.com/photo/2017/02/07/20/14/penguin-2041915_1280.jpg"/></li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
+
+     <!-- Mount Erebus -->
+<div data-aos="fade-down-right" class="blog-container">
+  <div class="blog-post" data-title="Mount Erebus">
+    <div class="slider" data-slider="">
+      <img alt="Mount Erebus Volcano" class="active" src="https://cdn.pixabay.com/photo/2012/02/26/10/52/mount-17043_1280.jpg"/>
+    </div>
+    <div class="blog-content">
+      <h2>Mount Erebus <span class="weather-status" id="weather-MountErebus">Loading...</span></h2>
+      <p>"Mount Erebus is Antarctica’s most famous volcano — its steaming crater and active lava lake are awe-inspiring against the icy backdrop."</p>
+      <div class="destination-links">
+        <a href="https://www.booking.com/searchresults.html?ss=Mount+Erebus" onclick="return  travel()" target="_blank">Travel</a> |
+        <a href="https://en.wikipedia.org/wiki/Mount_Erebus" onclick="return  travel()" target="_blank">Learn More</a>
+      </div>
+      <div class="toggle-btn">Show Top 5 Attractions</div>
+     <ul class="attractions">
+  <li><strong>Summit Crater & Lava Lake</strong><br/><img id="mountErebusAttraction1" src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Mount_Erebus_Summit.jpg"/></li>
+  <li><strong>Ice Towers</strong><br/><img id="mountErebusAttraction2" src="https://upload.wikimedia.org/wikipedia/commons/7/71/Mount_Erebus_Ice_Towers.jpg"/></li>
+  <li><strong>Erebus Glacier Tongue</strong><br/><img id="mountErebusAttraction3" src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Erebus_Glacier_Tongue.jpg"/></li>
+  <li><strong>Research Camps</strong><br/><img id="mountErebusAttraction4" src="https://cdn.pixabay.com/photo/2017/01/20/00/30/tent-1992131_1280.jpg"/></li>
+  <li><strong>View from Ross Island</strong><br/><img id="mountErebusAttraction5" src="https://upload.wikimedia.org/wikipedia/commons/8/85/Mount_Erebus_from_McMurdo_Station.jpg"/></li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
+<!-- Transantarctic Mountains -->
+<div data-aos="fade-down-right" data-aos="fade-up-left" class="blog-container">
+  <div class="blog-post" data-title="Transantarctic Mountains">
+    <div class="slider" data-slider="">
+      <img alt="Transantarctic Mountains" class="active" src="https://cdn.pixabay.com/photo/2016/09/19/22/46/lake-1681485_1280.jpg"/>
+    </div>
+    <div class="blog-content">
+      <h2>Transantarctic Mountains <span class="weather-status" id="weather-TransantarcticMountains">Loading...</span></h2>
+      <p>"Stretching across the continent, the Transantarctic Mountains divide East and West Antarctica with breathtaking peaks and valleys."</p>
+      <div class="destination-links">
+        <a href="https://www.booking.com/searchresults.html?ss=Transantarctic+Mountains" onclick="return  travel()" target="_blank">Travel</a> |
+        <a href="https://en.wikipedia.org/wiki/Transantarctic_Mountains" onclick="return  travel()" target="_blank">Learn More</a>
+      </div>
+      <div class="toggle-btn">Show Top 5 Attractions</div>
+     <ul class="attractions">
+  <li><strong>Beardmore Glacier</strong><br/><img id="transantarcticMountainsAttraction1" src="https://upload.wikimedia.org/wikipedia/commons/8/83/Beardmore_Glacier.jpg"/></li>
+  <li><strong>Mount Markham</strong><br/><img id="transantarcticMountainsAttraction2" src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Mount_Markham_Antarctica.jpg"/></li>
+  <li><strong>Geological Formations</strong><br/><img id="transantarcticMountainsAttraction3" src="https://cdn.pixabay.com/photo/2016/11/29/02/08/cliff-1868726_1280.jpg"/></li>
+  <li><strong>Polar Plateau Views</strong><br/><img id="transantarcticMountainsAttraction4" src="https://cdn.pixabay.com/photo/2017/03/27/14/56/antarctica-2179383_1280.jpg"/></li>
+  <li><strong>Historic Routes</strong><br/><img id="transantarcticMountainsAttraction5" src="https://cdn.pixabay.com/photo/2017/03/12/02/07/sledge-2137718_1280.jpg"/></li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
+<!-- Queen Maud Land -->
+<div data-aos="fade-down-right" class="blog-container">
+  <div class="blog-post" data-title="Queen Maud Land">
+    <div class="slider" data-slider="">
+      <img alt="Queen Maud Land" class="active" src="https://th.bing.com/th/id/OIP.E8lFb6aFDGGvsdeXX8XukQHaEU?w=317&h=184&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"/>
+    </div>
+    <div class="blog-content">
+      <h2>Queen Maud Land <span class="weather-status" id="weather-QueenMaudLand">Loading...</span></h2>
+      <p>"Known for its dramatic nunataks and sweeping glaciers, Queen Maud Land is a remote and stunning part of Antarctica."</p>
+      <div class="destination-links">
+        <a href="https://www.booking.com/searchresults.html?ss=Queen+Maud+Land" onclick="return  travel()" target="_blank">Travel</a> |
+        <a href="https://en.wikipedia.org/wiki/Queen_Maud_Land" onclick="return  travel()" target="_blank">Learn More</a>
+      </div>
+      <div class="toggle-btn">Show Top 5 Attractions</div>
+   <ul class="attractions">
+  <li><strong>Troll Research Station</strong><br/><img id="queenMaudLandAttraction1" src="https://upload.wikimedia.org/wikipedia/commons/2/29/Troll_research_station.jpg"/></li>
+  <li><strong>Drygalski Mountains</strong><br/><img id="queenMaudLandAttraction2" src="https://upload.wikimedia.org/wikipedia/commons/3/37/Queen_Maud_Land.jpg"/></li>
+  <li><strong>Nunataks</strong><br/><img id="queenMaudLandAttraction3" src="https://cdn.pixabay.com/photo/2018/05/23/22/23/ice-3426398_1280.jpg"/></li>
+  <li><strong>Queen Fabiola Mountains</strong><br/><img id="queenMaudLandAttraction4" src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Queen_Fabiola_Mountains.jpg"/></li>
+  <li><strong>Expedition Camps</strong><br/><img id="queenMaudLandAttraction5" src="https://cdn.pixabay.com/photo/2016/11/29/02/08/exploration-1868725_1280.jpg"/></li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
+<!-- Antarctic Peninsula -->
+<div data-aos="fade-up-left" class="blog-container">
+  <div class="blog-post" data-title="Antarctic Peninsula">
+    <div class="slider" data-slider="">
+      <img alt="Antarctic Peninsula" class="active" src="https://cdn.pixabay.com/photo/2014/05/04/14/12/icebergs-337604_1280.jpg"/>
+    </div>
+    <div class="blog-content">
+      <h2>Antarctic Peninsula <span class="weather-status" id="weather-AntarcticPeninsula">Loading...</span></h2>
+      <p>"The Antarctic Peninsula is the most accessible region, famed for dramatic fjords, glaciers, and abundant wildlife."</p>
+      <div class="destination-links">
+        <a href="https://www.booking.com/searchresults.html?ss=Antarctic+Peninsula"  onclick="return  travel()" target="_blank">Travel</a> |
+        <a href="https://en.wikipedia.org/wiki/Antarctic_Peninsula"onclick="return  travel()" target="_blank">Learn More</a>
+      </div>
+      <div class="toggle-btn">Show Top 5 Attractions</div>
+    <ul class="attractions">
+  <li><strong>Paradise Harbour</strong><br/><img id="antarcticPeninsulaAttraction1" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Paradise_Harbour_Antarctica.jpg"/></li>
+  <li><strong>Penguin Colonies</strong><br/><img id="antarcticPeninsulaAttraction2" src="https://cdn.pixabay.com/photo/2017/02/07/20/14/penguin-2041915_1280.jpg"/></li>
+  <li><strong>Glacier Views</strong><br/><img id="antarcticPeninsulaAttraction3" src="https://cdn.pixabay.com/photo/2018/03/27/22/07/iceberg-3267034_1280.jpg"/></li>
+  <li><strong>Research Stations</strong><br/><img id="antarcticPeninsulaAttraction4" src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Palmer_Station_Antarctica.jpg"/></li>
+  <li><strong>Iceberg Alley</strong><br/><img id="antarcticPeninsulaAttraction5" src="https://cdn.pixabay.com/photo/2018/04/05/18/56/iceberg-3299076_1280.jpg"/></li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
+<!-- Lemaire Channel -->
+<div data-aos="fade-down-right" class="blog-container">
+  <div class="blog-post" data-title="Lemaire Channel">
+    <div class="slider" data-slider="">
+      <img alt="Lemaire Channel" class="active" src="https://cdn.pixabay.com/photo/2013/04/28/21/44/waterway-107810_1280.jpg"/>
+    </div>
+    <div class="blog-content">
+      <h2>Lemaire Channel <span class="weather-status" id="weather-LemaireChannel">Loading...</span></h2>
+      <p>"Nicknamed ‘Kodak Gap’, the Lemaire Channel is a narrow passage framed by towering cliffs and drifting icebergs."</p>
+      <div class="destination-links">
+        <a href="https://www.booking.com/searchresults.html?ss=Lemaire+Channel" onclick="return  travel()" target="_blank">Travel</a> |
+        <a href="https://en.wikipedia.org/wiki/Lemaire_Channel" onclick="return  travel()" target="_blank">Learn More</a>
+      </div>
+      <div class="toggle-btn">Show Top 5 Attractions</div>
+     <ul class="attractions">
+  <li><strong>Iceberg Passage</strong><br/><img id="lemaireChannelAttraction1" src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Lemaire_Channel.jpg"/></li>
+  <li><strong>Rock Cliffs</strong><br/><img id="lemaireChannelAttraction2" src="https://cdn.pixabay.com/photo/2016/11/29/02/08/cliff-1868726_1280.jpg"/></li>
+  <li><strong>Whale Watching</strong><br/><img id="lemaireChannelAttraction3" src="https://cdn.pixabay.com/photo/2016/03/09/09/22/humpback-whale-1245670_1280.jpg"/></li>
+  <li><strong>Sunset Cruises</strong><br/><img id="lemaireChannelAttraction4" src="https://cdn.pixabay.com/photo/2017/05/22/19/53/sunset-2334067_1280.jpg"/></li>
+  <li><strong>Nearby Penguins</strong><br/><img id="lemaireChannelAttraction5" src="https://cdn.pixabay.com/photo/2017/02/07/20/14/penguin-2041915_1280.jpg"/></li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
+<!-- Weddell Sea -->
+<div data-aos="fade-up-left" class="blog-container">
+  <div class="blog-post" data-title="Weddell Sea">
+    <div class="slider" data-slider="">
+      <img alt="Weddell Sea" class="active" src="https://cdn.pixabay.com/photo/2021/09/18/12/40/pier-6635035_1280.jpg"/>
+    </div>
+    <div class="blog-content">
+      <h2>Weddell Sea <span class="weather-status" id="weather-WeddellSea">Loading...</span></h2>
+      <p>"The Weddell Sea is known for its vast sea ice, incredible tabular icebergs, and Shackleton’s famous Endurance expedition."</p>
+      <div class="destination-links">
+        <a href="https://www.booking.com/searchresults.html?ss=Weddell+Sea" onclick="return  travel()" target="_blank">Travel</a> |
+        <a href="https://en.wikipedia.org/wiki/Weddell_Sea" onclick="return  travel()" target="_blank">Learn More</a>
+      </div>
+      <div class="toggle-btn">Show Top 5 Attractions</div>
+    <ul class="attractions">
+  <li><strong>Tabular Icebergs</strong><br/><img id="weddellSeaAttraction1" src="https://cdn.pixabay.com/photo/2018/03/27/22/07/iceberg-3267034_1280.jpg"/></li>
+  <li><strong>Endurance Shipwreck Site</strong><br/><img id="weddellSeaAttraction2" src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Endurance_(Imperial_Trans-Antarctic_Expedition).jpg"/></li>
+  <li><strong>Weddell Seals</strong><br/><img id="weddellSeaAttraction3" src="https://cdn.pixabay.com/photo/2017/06/28/02/25/seals-2450908_1280.jpg"/></li>
+  <li><strong>Sea Ice Landscape</strong><br/><img id="weddellSeaAttraction4" src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Weddell_Sea.jpg"/></li>
+  <li><strong>Snow Petrels</strong><br/><img id="weddellSeaAttraction5" src="https://cdn.pixabay.com/photo/2017/03/02/11/16/petrel-2112896_1280.jpg"/></li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
+<!-- Shackleton Ice Shelf -->
+<div data-aos="fade-down-right" class="blog-container">
+  <div class="blog-post" data-title="Shackleton Ice Shelf">
+    <div class="slider" data-slider="">
+      <img alt="Shackleton Ice Shelf" class="active" src="https://cdn.pixabay.com/photo/2012/02/26/10/52/mount-17043_1280.jpg"/>
+    </div>
+    <div class="blog-content">
+      <h2>Shackleton Ice Shelf <span class="weather-status" id="weather-ShackletonIceShelf">Loading...</span></h2>
+      <p>"A remote and little-visited region, the Shackleton Ice Shelf is an immense floating sheet of ice along East Antarctica."</p>
+      <div class="destination-links">
+        <a href="https://www.booking.com/searchresults.html?ss=Shackleton+Ice+Shelf"onclick="return  travel()" target="_blank">Travel</a> |
+        <a href="https://en.wikipedia.org/wiki/Shackleton_Ice_Shelf" onclick="return  travel()" target="_blank">Learn More</a>
+      </div>
+      <div class="toggle-btn">Show Top 5 Attractions</div>
+    <ul class="attractions">
+  <li><strong>Coastal Ice Cliffs</strong><br/><img id="shackletonIceShelfAttraction1" src=""/></li>
+  <li><strong>Penguin Grounds</strong><br/><img id="shackletonIceShelfAttraction2" src=""/></li>
+  <li><strong>Sea Ice</strong><br/><img id="shackletonIceShelfAttraction3" src=""/></li>
+  <li><strong>Emperor Penguins</strong><br/><img id="shackletonIceShelfAttraction4" src=""/></li>
+  <li><strong>Expedition Camps</strong><br/><img id="shackletonIceShelfAttraction5" src=""/></li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
+<!-- Deception Island -->
+<div data-aos="fade-up-left" class="blog-container">
+  <div class="blog-post" data-title="Deception Island">
+    <div class="slider" data-slider="">
+      <img alt="Deception Island" class="active" src="https://cdn.pixabay.com/photo/2021/07/27/21/01/volcano-6497820_1280.jpg"/>
+    </div>
+    <div class="blog-content">
+      <h2>Deception Island <span class="weather-status" id="weather-DeceptionIsland">Loading...</span></h2>
+      <p>"Deception Island is a volcanic caldera offering warm beaches, dramatic landscapes, and a history of whaling and exploration."</p>
+      <div class="destination-links">
+        <a href="https://www.booking.com/searchresults.html?ss=Deception+Island" onclick="return  travel()" target="_blank">Travel</a> |
+        <a href="https://en.wikipedia.org/wiki/Deception_Island" onclick="return  travel()" target="_blank">Learn More</a>
+      </div>
+      <div class="toggle-btn">Show Top 5 Attractions</div>
+     <ul class="attractions">
+  <li><strong>Whalers Bay</strong><br/><img id="deceptionIslandAttraction1" src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Deception_Island_Bay.jpg"/></li>
+  <li><strong>Neptune’s Bellows</strong><br/><img id="deceptionIslandAttraction2" src="https://upload.wikimedia.org/wikipedia/commons/8/86/Neptune%27s_Bellows_Deception_Island.jpg"/></li>
+  <li><strong>Hot Springs</strong><br/><img id="deceptionIslandAttraction3" src="https://cdn.pixabay.com/photo/2017/05/10/18/22/hot-spring-2309812_1280.jpg"/></li>
+  <li><strong>Whaling Station Ruins</strong><br/><img id="deceptionIslandAttraction4" src="https://upload.wikimedia.org/wikipedia/commons/1/18/Whalers_Bay_Deception_Island.jpg"/></li>
+  <li><strong>Chinstrap Penguins</strong><br/><img id="deceptionIslandAttraction5" src="https://cdn.pixabay.com/photo/2017/02/07/20/14/penguin-2041915_1280.jpg"/></li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
+  
+<footer>
+  © 2025 TravelSafe. All rights reserved.
 </footer>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <script>
+  AOS.init();
+</script>
+  <script src="antarctica.js"></script>
 </body>
 </html>
+
+
+
+

@@ -1,6 +1,7 @@
   const countries = [
     "Kenya", "Japan", "France", "USA", "Peru", "Australia", "Antarctica",
-    "Masai Mara", "Tokyo", "Paris", "New York City", "Machu Picchu", "Sydney", "Antarctic Cruise"
+    "Masai Mara", "Tokyo", "Paris", "New York City", "Machu Picchu", "Sydney", "Antarctic Cruise",
+    "Africa", "Asia", "Europe", "North America", "South America", "Oceania", "Antarctica",
   ];
 
   const input = document.getElementById("searchInput");

@@ -10,11 +10,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<meta name="google-site-verification" content="mvxidW_l5LuRMdIquBLRKY5t9Wp9rSpYs1JEHyKnHFU" />
 
 <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
 <header>
     
 </header>
+<script async src="https://cse.google.com/cse.js?cx=123456"></script>
 </head>
 <body>
     <nav class="navbar">
@@ -43,18 +46,21 @@
     </nav>
     <script src="html/js/nav.js" defer></script>
     <script src="darkmode.js"></script>
+    <script src="background .js"></script>
 
     <section id="home">
         <div class="back_page">
-           
+           <backgrond-image id=""></background-image>
             <div class="text">
                 <h2 style="color: black;" id="heading;" font-style ="italics;">
                     Welcome to my travel page. Get inspiration for vacations. 
                 </h2>
          
             </div>
-            <div class="box" style="position: relative; display: flex; align-items: center;">
+            <div class="gcse-searchresults-only">
+            <div data-aos="fade-up"data-aos-anchor-placement="center-center" class="box" style="position: relative; display: flex; align-items: center;">
                 <input type="text" id="searchInput" placeholder="Search for a country..." style="padding-right: 40px;">
+                
                 <span id="searchBtn" style="position: absolute; right: 10px; cursor: pointer; color: #0077b6;">
                   <i class="fas fa-search"></i>
                 </span>
@@ -79,6 +85,7 @@
                 <span id="typed-text"></span>
             </div>
         
+        </div>
         </div>
         <script src="search.js"></script>
 <script>
@@ -113,9 +120,10 @@
 
     <div class="destination_pic">
         
-        <div class="destina"><h2 id="heading_2">Top Destinations at the moment </h2>
+        <div data-aos="fade-up"
+     data-aos-anchor-placement="center-center" class="destina"><h2 id="heading_2">Top Destinations at the moment </h2>
         </div>
-       
+       <div data-aos="zoom-out-up" data-aos-duration="1000" >
             <div class="containers">
                 <div class="sliding">
                   
@@ -136,13 +144,67 @@
                         </p>
                         <button id="close-popup-btn">Close</button>
                       </div>
+        </div>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+  AOS.init();
+</script>
             <script src="weather-destination.js"></script> 
 </section>
-<section id="filterable-destinations" style="padding: 3rem 1rem; background: #e8f7ff;" class="dest">
-    <h2 style="text-align:center; font-size: 2rem; color: #0077b6;">🔍 Find Your Perfect Destination</h2>
-    <p style="text-align:center; color: #555; margin-bottom: 1.5rem;">Use filters below to explore destinations based on your travel mood.</p>
+
+
+
+
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
   
-    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin-bottom:2rem;">
+  <script src="all cards.js"></script>
+  
+
+  <section id="map-section" data-aos="zoom-in-up" style="padding: 3rem 1rem; background: #f0f8ff; border-top: 1px solid #ccc;" class="world" >
+    <h2 data-aos="zoom-out-up" style="text-align:center; font-size: 2rem; color: #0077b6; margin-bottom: 1rem;">
+      🌍 Explore the World
+    </h2>
+    <p style="text-align:center; margin-bottom: 2rem; color: #555;">
+      Click on a country to view travel highlights
+    </p>
+    <div data-aos="zoom-in-down" data-aos-duration="5000">
+    <div id="map" style="height: 400px; align-items:center; width: 80%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); " ></div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+  AOS.init();
+</script>
+  </section>
+  
+  <script>
+    const map = L.map('map').setView([10, 0], 2);
+  
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap'
+    }).addTo(map);
+  
+    const destinations = [
+      { name: "Masai Mara, Kenya", coords: [-1.4, 35.1] },
+      { name: "Tokyo, Japan", coords: [35.68, 139.76] },
+      { name: "Paris, France", coords: [48.85, 2.35] },
+      { name: "New York City, USA", coords: [40.71, -74.00] },
+      { name: "Machu Picchu, Peru", coords: [-13.16, -72.54] },
+      { name: "Sydney, Australia", coords: [-33.87, 151.21] },
+      { name: "Antarctica", coords: [-75.25, -0.07] }
+    ];
+  
+    destinations.forEach(dest => {
+      const marker = L.marker(dest.coords).addTo(map);
+      marker.bindPopup(`<strong style="color:#0077b6">${dest.name}</strong><br><a href="destination.html" style="color:#00b4d8;">View Destination</a>`);
+    });
+  </script>
+  <section id="filterable-destinations" data-aos="zoom-in-up" style="padding: 1.5rem 1rem; background: grey;" class="dest">
+    <h2 data-aos="zoom-out-up" style="text-align:center; font-size: 2rem; color: #0077b6;">🔍 Find Your Perfect Destination</h2>
+    <p style="text-align:center; color: #555; margin-bottom: 2rem;">Use filters below to explore destinations based on your travel mood.</p>
+  
+    <div data-aos="fade-up-left" style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin-bottom:2rem; ">
       <select id="regionFilter" class="filter-dropdown">
         <option value="">🌐 Region</option>
         <option value="Africa">Africa</option>
@@ -173,54 +235,19 @@
     <div class="swiper-button-prev"></div>
     
   </div>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+  AOS.init();
+</script>
   </section>
-
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-  
-  <script src="all cards.js"></script>
-  
-  <section id="map-section" style="padding: 3rem 1rem; background: #f0f8ff; border-top: 1px solid #ccc;" class="world">
-    <h2 style="text-align:center; font-size: 2rem; color: #0077b6; margin-bottom: 1rem;">
-      🌍 Explore the World
-    </h2>
-    <p style="text-align:center; margin-bottom: 2rem; color: #555;">
-      Click on a country to view travel highlights
-    </p>
-    <div id="map" style="height: 400px; align-items:center; width: 80%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);"></div>
-  </section>
-  
-  <script>
-    const map = L.map('map').setView([10, 0], 2);
-  
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; OpenStreetMap'
-    }).addTo(map);
-  
-    const destinations = [
-      { name: "Masai Mara, Kenya", coords: [-1.4, 35.1] },
-      { name: "Tokyo, Japan", coords: [35.68, 139.76] },
-      { name: "Paris, France", coords: [48.85, 2.35] },
-      { name: "New York City, USA", coords: [40.71, -74.00] },
-      { name: "Machu Picchu, Peru", coords: [-13.16, -72.54] },
-      { name: "Sydney, Australia", coords: [-33.87, 151.21] },
-      { name: "Antarctica", coords: [-75.25, -0.07] }
-    ];
-  
-    destinations.forEach(dest => {
-      const marker = L.marker(dest.coords).addTo(map);
-      marker.bindPopup(`<strong style="color:#0077b6">${dest.name}</strong><br><a href="destination.html" style="color:#00b4d8;">View Destination</a>`);
-    });
-  </script>
-  
    
-    <section class="container_1">
+    <section data-aos="fade-up-left"class="container_1">
         <div class="testimonials-container myswiper">
             <div class="testimonial-card swipper-wrapper">
             <div class="swiper-slide">
         <div class="testimonial mySwiper">
             <div class="testi-content swiper-wrapper">
-                <div class="slide swiper-slide">
+                <div data-aos="flip-up" class="slide swiper-slide">
                     <img src="member-2.png" class="image" alt="">
                 <h4 id="paragraph_2">this is my review about this company</h4>
                 <i class="fa-solid fa-quote-left quote-icon"></i>
@@ -228,11 +255,11 @@
                         <span class="names">Lammy</span>
                         <span class="jobs">Web dev</span>
                     </div>
-                    <div class="star-rating">
+                    <div data-aos="zoom-out-up"class="star-rating">
                         <span>&#9733;&#9733;&#9733;&#9733;&#9734;</span>
                     </div>
                 </div>
-                <div class="slide swiper-slide">
+                <div  data-aos="flip-up"class="slide swiper-slide">
                     <img src="member-1.png" class="image" alt="">
                 <h4 id="paragraph_3">this is my review about this company</h4>
                 <i class="fa-solid fa-quote-left quote-icon"></i>
@@ -240,11 +267,11 @@
                         <span class="names">Lamshi</span>
                         <span class="jobs">Web dev</span>
                     </div>
-                    <div class="star-rating">
+                    <div data-aos="zoom-out-up"class="star-rating">
                         <span>&#9733;&#9733;&#9733;&#9733;&#9734;</span>
                     </div>
                 </div>
-                <div class="slide swiper-slide">
+                <div data-aos="flip-up" class="slide swiper-slide">
                     <img src="photo2.png" class="image" alt="">
                     <h4 id="paragraph_4">"A truly exceptional service. The team was knowledgeable and responsive. Highly recommended!"</h4>
                 <i class="fa-solid fa-quote-left quote-icon"></i>
@@ -252,11 +279,11 @@
                         <span class="names">Lammy</span>
                         <span class="jobs">Web dev</span>
                     </div>
-                    <div class="star-rating">
+                    <div data-aos="zoom-out-up" class="star-rating">
                         <span>&#9733;&#9733;&#9733;&#9733;&#9734;</span>
                     </div>
                 </div>
-                <div class="slide swiper-slide">
+                <div data-aos="flip-up" class="slide swiper-slide">
                     <img src="member-4.png" class="image" alt="">
                 <h4 id="paragraph_">this is my review about this company</h4>
                 <i class="fa-solid fa-quote-left quote-icon"></i>
@@ -264,11 +291,11 @@
                         <span class="names">Lammy</span>
                         <span class="jobs">Web dev</span>
                     </div>
-                    <div class="star-rating">
+                    <div data-aos="zoom-out-up" class="star-rating">
                         <span>&#9733;&#9733;&#9733;&#9733;&#9734;</span>
                     </div>
                 </div>
-                <div class="slide swiper-slide">
+                <div data-aos="flip-up" class="slide swiper-slide">
                     <img src="member-8.png" class="image" alt="">
                     <h4 id="paragraph_5">"Professional, reliable, and always willing to go the extra mile. I couldn't be happier with my experience."</h4>
                 <i class="fa-solid fa-quote-left quote-icon"></i>
@@ -276,11 +303,11 @@
                         <span class="names">Lammy</span>
                         <span class="jobs">Web dev</span>
                     </div>
-                    <div class="star-rating">
+                    <div data-aos="zoom-out-up" class="star-rating">
                         <span>&#9733;&#9733;&#9733;&#9733;&#9734;</span>
                     </div>
                 </div>
-                <div class="slide swiper-slide">
+                <div data-aos="flip-up" class="slide swiper-slide">
                     <img src="member-7.png" class="image" alt="">
                 <h4 id="paragraph_">this is my review about this company</h4>
                 <i class="fa-solid fa-quote-left quote-icon"></i>
@@ -288,7 +315,7 @@
                         <span class="names">Lammy</span>
                         <span class="jobs">Web dev</span>
                     </div>
-                    <div class="star-rating">
+                    <div data-aos="zoom-out-up" class="star-rating">
                         <span>&#9733;&#9733;&#9733;&#9733;&#9734;</span>
                     </div>
                 </div>
@@ -302,8 +329,12 @@
         <script src="html/js/swiper-bundle.min.js"></script>
 
         <script src="html/js/swipe.js"></script>    
-  
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+  AOS.init();
+</script>
     </section>
+
     <section class="About">
         <div class="wht">
 
@@ -311,15 +342,15 @@
 
     </section>
    
-   <footer style="background: #065986; color: white; padding: 2rem 1rem;">
+   <footer data-aos="zoom-out" style="background: #065986; color: white; padding: 2rem 1rem;">
   <div style="display: flex; flex-wrap: wrap; justify-content: space-around; max-width: 1200px; margin: auto;">
     
-    <div style="flex: 1; min-width: 200px; margin-bottom: 1.5rem;">
+    <div data-aos="zoom-out-right"style="flex: 1; min-width: 200px; margin-bottom: 1.5rem;">
       <h3 style="color: #fcbf49;">Travel Safe</h3>
       <p>Your go-to destination for unforgettable travel experiences around the world. Explore, dream, and discover with us.</p>
     </div>
 
-    <div style="flex: 1; min-width: 200px; margin-bottom: 1.5rem;">
+    <div data-aos="zoom-in-right" style="flex: 1; min-width: 200px; margin-bottom: 1.5rem;">
       <h4>Company</h4>
       <ul style="list-style: none; padding: 0;">
         <li><a href="about.html" style="color: white; text-decoration: none;">About Us</a></li>
@@ -329,7 +360,7 @@
       </ul>
     </div>
 
-    <div style="flex: 1; min-width: 200px; margin-bottom: 1.5rem;">
+    <div data-aos="zoom-out-left" style="flex: 1; min-width: 200px; margin-bottom: 1.5rem;">
       <h4>Destinations</h4>
       <ul style="list-style: none; padding: 0;">
         <li><a href="destination.html" style="color: white; text-decoration: none;">Top Picks</a></li>
@@ -338,7 +369,7 @@
       </ul>
     </div>
 
-    <div style="flex: 1; min-width: 200px; margin-bottom: 1.5rem;">
+    <div data-aos="zoom-out-right" style="flex: 1; min-width: 200px; margin-bottom: 1.5rem;">
       <h4>Follow Us</h4>
       <a href="https://web.facebook.com" style="color: #fcbf49; margin-right: 10px;"><i class="fab fa-facebook fa-lg"></i></a>
       <a href="https://x.com/Emmanuel176757" style="color: #fcbf49; margin-right: 10px;"><i class="fab fa-twitter fa-lg"></i></a>
@@ -350,6 +381,10 @@
   <div style="text-align: center; border-top: 1px solid #fcbf49; margin-top: 2rem; padding-top: 1rem; font-size: 0.9rem;">
     &copy; 2025 Travel Safe. All rights reserved.
   </div>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+  AOS.init();
+</script>
 </footer>
 
       

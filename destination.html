@@ -10,27 +10,43 @@
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      margin: 0;
+    
+      
+    }
+.background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+         margin: 0;
       background: #f4f4f4;
       color: #333;
-      background-image: url("https://images.unsplash.com/photo-1504598318550-17eba1008a68?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHRyYXZlbHxlbnwwfHwwfHx8MA%3D%3D");
+      background-image: url("https://cdn.pixabay.com/photo/2023/09/01/18/02/eyeglasses-8227429_1280.jpg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       background-attachment: fixed;
+      filter: blur(6px);
+      z-index: -1;
+ 
     }
-
     header {
       background: #0077b6;
       color: white;
-      padding: 1rem 1rem;
+      padding: 4.1rem ;
       text-align: center;
-      margin-top:50px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-bottom: 4px solid #00b4d8;
+      border-radius: 7px;
     }
 
     header h1 {
       margin: 0;
-      font-size: 2.5rem;
+      font-style: italic;
+      font-size: 2rem ;
+      align-items: center;
+      color: black;
     }
 
     .container {
@@ -71,6 +87,7 @@
       overflow: hidden;
       transition: transform 0.2s;
       position: relative;
+      margin: 0 10px;
     }
 
     .card img {
@@ -181,7 +198,7 @@
     }
   </style>
 </head>
-<body>
+<body >
   <nav class="navbar">
     <div class="navbar-brand" style="color: white;">Travel safe</div>
     <div class="links">
@@ -204,10 +221,10 @@
 <script src="html/js/nav.js" defer></script>
 
 <header>
-  <h1>Explore Top Travel Destinations</h1>
-  <p>One amazing location at a time from each continent</p>
+  <h1>Explore amazing location at a time from each continent</h1>
+ 
 </header>
-
+<div class="background"></div>
 <div class="container" id="continents-container"></div>
 
 <footer>
@@ -313,7 +330,7 @@
           img: "https://res.cloudinary.com/rainforest-cruises/image/upload/c_fill,g_auto,w_325,h_325,dpr_2/c_fill,g_auto/f_auto,q_auto/v1688484068/Antarctica-Small-Groups-Hero_6136a4f37.jpg?_i=AA",
           desc: "Icebergs and penguins.",
           more: "Sail through Drake Passage and explore glacial landscapes.",
-          link: 'antarctica.html'
+          link: 'Antarctica.html'
         }
       ]
     }
@@ -354,3 +371,5 @@
     }
   });
 </script>
+</body>
+</html>

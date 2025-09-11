@@ -1,0 +1,59 @@
+    .weather-widget {
+        margin: 20px auto;
+        padding: 10px;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        font-size: 1.2em;
+      }
+     .attractions {
+ max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+    .attractions li {
+        margin-bottom: 10px;
+        list-style-type: disc;
+      }
+.attractions.show {
+  max-height: 2000px;
+  transition: max-height 0.5s ease-in;
+}
+.attractions img {
+    width: 100%;
+    height: 150px; /* uniform height */
+    object-fit: cover; /* keep aspect ratio while f<illing */
+    border-radius: 5px;
+}
+  
+      .toggle-btn {
+        margin-top: 10px;
+        cursor: pointer;
+        color: #ffd700;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+        .weather-status {
+    font-size: 0.9em;
+    font-weight: normal;
+    color: #ffd700;
+    margin-left: 10px;
+    display: inline-block;
+  }
+  .slider {
+    width: 100%;
+    height: 400px; /* match the height you want for all sliders */
+    overflow: hidden;
+    padding: 15px; /* same padding as others */
+    box-sizing: border-box; /* ensures padding doesn't affect size */
+}
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ensures it fills the container nicely */
+    display: block;
+    border-radius: 5px;
+}

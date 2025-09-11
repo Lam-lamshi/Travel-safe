@@ -585,8 +585,25 @@ font: 1.05em sans-serif;
   opacity: 1;
   animation: none;
   }
+  .dest{
+    margin-top: 29px;
+    margin-left: 30%;
+    
+    width: 65%;
+    
+    height: 100%;
+    border-radius: 7px;
+   
+    
+  }
+  .world{
+margin-top: 20px;
+height: 100%;
+width: 50%;
+margin-left: 45px;
+border-radius: 5px;
+  }
   
-  /* Buttons */
   .buttons {
   width: 100px;
   text-align: center;

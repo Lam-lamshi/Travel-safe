@@ -5,8 +5,10 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="gen_dest.css" rel="stylesheet"/>
+<link rel="stylesheet" href="deco.css"/>
 <link href="navbar.css" rel="stylesheet"/>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+ <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <title>Europe</title>
 <style>
       .weather-widget {
@@ -36,7 +38,7 @@
 .attractions img {
     width: 100%;
     height: 150px; /* uniform height */
-    object-fit: cover; /* keep aspect ratio while filling */
+    object-fit: cover; /* keep aspect ratio while f<illing */
     border-radius: 5px;
 }
   
@@ -71,7 +73,7 @@
 
 
     </style>
-</head>
+</link></head>
 <body style="background-color:grey;">
 <nav class="navbar">
 <div class="navbar-brand" style="color: #444;">Travel safe</div>
@@ -95,7 +97,7 @@
 <div class="weather-widget">
   🌍 Check the <a href="https://weather.com/weather/today" style="color: #ffd700; text-decoration: underline;" target="_blank">latest weather</a> for your European destination!
 </div>
-<div class="blog-container">
+<div data-aos="fade-right"  class="blog-container">
 <!-- Italy Destination with Attraction List -->
 <div class="blog-post" data-title="Italy">
 <div class="slider" data-slider="">
@@ -105,8 +107,8 @@
 <h2>Italy <span class="weather-status" id="weather-Italy">Loading...</span></h2>
 <p>"Walking through the Colosseum was like stepping back in time. The stories of gladiators and emperors came alive. We ended our day with gelato by the Trevi Fountain – pure magic."</p>
 <div class="destination-links">
-<a href="https://www.booking.com/searchresults.html?ss=Italy+food" target="_blank">Food</a> |
-        <a href="https://www.booking.com/searchresults.html?ss=Italy+hotels" target="_blank">Hotels</a>
+<a href="https://www.booking.com/searchresults.html?ss=Italy+food" onclick="return travel()" target="_blank">Food</a> |
+        <a href="https://www.booking.com/searchresults.html?ss=Italy+hotels"onclick="return travel()"  target="_blank">Hotels</a>
 </div>
 <div class="toggle-btn">Show Top 5 Attractions</div>
 <ul class="attractions">
@@ -134,7 +136,9 @@
 </div>
 </div>
 </div>
-<div class="blog-container">
+
+
+<div data-aos="fade-left" class="blog-container">
 <div class="blog-post" data-title="France">
 <div class="slider" data-slider="">
 <img alt="Eiffel Tower Paris" class="active" src="https://cdn.pixabay.com/photo/2015/10/06/18/26/eiffel-tower-975004_1280.jpg"/>
@@ -143,8 +147,8 @@
 <h2>France <span class="weather-status" id="weather-France">Loading...</span></h2>
 <p>"A picnic under the Eiffel Tower at sunset felt straight out of a movie. Wine, cheese, and the golden hour view – it’s the most romantic experience we've ever had."</p>
 <div class="destination-links">
-<a href="https://www.booking.com/searchresults.html?ss=France+food" target="_blank">Food</a> |
-      <a href="https://www.booking.com/searchresults.html?ss=France+hotels" target="_blank">Hotels</a>
+<a href="https://www.booking.com/searchresults.html?ss=France+food"onclick="return travel()"  target="_blank">Food</a> |
+      <a href="https://www.booking.com/searchresults.html?ss=France+hotels" onclick="return travel()"  target="_blank">Hotels</a>
 </div>
 <div class="toggle-btn">Show Top 5 Attractions</div>
 <ul class="attractions">
@@ -162,7 +166,9 @@
 </div>
 </div>
 </div>
-<div class="blog-container">
+
+
+<div data-aos="fade-right" class="blog-container">
 <!-- Spain Destination with Attraction List -->
 <div class="blog-post" data-title="Spain">
 <div class="slider" data-slider="">
@@ -172,8 +178,8 @@
 <h2>Spain <span class="weather-status" id="weather-Spain">Loading...</span></h2>
 <p>"The passion and energy of the flamenco dancers in Seville was hypnotic. The rhythms, the clapping, the vibrant dresses – I felt the spirit of Spain in every beat."</p>
 <div class="destination-links">
-<a href="https://www.booking.com/searchresults.html?ss=Spain+food" target="_blank">Food</a> |
-      <a href="https://www.booking.com/searchresults.html?ss=Spain+hotels" target="_blank">Hotels</a>
+<a href="https://www.booking.com/searchresults.html?ss=Spain+food"onclick="return travel()"  target="_blank">Food</a> |
+      <a href="https://www.booking.com/searchresults.html?ss=Spain+hotels" onclick="return travel()"  target="_blank">Hotels</a>
 </div>
 <div class="toggle-btn">Show Top 5 Attractions</div>
 <ul class="attractions">
@@ -186,7 +192,9 @@
 </div>
 </div>
 </div>
-<div class="blog-container">
+
+
+<div data-aos="fade-left" class="blog-container">
 <div class="blog-post" data-title="Greece">
 <div class="slider" data-slider="">
 <img alt="Santorini Sunset" class="active" src="https://cdn.pixabay.com/photo/2014/01/21/18/38/santorini-249322_1280.jpg"/>
@@ -195,8 +203,8 @@
 <h2>Greece <span class="weather-status" id="weather-Greece">Loading...</span></h2>
 <p>"No words can describe the Santorini sunset from Oia – orange, pink, and gold reflecting on white houses and blue domes. It’s a postcard moment that stays in your heart."</p>
 <div class="destination-links">
-<a href="https://www.booking.com/searchresults.html?ss=Greece+food" target="_blank">Food</a> |
-      <a href="https://www.booking.com/searchresults.html?ss=Greece+hotels" target="_blank">Hotels</a>
+<a href="https://www.booking.com/searchresults.html?ss=Greece+food" onclick="return travel()" target="_blank">Food</a> |
+      <a href="https://www.booking.com/searchresults.html?ss=Greece+hotels" onclick="return travel()"  target="_blank">Hotels</a>
 </div>
 <div class="toggle-btn">Show Top 5 Attractions</div>
 <ul class="attractions">
@@ -209,7 +217,9 @@
 </div>
 </div>
 </div>
-<div class="blog-container">
+
+
+<div data-aos="fade-right" class="blog-container">
 <!-- Portugal Destination with Attraction List -->
 <div class="blog-post" data-title="Portugal">
 <div class="slider" data-slider="">
@@ -219,8 +229,8 @@
 <h2>Portugal <span class="weather-status" id="weather-Portugal">Loading...</span></h2>
 <p>"We hopped on Tram 28 and glided through Lisbon’s old streets and hills. It was charming, colorful, and felt like riding through history. A must-do!"</p>
 <div class="destination-links">
-<a href="https://www.booking.com/searchresults.html?ss=Portugal+food" target="_blank">Food</a> |
-          <a href="https://www.booking.com/searchresults.html?ss=Portugal+hotels" target="_blank">Hotels</a>
+<a href="https://www.booking.com/searchresults.html?ss=Portugal+food" onclick="return travel()"  target="_blank">Food</a> |
+          <a href="https://www.booking.com/searchresults.html?ss=Portugal+hotels" onclick="return travel()" target="_blank">Hotels</a>
 </div>
 <div class="toggle-btn">Show Top 5 Attractions</div>
 <ul class="attractions">
@@ -233,7 +243,9 @@
 </div>
 </div>
 </div>
-<div class="blog-container">
+
+
+<div data-aos="fade-left" class="blog-container">
 <div class="blog-post" data-title="Switzerland">
 <div class="slider" data-slider="">
 <img alt="Swiss Alps" class="active" src="https://cdn.pixabay.com/photo/2021/03/21/22/56/bridge-6113301_1280.jpg"/>
@@ -242,8 +254,8 @@
 <h2>Switzerland <span class="weather-status" id="weather-Switzerland">Loading...</span></h2>
 <p>"The panoramic train ride through the Swiss Alps was unreal – green valleys, snow-capped peaks, and quiet alpine villages. It’s like stepping into a fairytale."</p>
 <div class="destination-links">
-<a href="https://www.booking.com/searchresults.html?ss=Switzerland+food" target="_blank">Food</a> |
-          <a href="https://www.booking.com/searchresults.html?ss=Switzerland+hotels" target="_blank">Hotels</a>
+<a href="https://www.booking.com/searchresults.html?ss=Switzerland+food" onclick="return travel()" target="_blank">Food</a> |
+          <a href="https://www.booking.com/searchresults.html?ss=Switzerland+hotels" onclick="return travel()"  target="_blank">Hotels</a>
 </div>
 <div class="toggle-btn">Show Top 5 Attractions</div>
 <ul class="attractions">
@@ -256,7 +268,9 @@
 </div>
 </div>
 </div>
-<div class="blog-container">
+
+
+<div data-aos="fade-right" class="blog-container">
 <div class="blog-post" data-title="Austria">
 <div class="slider" data-slider="">
 <img alt="Vienna" class="active" src="https://cdn.pixabay.com/photo/2019/08/05/22/38/st-charless-church-4387053_1280.jpg"/>
@@ -265,8 +279,8 @@
 <h2>Austria <span class="weather-status" id="weather-Austria">Loading...</span></h2>
 <p>"The classical concerts in Vienna brought Mozart and Strauss to life. Every corner of this city sings with imperial charm and music history."</p>
 <div class="destination-links">
-<a href="https://www.booking.com/searchresults.html?ss=Austria+food" target="_blank">Food</a> |
-          <a href="https://www.booking.com/searchresults.html?ss=Austria+hotels" target="_blank">Hotels</a>
+<a href="https://www.booking.com/searchresults.html?ss=Austria+food" onclick="return travel()" target="_blank">Food</a> |
+          <a href="https://www.booking.com/searchresults.html?ss=Austria+hotels"onclick="return travel()"  target="_blank">Hotels</a>
 </div>
 <div class="toggle-btn">Show Top 5 Attractions</div>
 <ul class="attractions">
@@ -279,7 +293,9 @@
 </div>
 </div>
 </div>
-<div class="blog-container">
+
+
+<div data-aos="fade-left" class="blog-container">
 <div class="blog-post" data-title="Croatia">
 <div class="slider" data-slider="">
 <img alt="Dubrovnik" class="active" src="https://cdn.pixabay.com/photo/2017/10/16/22/19/dubrovnik-2858838_1280.jpg"/>
@@ -288,8 +304,8 @@
 <h2>Croatia <span class="weather-status" id="weather-Croatia">Loading...</span></h2>
 <p>"Walking the ancient city walls of Dubrovnik felt like stepping into a movie. The Adriatic views, red rooftops, and sea breeze were unforgettable."</p>
 <div class="destination-links">
-<a href="https://www.booking.com/searchresults.html?ss=Croatia+food" target="_blank">Food</a> |
-      <a href="https://www.booking.com/searchresults.html?ss=Croatia+hotels" target="_blank">Hotels</a>
+<a href="https://www.booking.com/searchresults.html?ss=Croatia+food" onclick="return travel()" target="_blank">Food</a> |
+      <a href="https://www.booking.com/searchresults.html?ss=Croatia+hotels" onclick="return travel()" target="_blank">Hotels</a>
 </div>
 <div class="toggle-btn">Show Top 5 Attractions</div>
 <ul class="attractions">
@@ -302,7 +318,9 @@
 </div>
 </div>
 </div>
-<div class="blog-container">
+
+
+<div data-aos="fade-right" class="blog-container">
 <!-- Netherlands Destination with Attraction List -->
 <div class="blog-post" data-title="Netherlands">
 <div class="slider" data-slider="">
@@ -312,8 +330,8 @@
 <h2>Netherlands <span class="weather-status" id="weather-Netherlands">Loading...</span></h2>
 <p>"A canal cruise through Amsterdam at dusk was magical – the lights, the bridges, the peaceful rhythm of water. Truly a dreamy European vibe."</p>
 <div class="destination-links">
-<a href="https://www.booking.com/searchresults.html?ss=Netherlands+food" target="_blank">Food</a> |
-      <a href="https://www.booking.com/searchresults.html?ss=Netherlands+hotels" target="_blank">Hotels</a>
+<a href="https://www.booking.com/searchresults.html?ss=Netherlands+food" onclick="return travel()"  target="_blank">Food</a> |
+      <a href="https://www.booking.com/searchresults.html?ss=Netherlands+hotels" onclick="return travel()" target="_blank">Hotels</a>
 </div>
 <div class="toggle-btn">Show Top 5 Attractions</div>
 <ul class="attractions">
@@ -326,7 +344,7 @@
 </div>
 </div>
 </div>
-<div class="blog-container">
+<div data-aos="fade-right" class="blog-container">
 <!-- Germany Destination with Attraction List -->
 <div class="blog-post" data-title="Germany">
 <div class="slider" data-slider="">
@@ -336,8 +354,8 @@
 <h2>Germany <span class="weather-status" id="weather-Germany">Loading...</span></h2>
 <p>"Berlin was a surprising blend of history and creativity. From Checkpoint Charlie to street art in Kreuzberg, it’s bold, deep, and inspiring."</p>
 <div class="destination-links">
-<a href="https://www.booking.com/searchresults.html?ss=Germany+food" target="_blank">Food</a> |
-      <a href="https://www.booking.com/searchresults.html?ss=Germany+hotels" target="_blank">Hotels</a>
+<a href="https://www.booking.com/searchresults.html?ss=Germany+food"onclick="return travel()"  target="_blank">Food</a> |
+      <a href="https://www.booking.com/searchresults.html?ss=Germany+hotels" onclick="return travel()"  target="_blank">Hotels</a>
 </div>
 <div class="toggle-btn">Show Top 5 Attractions</div>
 <ul class="attractions">
@@ -350,7 +368,9 @@
 </div>
 </div>
 </div>
-<div class="blog-container">
+
+
+<div data-aos="fade-left" class="blog-container">
 <div class="blog-post" data-title="Czech Republic">
 <div class="slider" data-slider="">
 <img alt="Prague Castle" class="active" src="https://cdn.pixabay.com/photo/2014/07/31/18/11/prague-castle-406558_1280.jpg"/>
@@ -359,21 +379,23 @@
 <h2>Czech Republic <span class="weather-status" id="weather-Czech Republic">Loading...</span></h2>
 <p>"Prague’s old town is straight out of a fairytale. Cobblestone streets, gothic towers, and the Charles Bridge at dawn – truly magical!"</p>
 <div class="destination-links">
-<a href="https://www.booking.com/searchresults.html?ss=Czech+Republic+food" target="_blank">Food</a> |
-      <a href="https://www.booking.com/searchresults.html?ss=Czech+Republic+hotels" target="_blank">Hotels</a>
+<a href="https://www.booking.com/searchresults.html?ss=Czech+Republic+food"  onclick="return travel()" target="_blank">Food</a> |
+      <a href="https://www.booking.com/searchresults.html?ss=Czech+Republic+hotels" onclick="return travel()"  target="_blank">Hotels</a>
 </div>
 <div class="toggle-btn">Show Top 5 Attractions</div>
 <ul class="attractions">
-<li><strong><a href="https://www.booking.com/landmark/cz/prague-castle.html" target="_blank">Prague Castle</a></strong><br/><img alt="Prague Castle" id="czechrepublicAttraction1" src=""/></li>
-<li><strong><a href="https://www.booking.com/landmark/cz/charles-bridge.html" target="_blank">Charles Bridge</a></strong><br/><img alt="Charles Bridge" id="czechrepublicAttraction2" src=""/></li>
-<li><strong><a href="https://www.booking.com/landmark/cz/old-town-square.html" target="_blank">Old Town Square</a></strong><br/><img alt="Old Town" id="czech republicAttraction3" src=""/></li>
-<li><strong><a href="https://www.booking.com/landmark/cz/st-vitus-cathedral.html" target="_blank">St. Vitus Cathedral</a></strong><br/><img alt="St. Vitus" id="czechrepublicAttraction4" src=""/></li>
-<li><strong><a href="https://www.booking.com/landmark/cz/astronomical-clock.html" target="_blank">Astronomical Clock</a></strong><br/><img alt="Astronomical Clock" id="czechrepublicAttraction5" src=""/></li>
+<li><strong><a href="https://www.booking.com/landmark/cz/prague-castle.html" target="_blank">Prague Castle</a></strong><br/><img alt="Prague Castle" id="czechAttraction1" src=""/></li>
+<li><strong><a href="https://www.booking.com/landmark/cz/charles-bridge.html" target="_blank">Charles Bridge</a></strong><br/><img alt="Charles Bridge" id="czechAttraction2" src=""/></li>
+<li><strong><a href="https://www.booking.com/landmark/cz/old-town-square.html" target="_blank">Old Town Square</a></strong><br/><img alt="Old Town" id="czechAttraction3" src=""/></li>
+<li><strong><a href="https://www.booking.com/landmark/cz/st-vitus-cathedral.html" target="_blank">St.Vitus Cathedral</a></strong><br/><img alt="St.Vitus" id="czechAttraction4" src=""/></li>
+<li><strong><a href="https://www.booking.com/landmark/cz/astronomical-clock.html" target="_blank">Astronomical Clock</a></strong><br/><img alt="Astronomical Clock" id="czechAttraction5" src=""/></li>
 </ul>
 </div>
 </div>
 </div>
-<div class="blog-container">
+
+
+<div data-aos="fade-right" class="blog-container">
 <!-- Norway Destination with Attraction List -->
 <div class="blog-post" data-title="Norway">
 <div class="slider" data-slider="">
@@ -383,13 +405,13 @@
 <h2>Norway <span class="weather-status" id="weather-Norway">Loading...</span></h2>
 <p>"Cruising through the Norwegian fjords is like floating through a dream – towering cliffs, emerald waters, and peaceful silence everywhere."</p>
 <div class="destination-links">
-<a href="https://www.booking.com/searchresults.html?ss=Norway+food" target="_blank">Food</a> |
-      <a href="https://www.booking.com/searchresults.html?ss=Norway+hotels" target="_blank">Hotels</a>
+<a href="https://www.booking.com/searchresults.html?ss=Norway+food" onclick="return travel()" target="_blank">Food</a> |
+      <a href="https://www.booking.com/searchresults.html?ss=Norway+hotels"  onclick="return travel()" target="_blank">Hotels</a>
 </div>
 <div class="toggle-btn">Show Top 5 Attractions</div>
 <ul class="attractions">
-<li><strong><a href="https://www.booking.com/landmark/no/geirangerfjord.html" target="_blank">Geirangerfjord</a></strong><br/><img alt="Geirangerfjord" id="norwayAttraction1" src=""/></li>
-<li><strong><a href="https://www.booking.com/landmark/no/preikestolen.html" target="_blank">Pulpit Rock</a></strong><br/><img alt="Pulpit Rock" id="norwayAttraction2" src=""/></li>
+<li><strong><a href="https://www.booking.com/landmark/no/geirangerfjord.html" onclick="return travel()" target="_blank">Geirangerfjord</a></strong><br/><img alt="Geirangerfjord" id="norwayAttraction1" src=""/></li>
+<li><strong><a href="https://www.booking.com/landmark/no/preikestolen.html" onclick="return travel()" target="_blank">Pulpit Rock</a></strong><br/><img alt="Pulpit Rock" id="norwayAttraction2" src=""/></li>
 <li><strong><a href="https://www.booking.com/landmark/no/flam.html" target="_blank">Flåm Railway</a></strong><br/><img alt="Flam Railway" id="norwayAttraction3" src=""/></li>
 <li><strong><a href="https://www.booking.com/landmark/no/bryggen.html" target="_blank">Bryggen Wharf</a></strong><br/><img alt="Bryggen" id="norwayAttraction4" src=""/></li>
 <li><strong><a href="https://www.booking.com/landmark/no/tromso.html" target="_blank">Tromsø (Northern Lights)</a></strong><br/><img alt="Tromsø" id="norwayAttraction5" src=""/></li>
@@ -397,7 +419,9 @@
 </div>
 </div>
 </div>
-<div class="blog-container">
+
+
+<div data-aos="fade-left" class="blog-container">
 <!-- Iceland Destination with Attraction List -->
 <div class="blog-post" data-title="Iceland">
 <div class="slider" data-slider="">
@@ -407,20 +431,25 @@
 <h2>Iceland <span class="weather-status" id="weather-Iceland">Loading...</span></h2>
 <p>"Iceland is wild, pure, and unforgettable. The waterfalls roar, geysers erupt, and the Blue Lagoon melts all your stress away."</p>
 <div class="destination-links">
-<a href="https://www.booking.com/searchresults.html?ss=Iceland+food" target="_blank">Food</a> |
-      <a href="https://www.booking.com/searchresults.html?ss=Iceland+hotels" target="_blank">Hotels</a>
+<a href="https://www.booking.com/searchresults.html?ss=Iceland+food" onclick="return travel()" target="_blank">Food</a> |
+      <a href="https://www.booking.com/searchresults.html?ss=Iceland+hotels" onclick="return travel()" target="_blank">Hotels</a>
 </div>
 <div class="toggle-btn">Show Top 5 Attractions</div>
 <ul class="attractions">
-<li><strong><a href="https://www.booking.com/landmark/is/blue-lagoon.html" target="_blank">Blue Lagoon</a></strong><br/><img alt="Blue Lagoon" id="icelandAttraction1"/><img alt="Blue Lagoon" id="icelandAttraction2" src=""/></li>
-<li><strong><a href="https://www.booking.com/landmark/is/gullfoss.html" target="_blank">Gullfoss Waterfall</a></strong><br/><img alt="Gullfoss" id="icelandAttraction3" src=""/></li>
-<li><strong><a href="https://www.booking.com/landmark/is/thingvellir-national-park.html" target="_blank">Þingvellir National Park</a></strong><br/><img alt="Thingvellir" id="icelandAttraction4" src=""/></li>
-<li><strong><a href="https://www.booking.com/landmark/is/seljalandsfoss.html" target="_blank">Seljalandsfoss Waterfall</a></strong><br/><img alt="Seljalandsfoss" id="icelandAttraction5" src=""/></li>
-<li><strong><a href="https://www.booking.com/landmark/is/jokulsarlon.html" target="_blank">Jökulsárlón Glacier Lagoon</a></strong><br/><img alt="Jökulsárlón" id="icelandAttraction6" src=""/></li>
+<li><strong><a href="https://www.booking.com/landmark/is/blue-lagoon.html" target="_blank">Blue Lagoon</a></strong><br/><img alt="Blue Lagoon" id="icelandAttraction1" src=""/></li>
+<li><strong><a href="https://www.booking.com/landmark/is/gullfoss.html" target="_blank">Gullfoss Waterfall</a></strong><br/><img alt="Gullfoss" id="icelandAttraction2" src=""/></li>
+<li><strong><a href="https://www.booking.com/landmark/is/thingvellir-national-park.html" target="_blank">Þingvellir National Park</a></strong><br/><img alt="Thingvellir" id="icelandAttraction3" src=""/></li>
+<li><strong><a href="https://www.booking.com/landmark/is/seljalandsfoss.html" target="_blank">Seljalandsfoss Waterfall</a></strong><br/><img alt="Seljalandsfoss" id="icelandAttraction4" src=""/></li>
+<li><strong><a href="https://www.booking.com/landmark/is/jokulsarlon.html" target="_blank">Jökulsárlón Glacier Lagoon</a></strong><br/><img alt="Jökulsárlón" id="icelandAttraction5" src=""/></li>
 </ul>
 </div>
 </div>
 </div>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <script>
+  AOS.init();
+</script>
 <footer>
   © 2025 TravelSafe. All rights reserved.
 </footer>
@@ -470,7 +499,41 @@ document.addEventListener("DOMContentLoaded", () => {
   // Add other countries as needed
 });
 </script>
+<script>
+const pixabayApiKey = "31496043-2fe9cd081b0b76a68243b7e3b";
 
+function fetchPixabayImages(query, elementId) {
+  fetch(`https://pixabay.com/api/?key=${pixabayApiKey}&q=${encodeURIComponent(query)}&image_type=photo`)
+    .then(response => response.json())
+    .then(data => {
+      if (data.hits.length > 0) {
+        document.getElementById(elementId).src = data.hits[0].webformatURL;
+      } else {
+        console.error(`No image found for ${query}`);
+      }
+    })
+    .catch(error => console.error("Pixabay error:", error));
+}
+
+const countriesWithAttractions = {
+  iceland: ["Blue Lagoon", "Gullfoss Waterfall", "Thingvellir National Park", "Reykjavik", "Jokulsarlon Glacier Lagoon"],
+  norway: ["Geirangerfjord", "Oslo Opera House", "Trolltunga", "Bergen Bryggen", "Lofoten Islands"],
+  czech: ["Charles Bridge", "Prague Castle", "Old Town Square", "Cesky Krumlov", "Kutna Hora"],
+  germany: ["Brandenburg Gate", "Neuschwanstein Castle", "Berlin Wall", "Cologne Cathedral", "Black Forest"],
+  netherlands: ["Keukenhof Gardens", "Amsterdam Canals", "Zaanse Schans", "Van Gogh Museum", "Kinderdijk Windmills"],
+  croatia: ["Dubrovnik Old Town", "Plitvice Lakes", "Hvar Island", "Diocletian's Palace", "Korcula Island"],
+  austria: ["Schonbrunn Palace", "Hallstatt", "St. Stephen's Cathedral", "Hofburg Palace", "Grossglockner Alpine Road"],
+  switzerland: ["Matterhorn", "Lake Geneva", "Jungfraujoch", "Chapel Bridge", "Rhine Falls"],
+  portugal: ["Lisbon", "Porto", "Madeira", "Algarve", "Sintra"]
+};
+
+Object.entries(countriesWithAttractions).forEach(([country, attractions]) => {
+  attractions.forEach((attraction, index) => {
+    const elementId = `${country}Attraction${index + 1}`;
+    fetchPixabayImages(`${attraction} ${country} vacation`, elementId);
+  });
+});
+</script>
 <script>
   // Toggle buttons for showing/hiding attractions
 document.addEventListener('DOMContentLoaded', () => {
@@ -485,52 +548,18 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-</script>
-<script>
-const apiKey = "31496043-2fe9cd081b0b76a68243b7e3b";
-
-function fetchPixabayImage(query, elementId, fallbackQuery = null) {
-  fetch(`https://pixabay.com/api/?key=${apiKey}&q=${encodeURIComponent(query)}&image_type=photo&orientation=horizontal`)
-    .then(response => response.json())
-    .then(data => {
-      if (data.hits.length > 0) {
-        document.getElementById(elementId).src = data.hits[0].webformatURL;
-      } else if (fallbackQuery) {
-        // Retry with a simpler query
-        console.warn(`Retrying with simpler query for ${elementId}: ${fallbackQuery}`);
-        fetchPixabayImage(fallbackQuery, elementId, null);
-      } else {
-        console.warn(`No image found for ${query}`);
+function travel(){
+  if (window.onunload=true){
+    if(confirm("do you want to leave this page ?")){
+    return true;
+        }else{
+    return false;
       }
-    })
-    .catch(error => console.error("Pixabay error:", error));
-}
-
-const countriesWithAttractions = {
-  italy: ["Colosseum", "Trevi Fountain", "Vatican Museums", "Florence Cathedral", "Grand Canal Venice"],
-  france: ["Arc de Triomphe", "Louvre Museum", "Notre Dame Cathedral", "Palace of Versailles", "Montmartre Sacre Coeur"],
-  spain: ["Sagrada Familia", "Alhambra", "Park Guell", "Mezquita Cordoba", "Plaza Mayor Madrid"],
-  greece: ["Acropolis Athens", "Oia Santorini", "Delphi", "Meteora Monasteries", "Parthenon"],
-  portugal: ["Belem Tower", "Jeronimos Monastery", "Lisbon Oceanarium", "Pena Palace Sintra", "Porto Riverside"],
-  switzerland: ["Matterhorn", "Jungfraujoch", "Lake Geneva", "Interlaken", "Chillon Castle"],
-  austria: ["Schonbrunn Palace", "Hofburg Palace", "St. Stephen's Cathedral", "Old Town Salzburg", "Hallstatt"],
-  croatia: ["Dubrovnik Old Town", "Plitvice Lakes", "Diocletian's Palace", "Zlatni Rat Beach", "Krka National Park"],
-  netherlands: ["Rijksmuseum", "Van Gogh Museum", "Keukenhof Gardens", "Anne Frank House", "Kinderdijk Windmills"],
-  germany: ["Brandenburg Gate", "Neuschwanstein Castle", "Berlin Wall Memorial", "Heide Park", "Museum Island"],
-  czechrepublic: ["Prague Castle", "Charles Bridge", "Old Town Square", "St Vitus Cathedral", "Astronomical Clock"],
-  norway: ["Geirangerfjord", "Pulpit Rock", "Flam Railway", "Bryggen Wharf", "Tromso Northern Lights"],
-  iceland: ["Blue Lagoon", "Gullfoss Waterfall", "Thingvellir National Park", "Seljalandsfoss", "Jokulsarlon Glacier Lagoon"]
+  }
+  
+  
 };
 
-// Fetch for each attraction
-Object.entries(countriesWithAttractions).forEach(([country, attractions]) => {
-  attractions.forEach((attraction, index) => {
-    const elementId = `${country}Attraction${index + 1}`;
-    const primaryQuery = `${attraction} ${country} travel`;
-    const fallbackQuery = `${attraction} ${country}`;
-    fetchPixabayImage(primaryQuery, elementId, fallbackQuery);
-  });
-});
-
-</script></body>
+</script>
+</body>
 </html>

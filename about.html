@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
   <link rel="stylesheet" href="deco.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
   <title>About Us - Travel safe</title>
   <style>
     body {
@@ -59,12 +61,23 @@
       flex-wrap: wrap;
       gap: 1rem;
       margin-top: 1rem;
+      height: 50%;
+    }
+     .continent div img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-top: 0.5rem;
+      object-fit: cover;
     }
 
     .continent div {
       flex: 1 1 250px;
       background: #e0f2f1;
       border-left: 5px solid #0077b6;
+      border-bottom: 1px solid #0077b6;
+
+    height:auto;
       padding: 1rem;
       border-radius: 8px;
     }
@@ -102,6 +115,11 @@
         flex-direction: column;
       }
     }
+ 
+   
+   
+
+   
   </style>
 </head>
 <body>
@@ -150,16 +168,20 @@
     <div class="section">
       <h2>Travel the Seven Continents With Us</h2>
       <div class="continent">
-        <div  ><strong>🌍 Africa:</strong> Safaris, deserts, vibrant cities, and ancient wonders.</div>
-        <div><strong>🌍 Asia:</strong> Temples, cuisine, megacities, and traditions that span centuries.</div>
-        <div><strong>🌍 Europe:</strong> Art, architecture, scenic villages, and rich history.</div>
-        <div><strong>🌍 North America:</strong> Skyscrapers, national parks, and cultural diversity.</div>
-        <div><strong>🌍 South America:</strong> Rainforests, Andes mountains, and colorful festivals.</div>
-        <div><strong>🌍 Australia & Oceania:</strong> Coral reefs, islands, beaches, and indigenous heritage.</div>
-        <div><strong>🌍 Antarctica:</strong> Majestic icebergs, penguins, and the adventure of a lifetime.</div>
+        <div  data-aos="fade-down-left" data-aos-duration="800"><strong>🌍 Africa:</strong> Safaris, deserts, vibrant cities, and ancient wonders.<img alt="African" data-aos="fade-up-left"data-aos-duration="800" id="AfricanAttraction1" src=""/></div>
+        <div data-aos="fade-left"data-aos-duration="800"><strong>🌍 Asia:</strong> Temples, cuisine, megacities, and traditions that span centuries.<img alt="Asian" data-aos="fade-up-left" data-aos-duration="800"id="AsianAttraction1" src=""/></div>
+        <div data-aos="fade-right" data-aos-duration="800"><strong>🌍 Europe:</strong> Art, architecture, scenic villages, and rich history.<img alt="Arts" data-aos="fade-up-left" data-aos-duration="800"id="EuropeanAttraction1" src=""/></div>
+        <div data-aos="fade-down-left" data-aos-duration="800"><strong>🌍 North America:</strong> Skyscrapers, national parks, and cultural diversity.<img alt="NorthAmerican" data-aos="fade-up-left"data-aos-duration="800" id="NorthAmericanAttraction1" src=""/></div>
+        <div data-aos="fade-right" data-aos-duration="800"><strong>🌍 South America:</strong> Rainforests, Andes mountains, and colorful festivals.<img alt="SouthAmerican" data-aos="fade-up-left"data-aos-duration="800" id="SouthamericanAttraction1" src=""/></div>
+        <div data-aos="fade-left"data-aos-duration="800"><strong>🌍 Australia & Oceania:</strong> Coral reefs, islands, beaches, and indigenous heritage.<img alt="Austrailian"data-aos="fade-up-left"data-aos-duration="800" id="AustraliaAttraction1" src=""/></div>
+        <div data-aos="fade-down-left"data-aos-duration="500"><strong>🌍 Antarctica:</strong> Majestic icebergs, penguins, and the adventure of a lifetime.<img alt="Antarctican"data-aos="fade-up-left"data-aos-duration="500" id="AntarcticanAttraction1" src=""/></div>
       </div>
     </div>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+  AOS.init();
+</script>
+<script src="bout.js"></script>
     <div class="section">
       <h2>Why Choose Us?</h2>
       <ul>
