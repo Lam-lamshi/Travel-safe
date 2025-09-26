@@ -88,7 +88,7 @@ justify-content: center;
 font: 1.05em sans-serif;
 }
 .destination_pic {
-  background-image: url("pictures/backko.png");
+  background-image: url("/pictures/backko.png");
   background-size: cover;
   min-height: 100vh;
   margin-top: 60px; /* to offset fixed navbar */
@@ -514,7 +514,7 @@ font: 1.05em sans-serif;
   opacity: 1;
 }
 .back_page{
-  background-image:url("pictures/bacci.png");
+  background-image:url("/pictures/bacci.png");
   background-size: cover;
   height: 109vh;
   position: relative;
