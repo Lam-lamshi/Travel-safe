@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Blog</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="/styles/navbar.css">
+  <link rel="stylesheet" href="/styles/deco.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background:rgb(40, 76, 97);
+      color: #333;
+    }
+    header {
+      padding: 2rem 0;
+      text-align: center;
+      color: white;
+    }
+  nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1rem;
+      font-weight: bold;
+    }
+
+    .blog-container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem;
+      display: grid;
+      gap: 2rem;
+    }
+
+    .blog-post {
+      background: rgb(133, 180, 216);
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .blog-post:hover {
+      transform: translateY(-5px) translateX(5px);
+    }
+ .slider {
+      position: relative;
+      width: 90%;
+      max-width: 600px;
+      margin: 0 auto;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+
+    .slider img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover ;
+      position: absolute;
+      object-position: center center;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+
+    .slider img.active {
+      opacity: 1;
+      z-index: 1;
+    }
+
+    .blog-content {
+      padding: 1.5rem;
+    }
+
+    .blog-content h2 {
+      color: #0077b6;
+      margin-bottom: 0.5rem;
+      font-size: 1.5rem;
+    }
+
+    .blog-content p {
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .read-more {
+      display: inline-block;
+      margin-top: 1rem;
+      color: #00b4d8;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .search-bar {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .search-bar input {
+      width: 60%;
+      padding: 0.6rem 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    .search-bar input:focus {
+      outline: none;
+      border-color: #0077b6;
+    }
+.navbar a{
+    color: #fff;
+font-weight: 2px;
+}
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #023e8a;
+      color: white;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+<nav class="navbar">
+    <div class="navbar-brand" style="color: white;">Travel safe</div>
+    <div class="links">
+           <a href="../travel.html" >Home</a>
+           <a href="/Pagestml/about.html">About</a>
+           <a href="/Pagestml/destination.html">Destinations</a>
+           <a href="/Pagestml/blog.html">Blog</a>
+           
+        </div>
+    <div class="action_btn">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="dropdown_menu">
+        <li><a href="../travel.html" >Home</a></li>
+       <li><a href="/Pagestml/about.html">About</a></li>
+        <li><a href="/Pagestml/destination.html">Destinations</a></li>
+        <li><a href="/Pagestml/blog.html">Blog</a></li>
+    </div>
+    <script src="../html/js/nav.js"></script>
+</nav>
+<script src="../html/js/nav.js" defer></script>
+  </header>
+
+ <div class="blog-container">
+    <div class="search-bar">
+      <input type="text" placeholder="Search blog posts..." oninput="filterPosts(this.value)">
+    </div>
+
+<div class="blog-post" data-title="peru">
+      <div class="slider" data-slider>
+        <img src="https://www.machupicchu.org/wp-content/uploads/peru-travel-2025-1024x585.jpg" class="active" alt="Slide 1">
+        <img src="https://www.machupicchu.org/wp-content/uploads/Luxury-travel-Peru-1024x585.jpg" alt="Slide 2">
+        <img src="https://www.machupicchu.org/wp-content/uploads/peru-guided-tours-2025.jpg" alt="Slide 3">
+      </div>
+      <div class="blog-content">
+        <h2>Exploring the Hidden Gems of Peru</h2>
+        <p>Peru offers a treasure trove of natural wonders and cultural richness, far beyond Machu Picchu. Discover quaint villages, breathtaking hikes, and the flavors of Peruvian cuisine. From the Sacred Valley to the Amazon rainforest, each destination reveals its own charm and surprises. Whether you're trekking in the Andes or enjoying ceviche by the coast, Peru invites you to explore with all your senses.</p>
+        <a href="#" class="read-more">Read More</a>
+      </div>
+    </div>
+    <div class="blog-post" data-title="beach">
+      <div class="slider" data-slider>
+        <img src="https://media.istockphoto.com/id/1160947136/photo/couple-relax-on-the-beach-enjoy-beautiful-sea-on-the-tropical-island.jpg?s=612x612&w=0&k=20&c=WJWEH22TFinjI0edzblfH-Nw0cdBfPX5LV8EMvs8Quo=" class="active" alt="Slide 1">
+        <img src="https://www.usnews.com/object/image/00000178-f4f5-d258-a5f9-fdf72e020000/lounge-area-restaurant.jpg?update-time=1725655129282&size=responsive640" alt="Slide 2">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1d/35/a3/72/dreams-onyx-resort-spa.jpg?w=500&h=500&s=1" alt="Slide 3">
+      </div>
+     <div class="blog-content">
+        <h2>Top 5 Beach Destinations for 2025</h2>
+        <p>Looking for your next beach getaway? We’ve rounded up five of the most stunning, relaxing, and Instagram-worthy beach destinations for your 2025 bucket list. From the pristine shores of Seychelles and the vibrant beach life in Rio, to the serene beauty of the Maldives, each destination promises sunshine, soft sands, and sparkling seas. Discover where to go and what to do when you get there.</p>
+        <a href="#" class="read-more">Read More</a>
+      </div>
+    </div>
+     <div class="blog-post" data-title="tokyo">
+      <div class="slider" data-slider>
+        <img src="https://www.travelandleisure.com/thmb/XNm_s_lwnBKzsFv-q6MqpZ7ptFk=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/sakura-temple-pagoda-japan-VISITJP0218-73f37dad55eb4cb5b02ea4ae0eee714d.jpg" class="active" alt="Slide 1">
+        <img src="https://pictures.tripmasters.com/images/packages/japan/tokyo-citylights500.jpg" alt="Slide 2">
+        <img src="https://www.dotwnews.com/modules/image_resize/image_resize.php?image=/uploads/posts/21066.jpeg&width=860&height=468&cropratio=860:468" alt="Slide 3">
+      </div>
+    <div class="blog-content">
+        <h2>A Local's Guide to Tokyo</h2>
+        <p>Tokyo is more than neon lights and skyscrapers. Let a local take you through hidden alleys, authentic sushi spots, and peaceful parks off the tourist radar. From ancient temples in Asakusa to futuristic tech in Akihabara, discover the city's contrasts. Learn the best time to visit, how to navigate like a local, and where to find Tokyo’s best-kept secrets for a truly immersive experience.</p>
+        <a href="#" class="read-more">Read More</a>
+      </div>
+    </div>
+ <div class="blog-post" data-title="hiking">
+      <div class="slider" data-slider>
+        <img src="https://www.cinqueterretour.it/wp-content/uploads/2021/02/Cinque-Terre-trekking800x500-750x500.jpg" class="active" alt="Slide 1">
+        <img src="https://i.natgeofe.com/n/2bd42d61-21f0-4496-ae2d-cd0d219418de/climbing-mount-fuji-japan01.jpg" alt="Slide 2">
+        <img src="https://image-tc.galaxy.tf/wijpeg-3fbt4irm6kfg37e8gb6mjq30h/the-inca-trail-complete-guide-to-prepare-you-for-this-unique-adventure_wide.jpg?crop=23%2C0%2C1454%2C818" alt="Slide 3">
+      </div>
+     <div class="blog-content">
+        <h2>Best Hiking Trails Around the World</h2>
+        <p>For the adventure seekers and nature lovers, these hiking trails offer breathtaking views and unforgettable experiences.
+             Explore the Inca Trail in Peru, the Tongariro Crossing in New Zealand, Mt. Fuji in Japan, and the Clinque Terre in Italy. We'll guide you through preparation tips, trail difficulty, and the best times to go. Your perfect trail might be just a flight away.</p>
+        <a href="#" class="read-more">Read More</a>
+      </div>
+    </div>
+ <div class="blog-post" data-title="Culture">
+      <div class="slider" data-slider>
+        <img src="https://thewanderingdaughter.com/wp-content/uploads/2023/08/Bali-day-tour-10.jpg" class="active" alt="Slide 1">
+        <img src="https://africacelebrates.com/wp-content/uploads/2023/05/culturalPIC.jpg" alt="Slide 2">
+        <img src="https://mettavoyage.com/wp-content/uploads/2022/06/hoi-an-cultural-tourism.jpg" alt="Slide 3">
+      </div>
+       <div class="blog-content">
+        <h2>Cultural Etiquette Every Traveler Should Know</h2>
+        <p>Traveling respectfully is key to a great experience abroad. Learn the do’s and don’ts in different cultures, from bowing in Japan to tipping customs in Europe. Whether you're visiting a bustling bazaar or a sacred temple, this guide will help you blend in gracefully and avoid common travel faux pas.</p>
+        <a href="#" class="read-more">Read More</a>
+      </div>
+    </div>
+    </div>
+<script src="blog.js"></script>
+  <footer>
+    &copy; 2025 TravelSafe. All rights reserved.
+  </footer>
+</body>
+</html>

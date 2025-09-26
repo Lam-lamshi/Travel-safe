@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="/styles/gen_dest.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="/styles/deco.css"/>
+  <link href="/styles/navbar.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <title>South America</title>
+  <style>
+    .attractions {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-out;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 15px;
+    }
+    .attractions.show {
+      max-height: 2000px;
+      transition: max-height 0.5s ease-in;
+    }
+    .attractions img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+    .toggle-btn {
+      margin-top: 10px;
+      cursor: pointer;
+      color: #ffd700;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+    .weather-status {
+      font-size: 0.9em;
+      font-weight: normal;
+      color: #ffd700;
+      margin-left: 10px;
+      display: inline-block;
+    }
+    .slider {
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+      padding: 15px;
+      box-sizing: border-box;
+    }
+    .slider img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body style="background-color:grey;">
+  <nav class="navbar">
+    <div class="navbar-brand" style="color: #444;">Travel safe</div>
+    <div class="links">
+      <a href="travel.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="destination.html">Destinations</a>
+      <a href="blog.html">Blog</a>
+    </div>
+    <div class="action_btn"><i class="fa-solid fa-bars"></i></div>
+    <div class="dropdown_menu">
+      <li><a href="travel.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="destination.html">Destinations</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </div>
+    <script defer src="html/js/nav.js"></script>
+  </nav>
+
+  <div class="weather-widget">
+     <a href="https://weather.com/weather/today" target="_blank" style="color: #ffd700; text-decoration: underline;">latest weather</a> for your South American destination!
+  </div>
+
+  <!-- ===================== RIO DE JANEIRO ===================== -->
+  <div data-aos="fade-right" class="blog-container">
+    <div class="blog-post" data-title="Rio de Janeiro">
+      <div class="slider">
+        <img alt="Rio" src="https://cdn.pixabay.com/photo/2014/09/07/21/29/rio-de-janeiro-438465_1280.jpg"/>
+      </div>
+      <div class="blog-content">
+        <h2>Rio de Janeiro <span class="weather-status" id="weather-Rio">Loading...</span></h2>
+        <p>"Copacabana sunsets, samba beats, and Christ the Redeemer watching over the city—it’s Brazil’s soul."</p>
+        <div class="destination-links">
+          <a href="https://www.booking.com/searchresults.html?ss=Rio+de+Janeiro+food" target="_blank">Food</a> |
+          <a href="https://www.booking.com/searchresults.html?ss=Rio+de+Janeiro+hotels" target="_blank">Hotels</a>
+        </div>
+        <div class="toggle-btn">Show Top 5 Attractions</div>
+   <ul class="attractions">
+  <li><strong><a href="https://www.booking.com/landmark/br/christ-the-redeemer.html" target="_blank">Christ the Redeemer</a></strong><br><img id="rioAttraction1" alt="Christ the Redeemer"></li>
+  <li><strong><a href="https://www.booking.com/landmark/br/sugarloaf-mountain.html" target="_blank">Sugarloaf Mountain</a></strong><br><img id="rioAttraction2" alt="Sugarloaf Mountain"></li>
+  <li><strong><a href="https://www.booking.com/landmark/br/copacabana-beach.html" target="_blank">Copacabana Beach</a></strong><br><img id="rioAttraction3" alt="Copacabana Beach"></li>
+  <li><strong><a href="https://www.booking.com/landmark/br/ipanema-beach.html" target="_blank">Ipanema Beach</a></strong><br><img id="rioAttraction4" alt="Ipanema Beach"></li>
+  <li><strong><a href="https://www.booking.com/landmark/br/maracana-stadium.html" target="_blank">Maracanã Stadium</a></strong><br><img id="rioAttraction5" alt="Maracanã Stadium"></li>
+</ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== SÃO PAULO ===================== -->
+  <div data-aos="fade-left" class="blog-container">
+    <div class="blog-post" data-title="São Paulo">
+      <div class="slider">
+        <img alt="São Paulo" src="https://cdn.pixabay.com/photo/2015/09/23/04/06/sao-paulo-952383_1280.jpg"/>
+      </div>
+      <div class="blog-content">
+        <h2>São Paulo <span class="weather-status" id="weather-SaoPaulo">Loading...</span></h2>
+        <p>"Brazil’s cultural capital—street art, skyscrapers, and endless food adventures."</p>
+        <div class="destination-links">
+          <a href="https://www.booking.com/searchresults.html?ss=Sao+Paulo+food" target="_blank">Food</a> |
+          <a href="https://www.booking.com/searchresults.html?ss=Sao+Paulo+hotels" target="_blank">Hotels</a>
+        </div>
+        <div class="toggle-btn">Show Top 5 Attractions</div>
+    <ul class="attractions">
+  <li><strong><a href="https://www.booking.com/landmark/br/avenida-paulista.html" target="_blank">Avenida Paulista</a></strong><br><img id="saopauloAttraction1" alt="Avenida Paulista"></li>
+  <li><strong><a href="https://www.booking.com/landmark/br/ibirapuera-park.html" target="_blank">Ibirapuera Park</a></strong><br><img id="saopauloAttraction2" alt="Ibirapuera Park"></li>
+  <li><strong><a href="https://www.booking.com/landmark/br/museum-of-art-of-sao-paulo.html" target="_blank">São Paulo Museum of Art</a></strong><br><img id="saopauloAttraction3" alt="MASP"></li>
+  <li><strong><a href="https://www.booking.com/landmark/br/municipal-market-of-sao-paulo.html" target="_blank">Municipal Market</a></strong><br><img id="saopauloAttraction4" alt="Mercado Municipal"></li>
+  <li><strong><a href="https://www.booking.com/landmark/br/liberdade-district.html" target="_blank">Liberdade District</a></strong><br><img id="saopauloAttraction5" alt="Liberdade"></li>
+</ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== BUENOS AIRES ===================== -->
+  <div data-aos="fade-right" class="blog-container">
+    <div class="blog-post" data-title="Buenos Aires">
+      <div class="slider">
+        <img alt="Buenos Aires" src="https://cdn.pixabay.com/photo/2016/02/23/17/08/buenos-aires-1211166_1280.jpg"/>
+      </div>
+      <div class="blog-content">
+        <h2>Buenos Aires <span class="weather-status" id="weather-BuenosAires">Loading...</span></h2>
+        <p>"Tango nights, historic plazas, and vibrant barrios—Buenos Aires feels like Europe in South America."</p>
+        <div class="destination-links">
+          <a href="https://www.booking.com/searchresults.html?ss=Buenos+Aires+food" target="_blank">Food</a> |
+          <a href="https://www.booking.com/searchresults.html?ss=Buenos+Aires+hotels" target="_blank">Hotels</a>
+        </div>
+        <div class="toggle-btn">Show Top 5 Attractions</div>
+       <ul class="attractions">
+  <li><strong><a href="https://www.booking.com/landmark/ar/plaza-de-mayo.html" target="_blank">Plaza de Mayo</a></strong><br><img id="buenosairesAttraction1" alt="Plaza de Mayo"></li>
+  <li><strong><a href="https://www.booking.com/landmark/ar/la-boca.html" target="_blank">La Boca</a></strong><br><img id="buenosairesAttraction2" alt="La Boca"></li>
+  <li><strong><a href="https://www.booking.com/landmark/ar/recoleta-cemetery.html" target="_blank">Recoleta Cemetery</a></strong><br><img id="buenosairesAttraction3" alt="Recoleta Cemetery"></li>
+  <li><strong><a href="https://www.booking.com/landmark/ar/teatro-colon.html" target="_blank">Teatro Colón</a></strong><br><img id="buenosairesAttraction4" alt="Teatro Colón"></li>
+  <li><strong><a href="https://www.booking.com/landmark/ar/obelisk-of-buenos-aires.html" target="_blank">Obelisco</a></strong><br><img id="buenosairesAttraction5" alt="Obelisco"></li>
+</ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== MENDOZA ===================== -->
+  <div data-aos="fade-left" class="blog-container">
+    <div class="blog-post" data-title="Mendoza">
+      <div class="slider">
+        <img alt="Mendoza" src="https://cdn.pixabay.com/photo/2016/07/22/07/19/mendoza-1539315_1280.jpg"/>
+      </div>
+      <div class="blog-content">
+        <h2>Mendoza <span class="weather-status" id="weather-Mendoza">Loading...</span></h2>
+        <p>"Vineyards at the foot of the Andes—Mendoza is Argentina’s wine paradise."</p>
+        <div class="destination-links">
+          <a href="https://www.booking.com/searchresults.html?ss=Mendoza+food" target="_blank">Food</a> |
+          <a href="https://www.booking.com/searchresults.html?ss=Mendoza+hotels" target="_blank">Hotels</a>
+        </div>
+        <div class="toggle-btn">Show Top 5 Attractions</div>
+       <ul class="attractions">
+  <li><strong><a href="https://www.booking.com/landmark/ar/plaza-independencia.html" target="_blank">Plaza Independencia</a></strong><br><img id="mendozaAttraction1" alt="Plaza Independencia"></li>
+  <li><strong><a href="https://www.booking.com/landmark/ar/parque-general-san-martin.html" target="_blank">Parque General San Martín</a></strong><br><img id="mendozaAttraction2" alt="Parque San Martín"></li>
+  <li><strong><a href="https://www.booking.com/landmark/ar/wineries.html" target="_blank">Mendoza Wineries</a></strong><br><img id="mendozaAttraction3" alt="Wineries"></li>
+  <li><strong><a href="https://www.booking.com/landmark/ar/andes-mountains.html" target="_blank">Andes Mountains</a></strong><br><img id="mendozaAttraction4" alt="Andes"></li>
+  <li><strong><a href="https://www.booking.com/landmark/ar/cerro-de-la-gloria.html" target="_blank">Cerro de la Gloria</a></strong><br><img id="mendozaAttraction5" alt="Cerro de la Gloria"></li>
+</ul>
+
+      </div>
+    </div>
+  </div>
+  <!-- ===================== LIMA ===================== -->
+  <div data-aos="fade-right" class="blog-container">
+    <div class="blog-post" data-title="Lima">
+      <div class="slider">
+        <img alt="Lima" src="https://cdn.pixabay.com/photo/2016/08/18/22/09/lima-1606465_1280.jpg"/>
+      </div>
+      <div class="blog-content">
+        <h2>Lima <span class="weather-status" id="weather-Lima">Loading...</span></h2>
+        <p>"A mix of colonial architecture, Pacific beaches, and world-class Peruvian cuisine."</p>
+        <div class="destination-links">
+          <a href="https://www.booking.com/searchresults.html?ss=Lima+food" target="_blank">Food</a> |
+          <a href="https://www.booking.com/searchresults.html?ss=Lima+hotels" target="_blank">Hotels</a>
+        </div>
+        <div class="toggle-btn">Show Top 5 Attractions</div>
+   <ul class="attractions">
+  <li><strong><a href="https://www.booking.com/landmark/pe/plaza-mayor-of-lima.html" target="_blank">Plaza Mayor</a></strong><br><img id="limaAttraction1" alt="Plaza Mayor"></li>
+  <li><strong><a href="https://www.booking.com/landmark/pe/miraflores.html" target="_blank">Miraflores District</a></strong><br><img id="limaAttraction2" alt="Miraflores"></li>
+  <li><strong><a href="https://www.booking.com/landmark/pe/parque-del-amor.html" target="_blank">Parque del Amor</a></strong><br><img id="limaAttraction3" alt="Parque del Amor"></li>
+  <li><strong><a href="https://www.booking.com/landmark/pe/magic-water-circuit.html" target="_blank">Magic Water Circuit</a></strong><br><img id="limaAttraction4" alt="Magic Water Circuit"></li>
+  <li><strong><a href="https://www.booking.com/landmark/pe/barranco.html" target="_blank">Barranco</a></strong><br><img id="limaAttraction5" alt="Barranco"></li>
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== CUSCO ===================== -->
+  <div data-aos="fade-left" class="blog-container">
+    <div class="blog-post" data-title="Cusco">
+      <div class="slider">
+        <img alt="Cusco" src="https://cdn.pixabay.com/photo/2018/01/04/13/39/cusco-3060181_1280.jpg"/>
+      </div>
+      <div class="blog-content">
+        <h2>Cusco <span class="weather-status" id="weather-Cusco">Loading...</span></h2>
+        <p>"The gateway to Machu Picchu—Inca heritage, cobblestone streets, and Andean charm."</p>
+        <div class="destination-links">
+          <a href="https://www.booking.com/searchresults.html?ss=Cusco+food" target="_blank">Food</a> |
+          <a href="https://www.booking.com/searchresults.html?ss=Cusco+hotels" target="_blank">Hotels</a>
+        </div>
+        <div class="toggle-btn">Show Top 5 Attractions</div>
+        <ul class="attractions">
+  <li><strong><a href="https://www.booking.com/landmark/pe/plaza-de-armas-cusco.html" target="_blank">Plaza de Armas</a></strong><br><img id="cuscoAttraction1" alt="Plaza de Armas"></li>
+  <li><strong><a href="https://www.booking.com/landmark/pe/sacsayhuaman.html" target="_blank">Sacsayhuamán</a></strong><br><img id="cuscoAttraction2" alt="Sacsayhuamán"></li>
+  <li><strong><a href="https://www.booking.com/landmark/pe/qorikancha.html" target="_blank">Qorikancha (Temple of the Sun)</a></strong><br><img id="cuscoAttraction3" alt="Qorikancha"></li>
+  <li><strong><a href="https://www.booking.com/landmark/pe/san-pedro-market.html" target="_blank">San Pedro Market</a></strong><br><img id="cuscoAttraction4" alt="San Pedro Market"></li>
+  <li><strong><a href="https://www.booking.com/landmark/pe/sacred-valley.html" target="_blank">Sacred Valley</a></strong><br><img id="cuscoAttraction5" alt="Sacred Valley"></li>
+</ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== SANTIAGO ===================== -->
+  <div data-aos="fade-right" class="blog-container">
+    <div class="blog-post" data-title="Santiago">
+      <div class="slider">
+        <img alt="Santiago" src="https://cdn.pixabay.com/photo/2016/01/23/18/24/santiago-1159477_1280.jpg"/>
+      </div>
+      <div class="blog-content">
+        <h2>Santiago <span class="weather-status" id="weather-Santiago">Loading...</span></h2>
+        <p>"Nestled between the Andes and vineyards, Santiago offers a modern city vibe with natural backdrops."</p>
+        <div class="destination-links">
+          <a href="https://www.booking.com/searchresults.html?ss=Santiago+food" target="_blank">Food</a> |
+          <a href="https://www.booking.com/searchresults.html?ss=Santiago+hotels" target="_blank">Hotels</a>
+        </div>
+        <div class="toggle-btn">Show Top 5 Attractions</div>
+    <ul class="attractions">
+  <li><strong><a href="https://www.booking.com/landmark/cl/plaza-de-armas-santiago.html" target="_blank">Plaza de Armas</a></strong><br><img id="santiagoAttraction1" alt="Plaza de Armas Santiago"></li>
+  <li><strong><a href="https://www.booking.com/landmark/cl/san-cristobal-hill.html" target="_blank">San Cristóbal Hill</a></strong><br><img id="santiagoAttraction2" alt="San Cristobal Hill"></li>
+  <li><strong><a href="https://www.booking.com/landmark/cl/la-moneda-palace.html" target="_blank">La Moneda Palace</a></strong><br><img id="santiagoAttraction3" alt="La Moneda Palace"></li>
+  <li><strong><a href="https://www.booking.com/landmark/cl/sky-costanera.html" target="_blank">Sky Costanera</a></strong><br><img id="santiagoAttraction4" alt="Sky Costanera"></li>
+  <li><strong><a href="https://www.booking.com/landmark/cl/museum-of-memory.html" target="_blank">Museum of Memory</a></strong><br><img id="santiagoAttraction5" alt="Museum of Memory"></li>
+</ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== VALPARAÍSO ===================== -->
+  <div data-aos="fade-left" class="blog-container">
+    <div class="blog-post" data-title="Valparaíso">
+      <div class="slider">
+        <img alt="Valparaiso" src="https://cdn.pixabay.com/photo/2015/07/31/15/01/valparaiso-869195_1280.jpg"/>
+      </div>
+      <div class="blog-content">
+        <h2>Valparaíso <span class="weather-status" id="weather-Valparaiso">Loading...</span></h2>
+        <p>"A bohemian port city of colorful houses, murals, and funiculars climbing the hills."</p>
+        <div class="destination-links">
+          <a href="https://www.booking.com/searchresults.html?ss=Valparaiso+food" target="_blank">Food</a> |
+          <a href="https://www.booking.com/searchresults.html?ss=Valparaiso+hotels" target="_blank">Hotels</a>
+        </div>
+        <div class="toggle-btn">Show Top 5 Attractions</div>
+        <ul class="attractions">
+  <li><strong><a href="https://www.booking.com/landmark/cl/cerro-alegre.html" target="_blank">Cerro Alegre</a></strong><br><img id="valparaisoAttraction1" alt="Cerro Alegre"></li>
+  <li><strong><a href="https://www.booking.com/landmark/cl/cerro-concepcion.html" target="_blank">Cerro Concepción</a></strong><br><img id="valparaisoAttraction2" alt="Cerro Concepción"></li>
+  <li><strong><a href="https://www.booking.com/landmark/cl/port-of-valparaiso.html" target="_blank">Port of Valparaíso</a></strong><br><img id="valparaisoAttraction3" alt="Port of Valparaiso"></li>
+  <li><strong><a href="https://www.booking.com/landmark/cl/la-sebastiana.html" target="_blank">La Sebastiana (Pablo Neruda’s House)</a></strong><br><img id="valparaisoAttraction4" alt="La Sebastiana"></li>
+  <li><strong><a href="https://www.booking.com/landmark/cl/muelle-prat.html" target="_blank">Muelle Prat</a></strong><br><img id="valparaisoAttraction5" alt="Muelle Prat"></li>
+</ul>
+      </div>
+    </div>
+  </div>
+  <!-- ===================== BOGOTÁ ===================== -->
+  <div data-aos="fade-right" class="blog-container">
+    <div class="blog-post" data-title="Bogotá">
+      <div class="slider">
+        <img alt="Bogota" src="https://cdn.pixabay.com/photo/2016/01/23/18/23/bogota-1159474_1280.jpg"/>
+      </div>
+      <div class="blog-content">
+        <h2>Bogotá <span class="weather-status" id="weather-Bogota">Loading...</span></h2>
+        <p>"A city high in the Andes with colonial plazas, gold museums, and colorful street art."</p>
+        <div class="destination-links">
+          <a href="https://www.booking.com/searchresults.html?ss=Bogota+food" target="_blank">Food</a> |
+          <a href="https://www.booking.com/searchresults.html?ss=Bogota+hotels" target="_blank">Hotels</a>
+        </div>
+        <div class="toggle-btn">Show Top 5 Attractions</div>
+     <ul class="attractions">
+  <li><strong><a href="https://www.booking.com/landmark/co/plaza-bolivar-bogota.html" target="_blank">Plaza de Bolívar</a></strong><br><img id="bogotaAttraction1" alt="Plaza Bolívar"></li>
+  <li><strong><a href="https://www.booking.com/landmark/co/gold-museum.html" target="_blank">Gold Museum</a></strong><br><img id="bogotaAttraction2" alt="Gold Museum"></li>
+  <li><strong><a href="https://www.booking.com/landmark/co/monserrate.html" target="_blank">Monserrate</a></strong><br><img id="bogotaAttraction3" alt="Monserrate"></li>
+  <li><strong><a href="https://www.booking.com/landmark/co/candelaria-bogota.html" target="_blank">La Candelaria</a></strong><br><img id="bogotaAttraction4" alt="La Candelaria"></li>
+  <li><strong><a href="https://www.booking.com/landmark/co/botero-museum.html" target="_blank">Botero Museum</a></strong><br><img id="bogotaAttraction5" alt="Botero Museum"></li>
+</ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== CARTAGENA ===================== -->
+  <div data-aos="fade-left" class="blog-container">
+    <div class="blog-post" data-title="Cartagena">
+      <div class="slider">
+        <img alt="Cartagena" src="https://cdn.pixabay.com/photo/2016/01/19/17/07/cartagena-1140927_1280.jpg"/>
+      </div>
+      <div class="blog-content">
+        <h2>Cartagena <span class="weather-status" id="weather-Cartagena">Loading...</span></h2>
+        <p>"A Caribbean jewel—walled city streets, lively plazas, and stunning coastal views."</p>
+        <div class="destination-links">
+          <a href="https://www.booking.com/searchresults.html?ss=Cartagena+food" target="_blank">Food</a> |
+          <a href="https://www.booking.com/searchresults.html?ss=Cartagena+hotels" target="_blank">Hotels</a>
+        </div>
+        <div class="toggle-btn">Show Top 5 Attractions</div>
+       <ul class="attractions">
+  <li><strong><a href="https://www.booking.com/landmark/co/walled-city-of-cartagena.html" target="_blank">Walled City</a></strong><br><img id="cartagenaAttraction1" alt="Walled City"></li>
+  <li><strong><a href="https://www.booking.com/landmark/co/castillo-san-felipe.html" target="_blank">Castillo San Felipe de Barajas</a></strong><br><img id="cartagenaAttraction2" alt="Castillo San Felipe"></li>
+  <li><strong><a href="https://www.booking.com/landmark/co/bocagrande.html" target="_blank">Bocagrande Beach</a></strong><br><img id="cartagenaAttraction3" alt="Bocagrande"></li>
+  <li><strong><a href="https://www.booking.com/landmark/co/getsemani.html" target="_blank">Getsemaní</a></strong><br><img id="cartagenaAttraction4" alt="Getsemaní"></li>
+  <li><strong><a href="https://www.booking.com/landmark/co/rosario-islands.html" target="_blank">Rosario Islands</a></strong><br><img id="cartagenaAttraction5" alt="Rosario Islands"></li>
+</ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== QUITO ===================== -->
+  <div data-aos="fade-right" class="blog-container">
+    <div class="blog-post" data-title="Quito">
+      <div class="slider">
+        <img alt="Quito" src="https://cdn.pixabay.com/photo/2017/01/20/00/30/quito-1991906_1280.jpg"/>
+      </div>
+      <div class="blog-content">
+        <h2>Quito <span class="weather-status" id="weather-Quito">Loading...</span></h2>
+        <p>"Perched high in the Andes, Quito boasts colonial churches, mountain views, and vibrant culture."</p>
+        <div class="destination-links">
+          <a href="https://www.booking.com/searchresults.html?ss=Quito+food" target="_blank">Food</a> |
+          <a href="https://www.booking.com/searchresults.html?ss=Quito+hotels" target="_blank">Hotels</a>
+        </div>
+        <div class="toggle-btn">Show Top 5 Attractions</div>
+      <ul class="attractions">
+  <li><strong><a href="https://www.booking.com/landmark/ec/historic-centre-of-quito.html" target="_blank">Historic Centre of Quito</a></strong><br><img id="quitoAttraction1" alt="Historic Centre of Quito"></li>
+  <li><strong><a href="https://www.booking.com/landmark/ec/basilica-del-voto-nacional.html" target="_blank">Basilica del Voto Nacional</a></strong><br><img id="quitoAttraction2" alt="Basilica del Voto Nacional"></li>
+  <li><strong><a href="https://www.booking.com/landmark/ec/middle-of-the-world-monument.html" target="_blank">Mitad del Mundo (Middle of the World)</a></strong><br><img id="quitoAttraction3" alt="Mitad del Mundo"></li>
+  <li><strong><a href="https://www.booking.com/landmark/ec/el-panecillo.html" target="_blank">El Panecillo</a></strong><br><img id="quitoAttraction4" alt="El Panecillo"></li>
+  <li><strong><a href="https://www.booking.com/landmark/ec/teleferico-quito.html" target="_blank">TelefériQo (Cable Car)</a></strong><br><img id="quitoAttraction5" alt="TelefériQo"></li>
+</ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== FOOTER & SCRIPTS ===================== -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+
+  <footer>© 2025 TravelSafe. All rights reserved.</footer>
+
+  <script>
+  const apiKey = "d1ed7374e6c83872fd2507f682afea26";
+  function fetchWeather(city, elementId) {
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`)
+      .then(r => r.json())
+      .then(data => {
+        if (data.cod === 200) {
+          const temp = Math.round(data.main.temp);
+          const icon = data.weather[0].icon;
+          document.getElementById(elementId).innerHTML =
+            `${temp}°C <img src="https://openweathermap.org/img/wn/${icon}.png" style="width:20px;"/>`;
+        }
+      });
+  }
+  document.addEventListener("DOMContentLoaded", () => {
+    fetchWeather("Rio de Janeiro", "weather-Rio");
+    fetchWeather("Sao Paulo", "weather-SaoPaulo");
+    fetchWeather("Buenos Aires", "weather-BuenosAires");
+    fetchWeather("Mendoza", "weather-Mendoza");
+    fetchWeather("Lima", "weather-Lima");
+    fetchWeather("Cusco", "weather-Cusco");
+    fetchWeather("Santiago", "weather-Santiago");
+    fetchWeather("Valparaiso", "weather-Valparaiso");
+    fetchWeather("Bogota", "weather-Bogota");
+    fetchWeather("Cartagena", "weather-Cartagena");
+    fetchWeather("Quito", "weather-Quito");
+  });
+  </script>
+
+  <script>
+  const pixabayApiKey = "31496043-2fe9cd081b0b76a68243b7e3b";
+  function fetchPixabayImages(query, elementId) {
+    fetch(`https://pixabay.com/api/?key=${pixabayApiKey}&q=${encodeURIComponent(query)}&image_type=photo`)
+      .then(r => r.json())
+      .then(data => { if (data.hits.length) document.getElementById(elementId).src = data.hits[0].webformatURL; });
+  }
+  const saAttractions = {
+    rio: ["Christ the Redeemer", "Sugarloaf Mountain", "Copacabana Beach", "Maracana Stadium", "Selaron Steps"],
+    saopaulo: ["Avenida Paulista", "Ibirapuera Park", "Sao Paulo Cathedral", "Municipal Market Sao Paulo", "Liberdade District"],
+    buenosaires: ["Plaza de Mayo", "La Boca", "Recoleta Cemetery", "Teatro Colon", "San Telmo"],
+    mendoza: ["Wine Tours Mendoza", "Aconcagua", "Plaza Independencia", "Parque General San Martin", "Cacheuta Hot Springs"],
+    lima: ["Plaza Mayor Lima", "Larco Museum", "Miraflores", "Huaca Pucllana", "Costa Verde"],
+    cusco: ["Sacsayhuaman", "Qorikancha", "San Pedro Market", "Plaza de Armas Cusco", "Rainbow Mountain"],
+    santiago: ["Plaza de Armas Santiago", "Cerro San Cristobal", "La Moneda Palace", "Sky Costanera", "Barrio Bellavista"],
+    valparaiso: ["Cerro Alegre", "Paseo Gervasoni", "La Sebastiana", "Plaza Sotomayor", "Ascensores"],
+    bogota: ["Monserrate Hill", "Plaza Bolivar", "Gold Museum Bogota", "La Candelaria", "Botero Museum"],
+    cartagena: ["Castillo San Felipe", "Old Town Cartagena", "Plaza Santo Domingo", "Bocagrande Beach", "Getsemani District"],
+    quito: ["Plaza Grande", "Basilica del Voto Nacional", "Mitad del Mundo", "TeleferiQo", "La Ronda"]
+  };
+  Object.entries(saAttractions).forEach(([city, attractions]) => {
+    attractions.forEach((a, i) => fetchPixabayImages(a, `${city}Attraction${i+1}`));
+  });
+  </script>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.toggle-btn').forEach(btn => {
+      const list = btn.nextElementSibling;
+      btn.addEventListener('click', () => {
+        list.classList.toggle('show');
+        btn.textContent = list.classList.contains('show')
+          ? 'Hide Attractions'
+          : 'Show Top 5 Attractions';
+      });
+    });
+  });
+  </script>
+</body>
+</html>

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="/styles/deco.css">
+  <link rel="stylesheet" href="/styles/destination.css">
+  <link href="/styles/gen_dest.css" rel="stylesheet"/>
+<link href="/styles/navbar.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="/styles/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Africa</title>
+    <style>
+      .weather-widget {
+        margin: 20px auto;
+        padding: 10px;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        font-size: 1.2em;
+      }
+     .attractions {
+ max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+    .attractions li {
+        margin-bottom: 10px;
+        list-style-type: disc;
+      }
+.attractions.show {
+  max-height: 2000px;
+  transition: max-height 0.5s ease-in;
+}
+.attractions img {
+    width: 100%;
+    height: 150px; /* uniform height */
+    object-fit: cover; /* keep aspect ratio while filling */
+    border-radius: 5px;
+}
+  
+      .toggle-btn {
+        margin-top: 10px;
+        cursor: pointer;
+        color: #ffd700;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+        .weather-status {
+    font-size: 0.9em;
+    font-weight: normal;
+    color: #ffd700;
+    margin-left: 10px;
+    display: inline-block;
+  }
+  .slider {
+    width: 100%;
+    height: 400px; /* match the height you want for all sliders */
+    overflow: hidden;
+    padding: 15px; /* same padding as others */
+    box-sizing: border-box; /* ensures padding doesn't affect size */
+}
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ensures it fills the container nicely */
+    display: block;
+    border-radius: 5px;
+}
+
+
+    </style>
+</link></head>
+<body style="background-color:grey;">
+    
+<nav class="navbar">
+    <div class="navbar-brand" style="color: white;">Travel safe</div>
+    <div class="links">
+           <a href="../travel.html" >Home</a>
+           <a href="/Pagestml/about.html">About</a>
+           <a href="/Pagestml/destination.html">Destinations</a>
+           <a href="/Pagestml/blog.html">Blog</a>
+           
+        </div>
+    <div class="action_btn">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="dropdown_menu">
+        <li><a href="../travel.html" >Home</a></li>
+       <li><a href="/Pagestml/about.html">About</a></li>
+        <li><a href="/Pagestml/destination.html">Destinations</a></li>
+        <li><a href="/Pagestml/blog.html">Blog</a></li>
+    </div>
+</nav>
+<script src="../html/js/nav.js" ></script>
+    <div class="weather-widget">
+  🌍 Check the <a href="https://weather.com/weather/today" style="color: #ffd700; text-decoration: underline;" target="_blank">latest weather</a> for your European destination!
+</div>
+
+<div data-aos="fade-up-left" class="blog-container">
+  <div class="blog-post" data-title="SouthAfrica">
+    <div class="slider" data-slider="">
+      <img alt="Cape Town Table Mountain" id="southafricaattraction" class="active" src="https://www.travelstart.co.za/blog/wp-content/uploads/2014/12/san-lameer.jpg"/>
+    </div>
+    <div class="blog-content">
+      <h2>South Africa <span class="weather-status" id="weather-South Africa">Loading...</span></h2>
+      <p>"From the top of Table Mountain to the vineyards of Stellenbosch and the wild safaris of Kruger, South Africa is where adventure meets breathtaking beauty."</p>
+      <div class="destination-links">
+        <a href="https://www.booking.com/searchresults.html?ss=South+Africa+food"onclick="return  travel()" target="_blank">Food</a> |
+        <a href="https://www.booking.com/searchresults.html?ss=South+Africa+hotels"onclick="return  travel()" target="_blank">Hotels</a>
+      </div>
+      <div class="toggle-btn">Show Top 5 Attractions</div>
+      <ul class="attractions">
+        <li>
+          <strong><a href="https://www.booking.com/landmark/za/table-mountain.html" target="_blank">Table Mountain, Cape Town</a></strong><br/>
+          <img alt="Table Mountain" id="southafricaAttraction1" src=""/>
+        </li>
+        <li>
+          <strong><a href="https://www.booking.com/landmark/za/kruger-national-park.html" target="_blank">Kruger National Park</a></strong><br/>
+          <img alt="Kruger National Park" id="southafricaAttraction2" src=""/>
+        </li>
+        <li>
+          <strong><a href="https://www.booking.com/landmark/za/robbeneiland.html" target="_blank">Robben Island</a></strong><br/>
+          <img alt="Robben Island" id="southafricaAttraction3" src=""/>
+        </li>
+        <li>
+          <strong><a href="https://www.booking.com/landmark/za/cape-of-good-hope.html" target="_blank">Cape of Good Hope</a></strong><br/>
+          <img alt="Cape of Good Hope" id="southafricaAttraction4" src=""/>
+        </li>
+        <li>
+          <strong><a href="https://www.booking.com/landmark/za/victoria-alfred-waterfront.html" target="_blank">V&A Waterfront</a></strong><br/>
+          <img alt="V&A Waterfront" id="southafricaAttraction5" src=""/>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div data-aos="fade-down-right" class="blog-container">
+  <div class="blog-post" data-title="Botswana">
+    <div class="slider" data-slider="">
+      <img alt="Okavango Delta Botswana" id="botswanaattraction" class="active" src="https://timbuktutravel.imgix.net/2017/07/khwai-tented-camp-okavango-delta-botswana-timbuktu-travel-copy.jpg?auto=compress%2Cformat&ixlib=php-1.1.0&q=50"/>
+    </div>
+    <div class="blog-content">
+      <h2>Botswana <span class="weather-status" id="weather-Botswana">Loading...</span></h2>
+      <p>"Botswana is a safari paradise — from the lush Okavango Delta to the elephants of Chobe and the salt pans of Makgadikgadi, every corner is wild and breathtaking."</p>
+      <div class="destination-links">
+        <a href="https://www.booking.com/searchresults.html?ss=Botswana+food" onclick="return  travel()" target="_blank">Food</a> |
+        <a href="https://www.booking.com/searchresults.html?ss=Botswana+hotels" onclick="return  travel()" target="_blank">Hotels</a>
+      </div>
+      <div class="toggle-btn">Show Top 5 Attractions</div>
+      <ul class="attractions">
+        <li>
+          <strong><a href="https://www.booking.com/landmark/bw/okavango-delta.html" target="_blank">Okavango Delta</a></strong><br/>
+          <img alt="Okavango Delta" id="botswanaAttraction1" src=""/>
+        </li>
+        <li>
+          <strong><a href="https://www.booking.com/landmark/bw/chobe-national-park.html" target="_blank">Chobe National Park</a></strong><br/>
+          <img alt="Chobe National Park" id="botswanaAttraction2" src=""/>
+        </li>
+        <li>
+          <strong><a href="https://www.booking.com/landmark/bw/moremi-game-reserve.html" target="_blank">Moremi Game Reserve</a></strong><br/>
+          <img alt="Moremi Game Reserve" id="botswanaAttraction3" src=""/>
+        </li>
+        <li>
+          <strong><a href="https://www.booking.com/landmark/bw/makgadikgadi-pans.html" target="_blank">Makgadikgadi Pans</a></strong><br/>
+          <img alt="Makgadikgadi Pans" id="botswanaAttraction4" src=""/>
+        </li>
+        <li>
+          <strong><a href="https://www.booking.com/landmark/bw/tsodilo-hills.html" target="_blank">Tsodilo Hills</a></strong><br/>
+          <img alt="Tsodilo Hills" id="botswanaAttraction5" src=""/>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+    <div data-aos="fade-up-left" class="blog-container">
+  <div class="blog-post" data-title="Tanzania">
+    <div class="slider" data-slider="">
+      <img alt="Serengeti Tanzania" id="tanzaniaattraction" class="active" src="https://media-cdn.tripadvisor.com/media/photo-s/25/8e/8a/24/beautiful.jpg"/>
+    </div>
+    <div class="blog-content">
+      <h2>Tanzania <span class="weather-status" id="weather-Tanzania">Loading...</span></h2>
+      <p>"From the endless plains of the Serengeti to the peak of Mount Kilimanjaro and the spice island of Zanzibar, Tanzania is pure adventure."</p>
+      <div class="destination-links">
+        <a href="https://www.booking.com/searchresults.html?ss=Tanzania+food" onclick="return  travel()" target="_blank">Food</a> |
+        <a href="https://www.booking.com/searchresults.html?ss=Tanzania+hotels" onclick="return  travel()" target="_blank">Hotels</a>
+      </div>
+      <div class="toggle-btn">Show Top 5 Attractions</div>
+      <ul class="attractions">
+        <li><strong>Serengeti National Park</strong><br/><img id="tanzaniaAttraction1" src=""/></li>
+        <li><strong>Mount Kilimanjaro</strong><br/><img id="tanzaniaAttraction2" src=""/></li>
+        <li><strong>Zanzibar Beaches</strong><br/><img id="tanzaniaAttraction3" src=""/></li>
+        <li><strong>Ngorongoro Crater</strong><br/><img id="tanzaniaAttraction4" src=""/></li>
+        <li><strong>Selous Game Reserve</strong><br/><img id="tanzaniaAttraction5" src=""/></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+ <div data-aos="fade-down-right" class="blog-container">
+  <div class="blog-post" data-title="Egypt">
+    <div class="slider" data-slider="">
+      <img alt="Pyramids of Giza" id="egyptattraction" class="active" src="https://media-cdn.tripadvisor.com/media/photo-s/15/e9/24/c0/steigenberger-aqua-magic.jpg"/>
+    </div>
+    <div class="blog-content">
+      <h2>Egypt <span class="weather-status" id="weather-Egypt">Loading...</span></h2>
+      <p>"Timeless wonders: Pyramids, Nile cruises, and the temples of Luxor. Egypt is history carved in stone."</p>
+      <div class="destination-links">
+        <a href="https://www.booking.com/searchresults.html?ss=Egypt+food"  onclick="return  travel()"target="_blank">Food</a> |
+        <a href="https://www.booking.com/searchresults.html?ss=Egypt+hotels" onclick="return  travel()"target="_blank">Hotels</a>
+      </div>
+      <div class="toggle-btn">Show Top 5 Attractions</div>
+      <ul class="attractions">
+        <li><strong>Pyramids of Giza</strong><br/><img id="egyptAttraction1" src=""/></li>
+        <li><strong>Valley of the Kings</strong><br/><img id="egyptAttraction2" src=""/></li>
+        <li><strong>Karnak Temple</strong><br/><img id="egyptAttraction3" src=""/></li>
+        <li><strong>Abu Simbel Temples</strong><br/><img id="egyptAttraction4" src=""/></li>
+        <li><strong>Nile River Cruise</strong><br/><img id="egyptAttraction5" src=""/></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+  <div  data-aos="fade-up-left" class="blog-container">
+  <div class="blog-post" data-title="Ethiopia">
+    <div class="slider" data-slider="">
+      <img alt="Lalibela Rock Churches" id="ethiopiaattraction" class="active" src="https://www.bucketlistplaces.com/wp-content/uploads/2021/04/bluenilefallsethiopia.jpeg"/>
+    </div>
+    <div class="blog-content">
+      <h2>Ethiopia <span class="weather-status" id="weather-Ethiopia">Loading...</span></h2>
+      <p>"From ancient rock-hewn churches to the source of the Blue Nile, Ethiopia is a land of history and natural wonders."</p>
+      <div class="destination-links">
+        <a href="https://www.booking.com/searchresults.html?ss=Ethiopia+food" onclick="return  travel()"target="_blank">Food</a> |
+        <a href="https://www.booking.com/searchresults.html?ss=Ethiopia+hotels" onclick="return  travel()" target="_blank">Hotels</a>
+      </div>
+      <div class="toggle-btn">Show Top 5 Attractions</div>
+      <ul class="attractions">
+        <li><strong>Lalibela Rock Churches</strong><br/><img id="ethiopiaAttraction1" src=""/></li>
+        <li><strong>Simien Mountains</strong><br/><img id="ethiopiaAttraction2" src=""/></li>
+        <li><strong>Lake Tana & Blue Nile Falls</strong><br/><img id="ethiopiaAttraction3" src=""/></li>
+        <li><strong>Axum Obelisks</strong><br/><img id="ethiopiaAttraction4" src=""/></li>
+        <li><strong>Omo Valley Tribes</strong><br/><img id="ethiopiaAttraction5" src=""/></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div data-aos="fade-down-right" class="blog-container">
+  <div class="blog-post" data-title="Madagascar">
+    <div class="slider" data-slider="">
+      <img alt="Baobab Avenue Madagascar" id="madagascarattraction" class="active" src="https://gassitours.wordpress.com/wp-content/uploads/2022/12/luxury-tour-in-madagascar.jpg?w=1024"/>
+    </div>
+    <div class="blog-content">
+      <h2>Madagascar <span class="weather-status" id="weather-Madagascar">Loading...</span></h2>
+      <p>"Madagascar is like another planet — baobab avenues, unique lemurs, and crystal-clear beaches."</p>
+      <div class="destination-links">
+        <a href="https://www.booking.com/searchresults.html?ss=Madagascar+food"  onclick="return  travel()"target="_blank">Food</a> |
+        <a href="https://www.booking.com/searchresults.html?ss=Madagascar+hotels" onclick="return  travel()" target="_blank">Hotels</a>
+      </div>
+      <div class="toggle-btn">Show Top 5 Attractions</div>
+      <ul class="attractions">
+        <li><strong>Avenue of the Baobabs</strong><br/><img id="madagascarAttraction1" src=""/></li>
+        <li><strong>Isalo National Park</strong><br/><img id="madagascarAttraction2" src=""/></li>
+        <li><strong>Nosy Be Island</strong><br/><img id="madagascarAttraction3" src=""/></li>
+        <li><strong>Tsingy de Bemaraha</strong><br/><img id="madagascarAttraction4" src=""/></li>
+        <li><strong>Andasibe-Mantadia Park</strong><br/><img id="madagascarAttraction5" src=""/></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+  <div data-aos="fade-up-left" class="blog-container">
+  <div class="blog-post" data-title="CapeVerde">
+    <div class="slider" data-slider="">
+      <img alt="Cape Verde Beaches" id="capeverdeattraction" class="active" src="https://image.urlaubspiraten.de/640/image/upload/v1603293749/mediavault_images/gksis7ufgkiu2ux9cbmb.jpg"/>
+    </div>
+    <div class="blog-content">
+      <h2>Cape Verde <span class="weather-status" id="weather-Cape Verde">Loading...</span></h2>
+      <p>"Golden beaches, Creole culture, and volcanic islands — Cape Verde is Africa’s hidden Atlantic gem."</p>
+      <div class="destination-links">
+        <a href="https://www.booking.com/searchresults.html?ss=Cape+Verde+food" onclick="return  travel()" target="_blank">Food</a> |
+        <a href="https://www.booking.com/searchresults.html?ss=Cape+Verde+hotels" onclick="return  travel()" target="_blank">Hotels</a>
+      </div>
+      <div class="toggle-btn">Show Top 5 Attractions</div>
+      <ul class="attractions">
+        <li><strong>Sal Island Beaches</strong><br/><img id="capeverdeAttraction1" src=""/></li>
+        <li><strong>Fogo Volcano</strong><br/><img id="capeverdeAttraction2" src=""/></li>
+        <li><strong>Santo Antão Mountains</strong><br/><img id="capeverdeAttraction3" src=""/></li>
+        <li><strong>Praia City</strong><br/><img id="capeverdeAttraction4" src=""/></li>
+        <li><strong>Mindelo (São Vicente)</strong><br/><img id="capeverdeAttraction5" src=""/></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+    <div data-aos="fade-down-right" class="blog-container">
+  <div class="blog-post" data-title="Malawi">
+    <div class="slider" data-slider="">
+      <img alt="Lake Malawi" id="malawiattraction" class="active" src="https://blog.tiketi.com/wp-content/uploads/2019/08/malawi-holidays-and-safari-guide-malawi-sea-242567_1280-1024x682.jpg"/>
+    </div>
+    <div class="blog-content">
+      <h2>Malawi <span class="weather-status" id="weather-Malawi">Loading...</span></h2>
+      <p>"The ‘Warm Heart of Africa’ — Malawi offers stunning lake beaches, friendly people, and hidden wildlife reserves."</p>
+      <div class="destination-links">
+        <a href="https://www.booking.com/searchresults.html?ss=Malawi+food"  onclick="return  travel()"target="_blank">Food</a> |
+        <a href="https://www.booking.com/searchresults.html?ss=Malawi+hotels" onclick="return  travel()" target="_blank">Hotels</a>
+      </div>
+      <div class="toggle-btn">Show Top 5 Attractions</div>
+      <ul class="attractions">
+        <li><strong>Lake Malawi</strong><br/><img id="malawiAttraction1" src=""/></li>
+        <li><strong>Liwonde National Park</strong><br/><img id="malawiAttraction2" src=""/></li>
+        <li><strong>Mount Mulanje</strong><br/><img id="malawiAttraction3" src=""/></li>
+        <li><strong>Nyika Plateau</strong><br/><img id="malawiAttraction4" src=""/></li>
+        <li><strong>Zomba Plateau</strong><br/><img id="malawiAttraction5" src=""/></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+  <div data-aos="fade-up-left" class="blog-container">
+  <div class="blog-post" data-title="Rwanda">
+    <div class="slider" data-slider="">
+      <img alt="Rwanda Volcanoes National Park" id="rwandaattraction" class="active" src="https://www.visitrwanda.com/wp-content/uploads/2020/03/IMG-20200310-WA0003.jpg"/>
+    </div>
+    <div class="blog-content">
+      <h2>Rwanda <span class="weather-status" id="weather-Rwanda">Loading...</span></h2>
+      <p>"The Land of a Thousand Hills — Rwanda is famous for gorilla trekking, lush tea plantations, and beautiful lakes."</p>
+      <div class="destination-links">
+        <a href="https://www.booking.com/searchresults.html?ss=Rwanda+food" onclick="return  travel()" target="_blank">Food</a> |
+        <a href="https://www.booking.com/searchresults.html?ss=Rwanda+hotels"  onclick="return  travel()"target="_blank">Hotels</a>
+      </div>
+      <div class="toggle-btn">Show Top 5 Attractions</div>
+      <ul class="attractions">
+        <li><strong>Volcanoes National Park</strong><br/><img id="rwandaAttraction1" src=""/></li>
+        <li><strong>Lake Kivu</strong><br/><img id="rwandaAttraction2" src=""/></li>
+        <li><strong>Nyungwe Forest</strong><br/><img id="rwandaAttraction3" src=""/></li>
+        <li><strong>Kigali Genocide Memorial</strong><br/><img id="rwandaAttraction4" src=""/></li>
+        <li><strong>Akagera National Park</strong><br/><img id="rwandaAttraction5" src=""/></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+    <div data-aos="fade-down-right" class="blog-container">
+  <div class="blog-post" data-title="Zimbabwe">
+    <div class="slider" data-slider="">
+      <img alt="Victoria Falls Zimbabwe" id="zimbabweattraction" class="active" src="https://www.tripsavvy.com/thmb/fNsdbjMNzBA8dVWyuIGDcNW0Nyw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-143922110-5bf7964146e0fb0026a2df41.jpg"/>
+    </div>
+    <div class="blog-content">
+      <h2>Zimbabwe <span class="weather-status" id="weather-Zimbabwe">Loading...</span></h2>
+      <p>"Zimbabwe is raw natural beauty — thundering waterfalls, ancient ruins, and warm hospitality."</p>
+      <div class="destination-links">
+        <a href="https://www.booking.com/searchresults.html?ss=Zimbabwe+food" onclick="return  travel()" target="_blank">Food</a> |
+        <a href="https://www.booking.com/searchresults.html?ss=Zimbabwe+hotels" onclick="return  travel()" target="_blank">Hotels</a>
+      </div>
+      <div class="toggle-btn">Show Top 5 Attractions</div>
+      <ul class="attractions">
+        <li><strong>Victoria Falls</strong><br/><img id="zimbabweAttraction1" src=""/></li>
+        <li><strong>Hwange National Park</strong><br/><img id="zimbabweAttraction2" src=""/></li>
+        <li><strong>Great Zimbabwe Ruins</strong><br/><img id="zimbabweAttraction3" src=""/></li>
+        <li><strong>Matobo Hills</strong><br/><img id="zimbabweAttraction4" src=""/></li>
+        <li><strong>Mana Pools National Park</strong><br/><img id="zimbabweAttraction5" src=""/></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+   <div data-aos="fade-up-left" class="blog-container">
+  <div class="blog-post" data-title="Zambia">
+    <div class="slider" data-slider="">
+      <img alt="Victoria Falls Zambia" id="country" class="active" src="https://qph.cf2.quoracdn.net/main-qimg-9a90c72c85aab8555015809496d4e901-lq"/>
+    </div>
+    <div class="blog-content">
+      <h2>Zambia <span class="weather-status" id="weather-Zambia">Loading...</span></h2>
+      <p>"Home of Victoria Falls and walking safaris, Zambia is for true wilderness lovers."</p>
+      <div class="destination-links">
+        <a href="https://www.booking.com/searchresults.html?ss=Zambia+food" onclick="return  travel()" target="_blank">Food</a> |
+        <a href="https://www.booking.com/searchresults.html?ss=Zambia+hotels" onclick="return  travel()" target="_blank">Hotels</a>
+      </div>
+      <div class="toggle-btn">Show Top 5 Attractions</div>
+      <ul class="attractions">
+        <li><strong>Victoria Falls (Livingstone)</strong><br/><img id="zambiaAttraction1" src=""/></li>
+        <li><strong>South Luangwa National Park</strong><br/><img id="zambiaAttraction2" src=""/></li>
+        <li><strong>Kafue National Park</strong><br/><img id="zambiaAttraction3" src=""/></li>
+        <li><strong>Lower Zambezi National Park</strong><br/><img id="zambiaAttraction4" src=""/></li>
+        <li><strong>Lake Kariba</strong><br/><img id="zambiaAttraction5" src=""/></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+    <div  data-aos="fade-down-right"class="blog-container">
+  <div class="blog-post" data-title="Nigeria">
+    <div class="slider" data-slider="">
+      <img alt="Abuja Nigeria" id="country" class="active"  src="https://nairametrics.com/wp-content/uploads/2022/07/Whispering-palms.jpg"/>
+    </div>
+    <div class="blog-content">
+      <h2>Nigeria <span class="weather-status" id="weather-Nigeria">Loading...</span></h2>
+      <p>"Nigeria is a mix of culture, music, and natural beauty — from bustling Lagos to waterfalls and plateaus."</p>
+      <div class="destination-links">
+        <a href="https://www.booking.com/searchresults.html?ss=Nigeria+food" onclick="return  travel()" target="_blank">Food</a> |
+        <a href="https://www.booking.com/searchresults.html?ss=Nigeria+hotels" onclick="return  travel()" target="_blank">Hotels</a>
+      </div>
+      <div class="toggle-btn">Show Top 5 Attractions</div>
+      <ul class="attractions">
+        <li><strong>Olumo Rock</strong><br/><img id="nigeriaAttraction1" src=""/></li>
+        <li><strong>Yankari National Park</strong><br/><img id="nigeriaAttraction2" src=""/></li>
+        <li><strong>Zuma Rock</strong><br/><img id="nigeriaAttraction3" src=""/></li>
+        <li><strong>Erin Ijesha Waterfalls</strong><br/><img id="nigeriaAttraction4" src=""/></li>
+        <li><strong>Obudu Mountain Resort</strong><br/><img id="nigeriaAttraction5" src=""/></li>
+      </ul>
+    </div>
+
+
+  </div>
+
+<script src="/sripts/africa.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <script>
+  AOS.init();
+</script>
+<footer>
+    &copy; 2025 TravelSafe. All rights reserved.
+  </footer>
+</body>
+</html>

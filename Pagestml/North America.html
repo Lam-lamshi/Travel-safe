@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="/styles/gen_dest.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="/styles/deco.css"/>
+  <link href="/styles/navbar.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <title>North America</title>
+  <style>
+    .attractions {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-out;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 15px;
+    }
+    .attractions.show {
+      max-height: 2000px;
+      transition: max-height 0.5s ease-in;
+    }
+    .attractions img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+    .toggle-btn {
+      margin-top: 10px;
+      cursor: pointer;
+      color: #ffd700;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+    .weather-status {
+      font-size: 0.9em;
+      font-weight: normal;
+      color: #ffd700;
+      margin-left: 10px;
+      display: inline-block;
+    }
+    .slider {
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+      padding: 15px;
+      box-sizing: border-box;
+    }
+    .slider img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body style="background-color:grey;">
+  <nav class="navbar">
+    <div class="navbar-brand" style="color: #444;">Travel safe</div>
+    <div class="links">
+      <a href="travel.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="destination.html">Destinations</a>
+      <a href="blog.html">Blog</a>
+    </div>
+    <div class="action_btn"><i class="fa-solid fa-bars"></i></div>
+    <div class="dropdown_menu">
+      <li><a href="travel.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="destination.html">Destinations</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </div>
+    <script defer src="html/js/nav.js"></script>
+  </nav>
+
+  <div class="weather-widget">
+    🌍 Check the <a href="https://weather.com/weather/today" target="_blank" style="color: #ffd700; text-decoration: underline;">latest weather</a> for your North American destination!
+  </div>
+
+  <!-- ===================== NEW YORK CITY ===================== -->
+  <div data-aos="fade-right" class="blog-container">
+    <div class="blog-post" data-title="New York City">
+      <div class="slider">
+        <img alt="New York" src="https://cdn.pixabay.com/photo/2016/11/29/03/53/architecture-1867726_1280.jpg"/>
+      </div>
+      <div class="blog-content">
+        <h2>New York City <span class="weather-status" id="weather-NYC">Loading...</span></h2>
+        <p>"Times Square, Central Park, and Broadway—NYC is the city that never sleeps and always inspires."</p>
+        <div class="destination-links">
+          <a href="https://www.booking.com/searchresults.html?ss=New+York+food" target="_blank">Food</a> |
+          <a href="https://www.booking.com/searchresults.html?ss=New+York+hotels" target="_blank">Hotels</a>
+        </div>
+        <div class="toggle-btn">Show Top 5 Attractions</div>
+      <!-- ===================== NEW YORK CITY ATTRACTIONS ===================== -->
+<ul class="attractions">
+  <li><strong><a href="https://www.booking.com/landmark/us/times-square.html" target="_blank">Times Square</a></strong><br><img id="nycAttraction1" alt="Times Square"></li>
+  <li><strong><a href="https://www.booking.com/landmark/us/statue-of-liberty.html" target="_blank">Statue of Liberty</a></strong><br><img id="nycAttraction2" alt="Statue of Liberty"></li>
+  <li><strong><a href="https://www.booking.com/landmark/us/central-park.html" target="_blank">Central Park</a></strong><br><img id="nycAttraction3" alt="Central Park"></li>
+  <li><strong><a href="https://www.booking.com/landmark/us/empire-state-building.html" target="_blank">Empire State Building</a></strong><br><img id="nycAttraction4" alt="Empire State Building"></li>
+  <li><strong><a href="https://www.booking.com/landmark/us/metropolitan-museum-of-art.html" target="_blank">Metropolitan Museum of Art (The Met)</a></strong><br><img id="nycAttraction5" alt="Metropolitan Museum of Art"></li>
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== LOS ANGELES ===================== -->
+  <div data-aos="fade-left" class="blog-container">
+    <div class="blog-post" data-title="Los Angeles">
+      <div class="slider">
+        <img alt="Los Angeles" src="https://cdn.pixabay.com/photo/2017/05/11/21/16/los-angeles-2300773_1280.jpg"/>
+      </div>
+      <div class="blog-content">
+        <h2>Los Angeles <span class="weather-status" id="weather-LA">Loading...</span></h2>
+        <p>"Hollywood, palm trees, and sunsets over Santa Monica—LA is glitz, glamour, and California dreams."</p>
+        <div class="destination-links">
+          <a href="https://www.booking.com/searchresults.html?ss=Los+Angeles+food" target="_blank">Food</a> |
+          <a href="https://www.booking.com/searchresults.html?ss=Los+Angeles+hotels" target="_blank">Hotels</a>
+        </div>
+        <div class="toggle-btn">Show Top 5 Attractions</div>
+    <ul class="attractions">
+  <li><strong><a href="https://www.booking.com/landmark/us/hollywood-walk-of-fame.html" target="_blank">Hollywood Walk of Fame</a></strong><br><img id="laAttraction1" alt="Hollywood Walk of Fame"></li>
+  <li><strong><a href="https://www.booking.com/landmark/us/universal-studios-hollywood.html" target="_blank">Universal Studios Hollywood</a></strong><br><img id="laAttraction2" alt="Universal Studios Hollywood"></li>
+  <li><strong><a href="https://www.booking.com/landmark/us/griffith-observatory.html" target="_blank">Griffith Observatory</a></strong><br><img id="laAttraction3" alt="Griffith Observatory"></li>
+  <li><strong><a href="https://www.booking.com/landmark/us/santa-monica-pier.html" target="_blank">Santa Monica Pier</a></strong><br><img id="laAttraction4" alt="Santa Monica Pier"></li>
+  <li><strong><a href="https://www.booking.com/landmark/us/getty-center.html" target="_blank">The Getty Center</a></strong><br><img id="laAttraction5" alt="The Getty Center"></li>
+</ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== MIAMI ===================== -->
+  <div data-aos="fade-right" class="blog-container">
+    <div class="blog-post" data-title="Miami">
+      <div class="slider">
+        <img alt="Miami" src="https://cdn.pixabay.com/photo/2016/11/18/16/52/miami-1835619_1280.jpg"/>
+      </div>
+      <div class="blog-content">
+        <h2>Miami <span class="weather-status" id="weather-Miami">Loading...</span></h2>
+        <p>"Art Deco buildings, Cuban flavors, and vibrant nightlife make Miami the tropical playground of the USA."</p>
+        <div class="destination-links">
+          <a href="https://www.booking.com/searchresults.html?ss=Miami+food" target="_blank">Food</a> |
+          <a href="https://www.booking.com/searchresults.html?ss=Miami+hotels" target="_blank">Hotels</a>
+        </div>
+        <div class="toggle-btn">Show Top 5 Attractions</div>
+    <ul class="attractions">
+  <li><strong><a href="https://www.booking.com/landmark/us/south-beach-miami.html" target="_blank">South Beach</a></strong><br><img id="miamiAttraction1" alt="South Beach"></li>
+  <li><strong><a href="https://www.booking.com/landmark/us/miami-art-deco-district.html" target="_blank">Art Deco Historic District</a></strong><br><img id="miamiAttraction2" alt="Art Deco District"></li>
+  <li><strong><a href="https://www.booking.com/landmark/us/little-havana-miami.html" target="_blank">Little Havana</a></strong><br><img id="miamiAttraction3" alt="Little Havana"></li>
+  <li><strong><a href="https://www.booking.com/landmark/us/vizcaya-museum.html" target="_blank">Vizcaya Museum & Gardens</a></strong><br><img id="miamiAttraction4" alt="Vizcaya Museum"></li>
+  <li><strong><a href="https://www.booking.com/landmark/us/bayside-marketplace.html" target="_blank">Bayside Marketplace</a></strong><br><img id="miamiAttraction5" alt="Bayside Marketplace"></li>
+</ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== LAS VEGAS ===================== -->
+  <div data-aos="fade-left" class="blog-container">
+    <div class="blog-post" data-title="Las Vegas">
+      <div class="slider">
+        <img alt="Las Vegas" src="https://cdn.pixabay.com/photo/2017/08/06/23/10/las-vegas-2591670_1280.jpg"/>
+      </div>
+      <div class="blog-content">
+        <h2>Las Vegas <span class="weather-status" id="weather-Vegas">Loading...</span></h2>
+        <p>"The Strip glows with lights, shows, and casinos—Vegas is a world of entertainment in the desert."</p>
+        <div class="destination-links">
+          <a href="https://www.booking.com/searchresults.html?ss=Las+Vegas+food" target="_blank">Food</a> |
+          <a href="https://www.booking.com/searchresults.html?ss=Las+Vegas+hotels" target="_blank">Hotels</a>
+        </div>
+        <div class="toggle-btn">Show Top 5 Attractions</div>
+        <!-- ===================== LAS VEGAS ATTRACTIONS ===================== -->
+<ul class="attractions">
+  <li><strong><a href="https://www.booking.com/landmark/us/las-vegas-strip.html" target="_blank">Las Vegas Strip</a></strong><br><img id="vegasAttraction1" alt="Las Vegas Strip"></li>
+  <li><strong><a href="https://www.booking.com/landmark/us/bellagio-fountains.html" target="_blank">Bellagio Fountains</a></strong><br><img id="vegasAttraction2" alt="Bellagio Fountains"></li>
+  <li><strong><a href="https://www.booking.com/landmark/us/fremont-street.html" target="_blank">Fremont Street Experience</a></strong><br><img id="vegasAttraction3" alt="Fremont Street"></li>
+  <li><strong><a href="https://www.booking.com/landmark/us/hoover-dam.html" target="_blank">Hoover Dam</a></strong><br><img id="vegasAttraction4" alt="Hoover Dam"></li>
+  <li><strong><a href="https://www.booking.com/landmark/us/stratosphere.html" target="_blank">Stratosphere Tower</a></strong><br><img id="vegasAttraction5" alt="Stratosphere Tower"></li>
+</ul>
+
+      </div>
+    </div>
+  </div>
+  <!-- ===================== CANCUN ===================== -->
+  <div data-aos="fade-right" class="blog-container">
+    <div class="blog-post" data-title="Cancun">
+      <div class="slider">
+        <img alt="Cancun" src="https://cdn.pixabay.com/photo/2015/07/09/22/44/cancun-838506_1280.jpg"/>
+      </div>
+      <div class="blog-content">
+        <h2>Cancun <span class="weather-status" id="weather-Cancun">Loading...</span></h2>
+        <p>"Turquoise waters, endless beaches, and nightlife make Cancun a dream Caribbean escape."</p>
+        <div class="destination-links">
+          <a href="https://www.booking.com/searchresults.html?ss=Cancun+food" target="_blank">Food</a> |
+          <a href="https://www.booking.com/searchresults.html?ss=Cancun+hotels" target="_blank">Hotels</a>
+        </div>
+        <div class="toggle-btn">Show Top 5 Attractions</div>
+       <!-- ===================== CANCÚN ATTRACTIONS ===================== -->
+<ul class="attractions">
+  <li><strong><a href="https://www.booking.com/landmark/mx/cancun-hotel-zone.html" target="_blank">Hotel Zone</a></strong><br><img id="cancunAttraction1" alt="Cancun Hotel Zone"></li>
+  <li><strong><a href="https://www.booking.com/landmark/mx/playa-delfines.html" target="_blank">Playa Delfines</a></strong><br><img id="cancunAttraction2" alt="Playa Delfines"></li>
+  <li><strong><a href="https://www.booking.com/landmark/mx/underwater-museum.html" target="_blank">Cancún Underwater Museum</a></strong><br><img id="cancunAttraction3" alt="Underwater Museum"></li>
+  <li><strong><a href="https://www.booking.com/landmark/mx/market-28.html" target="_blank">Mercado 28</a></strong><br><img id="cancunAttraction4" alt="Mercado 28"></li>
+  <li><strong><a href="https://www.booking.com/landmark/mx/interactive-aquarium.html" target="_blank">Interactive Aquarium</a></strong><br><img id="cancunAttraction5" alt="Interactive Aquarium"></li>
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== MEXICO CITY ===================== -->
+  <div data-aos="fade-left" class="blog-container">
+    <div class="blog-post" data-title="Mexico City">
+      <div class="slider">
+        <img alt="Mexico City" src="https://cdn.pixabay.com/photo/2017/04/15/10/40/mexico-2234640_1280.jpg"/>
+      </div>
+      <div class="blog-content">
+        <h2>Mexico City <span class="weather-status" id="weather-MexicoCity">Loading...</span></h2>
+        <p>"From ancient pyramids to modern art, Mexico City buzzes with history, flavors, and culture."</p>
+        <div class="destination-links">
+          <a href="https://www.booking.com/searchresults.html?ss=Mexico+City+food" target="_blank">Food</a> |
+          <a href="https://www.booking.com/searchresults.html?ss=Mexico+City+hotels" target="_blank">Hotels</a>
+        </div>
+        <div class="toggle-btn">Show Top 5 Attractions</div>
+       <!-- ===================== MEXICO CITY ATTRACTIONS ===================== -->
+<ul class="attractions">
+  <li><strong><a href="https://www.booking.com/landmark/mx/zocalo.html" target="_blank">Zócalo</a></strong><br><img id="mexicoCityAttraction1" alt="Zocalo"></li>
+  <li><strong><a href="https://www.booking.com/landmark/mx/chapultepec-forest.html" target="_blank">Chapultepec Park</a></strong><br><img id="mexicoCityAttraction2" alt="Chapultepec Park"></li>
+  <li><strong><a href="https://www.booking.com/landmark/mx/templo-mayor.html" target="_blank">Templo Mayor</a></strong><br><img id="mexicoCityAttraction3" alt="Templo Mayor"></li>
+  <li><strong><a href="https://www.booking.com/landmark/mx/frida-kahlo-museum.html" target="_blank">Frida Kahlo Museum</a></strong><br><img id="mexicoCityAttraction4" alt="Frida Kahlo Museum"></li>
+  <li><strong><a href="https://www.booking.com/landmark/mx/palacio-de-bellas-artes.html" target="_blank">Palacio de Bellas Artes</a></strong><br><img id="mexicoCityAttraction5" alt="Palacio de Bellas Artes"></li>
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== VANCOUVER ===================== -->
+  <div data-aos="fade-right" class="blog-container">
+    <div class="blog-post" data-title="Vancouver">
+      <div class="slider">
+        <img alt="Vancouver" src="https://cdn.pixabay.com/photo/2017/01/20/00/30/vancouver-1991914_1280.jpg"/>
+      </div>
+      <div class="blog-content">
+        <h2>Vancouver <span class="weather-status" id="weather-Vancouver">Loading...</span></h2>
+        <p>"Mountains meet the ocean in Vancouver—Stanley Park, lively markets, and breathtaking views."</p>
+        <div class="destination-links">
+          <a href="https://www.booking.com/searchresults.html?ss=Vancouver+food" target="_blank">Food</a> |
+          <a href="https://www.booking.com/searchresults.html?ss=Vancouver+hotels" target="_blank">Hotels</a>
+        </div>
+        <div class="toggle-btn">Show Top 5 Attractions</div>
+       <!-- ===================== VANCOUVER ATTRACTIONS ===================== -->
+<ul class="attractions">
+  <li><strong><a href="https://www.booking.com/landmark/ca/stanley-park.html" target="_blank">Stanley Park</a></strong><br><img id="vancouverAttraction1" alt="Stanley Park"></li>
+  <li><strong><a href="https://www.booking.com/landmark/ca/granville-island.html" target="_blank">Granville Island</a></strong><br><img id="vancouverAttraction2" alt="Granville Island"></li>
+  <li><strong><a href="https://www.booking.com/landmark/ca/capilano-suspension-bridge.html" target="_blank">Capilano Suspension Bridge</a></strong><br><img id="vancouverAttraction3" alt="Capilano Suspension Bridge"></li>
+  <li><strong><a href="https://www.booking.com/landmark/ca/grouse-mountain.html" target="_blank">Grouse Mountain</a></strong><br><img id="vancouverAttraction4" alt="Grouse Mountain"></li>
+  <li><strong><a href="https://www.booking.com/landmark/ca/vancouver-aquarium.html" target="_blank">Vancouver Aquarium</a></strong><br><img id="vancouverAttraction5" alt="Vancouver Aquarium"></li>
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== TORONTO ===================== -->
+  <div data-aos="fade-left" class="blog-container">
+    <div class="blog-post" data-title="Toronto">
+      <div class="slider">
+        <img alt="Toronto" src="https://cdn.pixabay.com/photo/2017/08/02/14/26/toronto-2577301_1280.jpg"/>
+      </div>
+      <div class="blog-content">
+        <h2>Toronto <span class="weather-status" id="weather-Toronto">Loading...</span></h2>
+        <p>"Canada’s biggest city is a mix of skyscrapers, multicultural neighborhoods, and Lake Ontario views."</p>
+        <div class="destination-links">
+          <a href="https://www.booking.com/searchresults.html?ss=Toronto+food" target="_blank">Food</a> |
+          <a href="https://www.booking.com/searchresults.html?ss=Toronto+hotels" target="_blank">Hotels</a>
+        </div>
+        <div class="toggle-btn">Show Top 5 Attractions</div>
+      <!-- ===================== TORONTO ATTRACTIONS ===================== -->
+<ul class="attractions">
+  <li><strong><a href="https://www.booking.com/landmark/ca/cn-tower.html" target="_blank">CN Tower</a></strong><br><img id="torontoAttraction1" alt="CN Tower"></li>
+  <li><strong><a href="https://www.booking.com/landmark/ca/royal-ontario-museum.html" target="_blank">Royal Ontario Museum</a></strong><br><img id="torontoAttraction2" alt="Royal Ontario Museum"></li>
+  <li><strong><a href="https://www.booking.com/landmark/ca/ripley-s-aquarium.html" target="_blank">Ripley’s Aquarium</a></strong><br><img id="torontoAttraction3" alt="Ripley’s Aquarium"></li>
+  <li><strong><a href="https://www.booking.com/landmark/ca/rogers-centre.html" target="_blank">Rogers Centre</a></strong><br><img id="torontoAttraction4" alt="Rogers Centre"></li>
+  <li><strong><a href="https://www.booking.com/landmark/ca/toronto-islands.html" target="_blank">Toronto Islands</a></strong><br><img id="torontoAttraction5" alt="Toronto Islands"></li>
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== MONTREAL ===================== -->
+  <div data-aos="fade-right" class="blog-container">
+    <div class="blog-post" data-title="Montreal">
+      <div class="slider">
+        <img alt="Montreal" src="https://cdn.pixabay.com/photo/2016/09/08/21/52/montreal-1651021_1280.jpg"/>
+      </div>
+      <div class="blog-content">
+        <h2>Montreal <span class="weather-status" id="weather-Montreal">Loading...</span></h2>
+        <p>"French charm meets Canadian energy in Montreal—old town vibes, festivals, and foodie heaven."</p>
+        <div class="destination-links">
+          <a href="https://www.booking.com/searchresults.html?ss=Montreal+food" target="_blank">Food</a> |
+          <a href="https://www.booking.com/searchresults.html?ss=Montreal+hotels" target="_blank">Hotels</a>
+        </div>
+        <div class="toggle-btn">Show Top 5 Attractions</div>
+      <!-- ===================== MONTREAL ATTRACTIONS ===================== -->
+<ul class="attractions">
+  <li><strong><a href="https://www.booking.com/landmark/ca/old-montreal.html" target="_blank">Old Montreal</a></strong><br><img id="montrealAttraction1" alt="Old Montreal"></li>
+  <li><strong><a href="https://www.booking.com/landmark/ca/notre-dame-basilica-montreal.html" target="_blank">Notre-Dame Basilica</a></strong><br><img id="montrealAttraction2" alt="Notre-Dame Basilica"></li>
+  <li><strong><a href="https://www.booking.com/landmark/ca/mount-royal-park.html" target="_blank">Mount Royal Park</a></strong><br><img id="montrealAttraction3" alt="Mount Royal Park"></li>
+  <li><strong><a href="https://www.booking.com/landmark/ca/montreal-biodome.html" target="_blank">Montreal Biodome</a></strong><br><img id="montrealAttraction4" alt="Montreal Biodome"></li>
+  <li><strong><a href="https://www.booking.com/landmark/ca/saint-joseph-oratory.html" target="_blank">Saint Joseph’s Oratory</a></strong><br><img id="montrealAttraction5" alt="Saint Joseph’s Oratory"></li>
+</ul>
+
+      </div>
+    </div>
+  </div>
+  <!-- ===================== HAVANA ===================== -->
+  <div data-aos="fade-left" class="blog-container">
+    <div class="blog-post" data-title="Havana">
+      <div class="slider">
+        <img alt="Havana" src="https://cdn.pixabay.com/photo/2016/01/19/17/17/havana-1140954_1280.jpg"/>
+      </div>
+      <div class="blog-content">
+        <h2>Havana <span class="weather-status" id="weather-Havana">Loading...</span></h2>
+        <p>"Classic cars, salsa rhythms, and pastel colonial buildings make Havana unforgettable."</p>
+        <div class="destination-links">
+          <a href="https://www.booking.com/searchresults.html?ss=Havana+food" target="_blank">Food</a> |
+          <a href="https://www.booking.com/searchresults.html?ss=Havana+hotels" target="_blank">Hotels</a>
+        </div>
+        <div class="toggle-btn">Show Top 5 Attractions</div>
+      <!-- ===================== HAVANA ATTRACTIONS ===================== -->
+<ul class="attractions">
+  <li><strong><a href="https://www.booking.com/landmark/cu/old-havana.html" target="_blank">Old Havana</a></strong><br><img id="havanaAttraction1" alt="Old Havana"></li>
+  <li><strong><a href="https://www.booking.com/landmark/cu/malecon.html" target="_blank">Malecón</a></strong><br><img id="havanaAttraction2" alt="Malecon"></li>
+  <li><strong><a href="https://www.booking.com/landmark/cu/plaza-de-la-revolucion.html" target="_blank">Plaza de la Revolución</a></strong><br><img id="havanaAttraction3" alt="Plaza de la Revolucion"></li>
+  <li><strong><a href="https://www.booking.com/landmark/cu/castillo-del-morro.html" target="_blank">Castillo del Morro</a></strong><br><img id="havanaAttraction4" alt="Castillo del Morro"></li>
+  <li><strong><a href="https://www.booking.com/landmark/cu/national-museum-of-fine-arts.html" target="_blank">National Museum of Fine Arts</a></strong><br><img id="havanaAttraction5" alt="National Museum of Fine Arts"></li>
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== SAN FRANCISCO ===================== -->
+  <div data-aos="fade-right" class="blog-container">
+    <div class="blog-post" data-title="San Francisco">
+      <div class="slider">
+        <img alt="San Francisco" src="https://cdn.pixabay.com/photo/2015/07/29/00/04/golden-gate-bridge-865672_1280.jpg"/>
+      </div>
+      <div class="blog-content">
+        <h2>San Francisco <span class="weather-status" id="weather-SF">Loading...</span></h2>
+        <p>"Golden Gate views, cable cars, and Alcatraz tours—San Francisco is the gem of the Bay."</p>
+        <div class="destination-links">
+          <a href="https://www.booking.com/searchresults.html?ss=San+Francisco+food" target="_blank">Food</a> |
+          <a href="https://www.booking.com/searchresults.html?ss=San+Francisco+hotels" target="_blank">Hotels</a>
+        </div>
+        <div class="toggle-btn">Show Top 5 Attractions</div>
+       <!-- ===================== SAN FRANCISCO ATTRACTIONS ===================== -->
+<ul class="attractions">
+  <li><strong><a href="https://www.booking.com/landmark/us/golden-gate-bridge.html" target="_blank">Golden Gate Bridge</a></strong><br><img id="sfAttraction1" alt="Golden Gate Bridge"></li>
+  <li><strong><a href="https://www.booking.com/landmark/us/alcatraz.html" target="_blank">Alcatraz Island</a></strong><br><img id="sfAttraction2" alt="Alcatraz Island"></li>
+  <li><strong><a href="https://www.booking.com/landmark/us/fishermans-wharf.html" target="_blank">Fisherman’s Wharf</a></strong><br><img id="sfAttraction3" alt="Fisherman’s Wharf"></li>
+  <li><strong><a href="https://www.booking.com/landmark/us/lombard-street.html" target="_blank">Lombard Street</a></strong><br><img id="sfAttraction4" alt="Lombard Street"></li>
+  <li><strong><a href="https://www.booking.com/landmark/us/chinatown-san-francisco.html" target="_blank">Chinatown</a></strong><br><img id="sfAttraction5" alt="Chinatown San Francisco"></li>
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== FOOTER & SCRIPTS ===================== -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+
+  <footer>© 2025 TravelSafe. All rights reserved.</footer>
+
+  <script>
+  const apiKey = "d1ed7374e6c83872fd2507f682afea26";
+  function fetchWeather(city, elementId) {
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`)
+      .then(r => r.json())
+      .then(data => {
+        if (data.cod === 200) {
+          const temp = Math.round(data.main.temp);
+          const icon = data.weather[0].icon;
+          document.getElementById(elementId).innerHTML =
+            `${temp}°C <img src="https://openweathermap.org/img/wn/${icon}.png" style="width:20px;"/>`;
+        }
+      });
+  }
+  document.addEventListener("DOMContentLoaded", () => {
+    fetchWeather("New York", "weather-NYC");
+    fetchWeather("Los Angeles", "weather-LA");
+    fetchWeather("Miami", "weather-Miami");
+    fetchWeather("Las Vegas", "weather-Vegas");
+    fetchWeather("Cancun", "weather-Cancun");
+    fetchWeather("Mexico City", "weather-MexicoCity");
+    fetchWeather("Vancouver", "weather-Vancouver");
+    fetchWeather("Toronto", "weather-Toronto");
+    fetchWeather("Montreal", "weather-Montreal");
+    fetchWeather("Havana", "weather-Havana");
+    fetchWeather("San Francisco", "weather-SF");
+  });
+  </script>
+
+  <script>
+  const pixabayApiKey = "31496043-2fe9cd081b0b76a68243b7e3b";
+  function fetchPixabayImages(query, elementId) {
+    fetch(`https://pixabay.com/api/?key=${pixabayApiKey}&q=${encodeURIComponent(query)}&image_type=photo`)
+      .then(r => r.json())
+      .then(data => { if (data.hits.length) document.getElementById(elementId).src = data.hits[0].webformatURL; });
+  }
+  const naAttractions = {
+    nyc: ["Statue of Liberty", "Central Park", "Empire State Building", "Times Square", "Broadway"],
+    la: ["Hollywood Sign", "Santa Monica Pier", "Griffith Observatory", "Rodeo Drive", "Venice Beach"],
+    miami: ["South Beach", "Little Havana", "Wynwood Walls", "Vizcaya Museum", "Bayside Marketplace"],
+    vegas: ["Las Vegas Strip", "Bellagio Fountains", "Fremont Street", "Red Rock Canyon", "High Roller"],
+    cancun: ["Chichen Itza", "Isla Mujeres", "Xcaret Park", "Cancun Underwater Museum", "Hotel Zone Beach"],
+    mexicocity: ["Teotihuacan Pyramids", "Zocalo", "Chapultepec Castle", "Frida Kahlo Museum", "Metropolitan Cathedral"],
+    vancouver: ["Stanley Park", "Granville Island", "Capilano Suspension Bridge", "Grouse Mountain", "Gastown"],
+    toronto: ["CN Tower", "Royal Ontario Museum", "Toronto Islands", "Distillery District", "Kensington Market"],
+    montreal: ["Old Montreal", "Notre Dame Basilica", "Mount Royal Park", "Montreal Museum of Fine Arts", "Jean Talon Market"],
+    havana: ["Old Havana", "Malecon", "Capitolio", "Revolution Square", "El Floridita"],
+    sf: ["Golden Gate Bridge", "Alcatraz Island", "Fisherman's Wharf", "Lombard Street", "San Francisco Chinatown"]
+  };
+  Object.entries(naAttractions).forEach(([city, attractions]) => {
+    attractions.forEach((a, i) => fetchPixabayImages(a, `${city}Attraction${i+1}`));
+  });
+  </script>
+
+  <script>
+  // Toggle buttons
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.toggle-btn').forEach(btn => {
+      const list = btn.nextElementSibling;
+      btn.addEventListener('click', () => {
+        list.classList.toggle('show');
+        btn.textContent = list.classList.contains('show')
+          ? 'Hide Attractions'
+          : 'Show Top 5 Attractions';
+      });
+    });
+  });
+  </script>
+</body>
+</html>

@@ -1,0 +1,414 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <link href="/styles/gen_dest.css" rel="stylesheet"/>
+  <link href="/styles/deco.css" rel="stylesheet"/>
+  <link href="/styles/navbar.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <title>Asia</title>
+  <style>
+    body { background-color: grey; }
+    .weather-widget {
+      margin: 20px auto;
+      padding: 10px;
+      text-align: center;
+      color: white;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+    .attractions {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-out;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 15px;
+    }
+    .attractions li { margin-bottom: 10px; list-style-type: disc; }
+    .attractions.show { max-height: 2000px; transition: max-height 0.5s ease-in; }
+    .attractions img {
+      width: 100%; height: 150px;
+      object-fit: cover; border-radius: 5px;
+    }
+    .toggle-btn {
+      margin-top: 10px; cursor: pointer;
+      color: #ffd700; font-weight: bold; text-decoration: underline;
+    }
+    .weather-status {
+      font-size: 0.9em; font-weight: normal; color: #ffd700;
+      margin-left: 10px; display: inline-block;
+    }
+    .slider {
+      width: 100%; height: 400px; overflow: hidden;
+      padding: 15px; box-sizing: border-box;
+    }
+    .slider img {
+      width: 100%; height: 100%;
+      object-fit: cover; border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-brand" style="color: #444;">Travel safe</div>
+    <div class="links">
+      <a href="travel.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="destination.html">Destinations</a>
+      <a href="blog.html">Blog</a>
+    </div>
+    <div class="action_btn"><i class="fa-solid fa-bars"></i></div>
+    <div class="dropdown_menu">
+      <li><a href="travel.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="destination.html">Destinations</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </div>
+    <script defer src="html/js/nav.js"></script>
+  </nav>
+
+  <div class="weather-widget">
+    🌏 Check the <a href="https://weather.com/weather/today" style="color: #ffd700; text-decoration: underline;" target="_blank">latest weather</a> for your Asian destination!
+  </div>
+
+  <!-- ===================== TOKYO ===================== -->
+  <div data-aos="fade-right" class="blog-container">
+    <div class="blog-post" data-title="Tokyo">
+      <div class="slider"><img src="https://cdn.pixabay.com/photo/2016/11/19/14/00/tokyo-1834326_1280.jpg" alt="Tokyo"></div>
+      <div class="blog-content">
+        <h2>Tokyo <span class="weather-status" id="weather-Tokyo">Loading...</span></h2>
+        <p>"Tokyo dazzles with neon lights, temples, and sushi feasts. A city where tradition meets futuristic vibes."</p>
+        <div class="destination-links">
+          <a href="https://www.booking.com/searchresults.html?ss=Tokyo+food" target="_blank">Food</a> |
+          <a href="https://www.booking.com/searchresults.html?ss=Tokyo+hotels" target="_blank">Hotels</a>
+        </div>
+        <div class="toggle-btn">Show Top 5 Attractions</div>
+      <ul class="attractions">
+  <li><strong><a href="https://www.booking.com/landmark/jp/tokyo-tower.html" target="_blank">Tokyo Tower</a></strong><br><img id="tokyoAttraction1" alt="Tokyo Tower"></li>
+  <li><strong><a href="https://www.booking.com/landmark/jp/sensoji-temple.html" target="_blank">Sensō-ji Temple</a></strong><br><img id="tokyoAttraction2" alt="Sensoji"></li>
+  <li><strong><a href="https://www.booking.com/landmark/jp/shibuya-crossing.html" target="_blank">Shibuya Crossing</a></strong><br><img id="tokyoAttraction3" alt="Shibuya"></li>
+  <li><strong><a href="https://www.booking.com/landmark/jp/meiji-shrine.html" target="_blank">Meiji Shrine</a></strong><br><img id="tokyoAttraction4" alt="Meiji Shrine"></li>
+  <li><strong><a href="https://www.booking.com/landmark/jp/tokyo-disneyland.html" target="_blank">Tokyo Disneyland</a></strong><br><img id="tokyoAttraction5" alt="Tokyo Disneyland"></li>
+</ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== KYOTO ===================== -->
+  <div data-aos="fade-left" class="blog-container">
+    <div class="blog-post" data-title="Kyoto">
+      <div class="slider"><img src="https://cdn.pixabay.com/photo/2016/11/29/09/08/japan-1869488_1280.jpg" alt="Kyoto"></div>
+      <div class="blog-content">
+        <h2>Kyoto <span class="weather-status" id="weather-Kyoto">Loading...</span></h2>
+        <p>"Kyoto’s temples, bamboo forests, and tea houses whisper the beauty of Japan’s cultural heart."</p>
+        <div class="destination-links">
+          <a href="https://www.booking.com/searchresults.html?ss=Kyoto+food" target="_blank">Food</a> |
+          <a href="https://www.booking.com/searchresults.html?ss=Kyoto+hotels" target="_blank">Hotels</a>
+        </div>
+        <div class="toggle-btn">Show Top 5 Attractions</div>
+ <ul class="attractions">
+  <li><strong><a href="https://www.booking.com/landmark/jp/fushimi-inari-taisha.html" target="_blank">Fushimi Inari Shrine</a></strong><br><img id="kyotoAttraction1" alt="Fushimi Inari"></li>
+  <li><strong><a href="https://www.booking.com/landmark/jp/kinkaku-ji.html" target="_blank">Kinkaku-ji (Golden Pavilion)</a></strong><br><img id="kyotoAttraction2" alt="Kinkakuji"></li>
+  <li><strong><a href="https://www.booking.com/landmark/jp/arashiyama.html" target="_blank">Arashiyama Bamboo Grove</a></strong><br><img id="kyotoAttraction3" alt="Arashiyama"></li>
+  <li><strong><a href="https://www.booking.com/landmark/jp/gion.html" target="_blank">Gion District</a></strong><br><img id="kyotoAttraction4" alt="Gion"></li>
+  <li><strong><a href="https://www.booking.com/landmark/jp/nijo-castle.html" target="_blank">Nijo Castle</a></strong><br><img id="kyotoAttraction5" alt="Nijo Castle"></li>
+</ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== BANGKOK ===================== -->
+  <div data-aos="fade-right" class="blog-container">
+    <div class="blog-post" data-title="Bangkok">
+      <div class="slider"><img src="https://cdn.pixabay.com/photo/2016/11/19/11/11/grand-palace-1834186_1280.jpg" alt="Bangkok"></div>
+      <div class="blog-content">
+        <h2>Bangkok <span class="weather-status" id="weather-Bangkok">Loading...</span></h2>
+        <p>"Bustling markets, golden temples, and river cruises—Bangkok is a feast for the senses."</p>
+        <div class="destination-links">
+          <a href="https://www.booking.com/searchresults.html?ss=Bangkok+food" target="_blank">Food</a> |
+          <a href="https://www.booking.com/searchresults.html?ss=Bangkok+hotels" target="_blank">Hotels</a>
+        </div>
+        <div class="toggle-btn">Show Top 5 Attractions</div>
+     <ul class="attractions">
+  <li><strong><a href="https://www.booking.com/landmark/th/grand-palace.html" target="_blank">Grand Palace</a></strong><br><img id="bangkokAttraction1" alt="Grand Palace"></li>
+  <li><strong><a href="https://www.booking.com/landmark/th/wat-arun.html" target="_blank">Wat Arun</a></strong><br><img id="bangkokAttraction2" alt="Wat Arun"></li>
+  <li><strong><a href="https://www.booking.com/landmark/th/chatuchak-market.html" target="_blank">Chatuchak Market</a></strong><br><img id="bangkokAttraction3" alt="Chatuchak"></li>
+  <li><strong><a href="https://www.booking.com/landmark/th/khao-san-road.html" target="_blank">Khao San Road</a></strong><br><img id="bangkokAttraction4" alt="Khao San"></li>
+  <li><strong><a href="https://www.booking.com/landmark/th/damnoen-saduak-floating-market.html" target="_blank">Floating Markets</a></strong><br><img id="bangkokAttraction5" alt="Floating Market"></li>
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== PHUKET ===================== -->
+  <div data-aos="fade-left" class="blog-container">
+    <div class="blog-post" data-title="Phuket">
+      <div class="slider"><img src="https://cdn.pixabay.com/photo/2017/05/16/22/27/phuket-2312616_1280.jpg" alt="Phuket"></div>
+      <div class="blog-content">
+        <h2>Phuket <span class="weather-status" id="weather-Phuket">Loading...</span></h2>
+        <p>"Thailand’s island paradise—turquoise waters, nightlife, and endless beaches."</p>
+        <div class="destination-links">
+          <a href="https://www.booking.com/searchresults.html?ss=Phuket+food" target="_blank">Food</a> |
+          <a href="https://www.booking.com/searchresults.html?ss=Phuket+hotels" target="_blank">Hotels</a>
+        </div>
+        <div class="toggle-btn">Show Top 5 Attractions</div>
+      <ul class="attractions">
+  <li><strong><a href="https://www.booking.com/landmark/th/patong-beach.html" target="_blank">Patong Beach</a></strong><br><img id="phuketAttraction1" alt="Patong Beach"></li>
+  <li><strong><a href="https://www.booking.com/landmark/th/big-buddha.html" target="_blank">Big Buddha</a></strong><br><img id="phuketAttraction2" alt="Big Buddha"></li>
+  <li><strong><a href="https://www.booking.com/landmark/th/phi-phi-islands.html" target="_blank">Phi Phi Islands</a></strong><br><img id="phuketAttraction3" alt="Phi Phi Islands"></li>
+  <li><strong><a href="https://www.booking.com/landmark/th/phang-nga-bay.html" target="_blank">Phang Nga Bay</a></strong><br><img id="phuketAttraction4" alt="Phang Nga Bay"></li>
+  <li><strong><a href="https://www.booking.com/landmark/th/wat-chalong.html" target="_blank">Wat Chalong</a></strong><br><img id="phuketAttraction5" alt="Wat Chalong"></li>
+</ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== BALI ===================== -->
+  <div data-aos="fade-right" class="blog-container">
+    <div class="blog-post" data-title="Bali">
+      <div class="slider"><img src="https://cdn.pixabay.com/photo/2017/08/02/05/37/bali-2560010_1280.jpg" alt="Bali"></div>
+      <div class="blog-content">
+        <h2>Bali <span class="weather-status" id="weather-Bali">Loading...</span></h2>
+        <p>"Bali enchants with rice terraces, temples, surf waves, and sunsets that take your breath away."</p>
+        <div class="destination-links">
+          <a href="https://www.booking.com/searchresults.html?ss=Bali+food" target="_blank">Food</a> |
+          <a href="https://www.booking.com/searchresults.html?ss=Bali+hotels" target="_blank">Hotels</a>
+        </div>
+        <div class="toggle-btn">Show Top 5 Attractions</div>
+    <ul class="attractions">
+  <li><strong><a href="https://www.booking.com/landmark/id/tanah-lot.html" target="_blank">Tanah Lot Temple</a></strong><br><img id="baliAttraction1" alt="Tanah Lot"></li>
+  <li><strong><a href="https://www.booking.com/landmark/id/ubud-monkey-forest.html" target="_blank">Ubud Monkey Forest</a></strong><br><img id="baliAttraction2" alt="Ubud Monkey Forest"></li>
+  <li><strong><a href="https://www.booking.com/landmark/id/tegallalang-rice-terrace.html" target="_blank">Tegallalang Rice Terraces</a></strong><br><img id="baliAttraction3" alt="Rice Terraces"></li>
+  <li><strong><a href="https://www.booking.com/landmark/id/kuta-beach.html" target="_blank">Kuta Beach</a></strong><br><img id="baliAttraction4" alt="Kuta Beach"></li>
+  <li><strong><a href="https://www.booking.com/landmark/id/uluwatu-temple.html" target="_blank">Uluwatu Temple</a></strong><br><img id="baliAttraction5" alt="Uluwatu"></li>
+</ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== SINGAPORE ===================== -->
+  <div data-aos="fade-left" class="blog-container">
+    <div class="blog-post" data-title="Singapore">
+      <div class="slider"><img src="https://cdn.pixabay.com/photo/2015/09/18/17/45/singapore-944212_1280.jpg" alt="Singapore"></div>
+      <div class="blog-content">
+        <h2>Singapore <span class="weather-status" id="weather-Singapore">Loading...</span></h2>
+        <p>"A futuristic garden city with skyscrapers, hawker food stalls, and cultural neighborhoods."</p>
+        <div class="destination-links">
+          <a href="https://www.booking.com/searchresults.html?ss=Singapore+food" target="_blank">Food</a> |
+          <a href="https://www.booking.com/searchresults.html?ss=Singapore+hotels" target="_blank">Hotels</a>
+        </div>
+        <div class="toggle-btn">Show Top 5 Attractions</div>
+       <ul class="attractions">
+  <li><strong><a href="https://www.booking.com/landmark/sg/marina-bay-sands.html" target="_blank">Marina Bay Sands</a></strong><br><img id="singaporeAttraction1" alt="Marina Bay Sands"></li>
+  <li><strong><a href="https://www.booking.com/landmark/sg/gardens-by-the-bay.html" target="_blank">Gardens by the Bay</a></strong><br><img id="singaporeAttraction2" alt="Gardens by the Bay"></li>
+  <li><strong><a href="https://www.booking.com/landmark/sg/sentosa.html" target="_blank">Sentosa Island</a></strong><br><img id="singaporeAttraction3" alt="Sentosa"></li>
+  <li><strong><a href="https://www.booking.com/landmark/sg/orchard-road.html" target="_blank">Orchard Road</a></strong><br><img id="singaporeAttraction4" alt="Orchard Road"></li>
+  <li><strong><a href="https://www.booking.com/landmark/sg/clarke-quay.html" target="_blank">Clarke Quay</a></strong><br><img id="singaporeAttraction5" alt="Clarke Quay"></li>
+</ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== KUALA LUMPUR ===================== -->
+  <div data-aos="fade-right" class="blog-container">
+    <div class="blog-post" data-title="Kuala Lumpur">
+      <div class="slider"><img src="https://cdn.pixabay.com/photo/2014/12/16/23/45/petronas-towers-570475_1280.jpg" alt="Kuala Lumpur"></div>
+      <div class="blog-content">
+        <h2>Kuala Lumpur <span class="weather-status" id="weather-KualaLumpur">Loading...</span></h2>
+        <p>"Malaysia’s capital shines with skyscrapers, street food, and the iconic Petronas Towers."</p>
+        <div class="destination-links">
+          <a href="https://www.booking.com/searchresults.html?ss=Kuala+Lumpur+food" target="_blank">Food</a> |
+          <a href="https://www.booking.com/searchresults.html?ss=Kuala+Lumpur+hotels" target="_blank">Hotels</a>
+        </div>
+        <div class="toggle-btn">Show Top 5 Attractions</div>
+ <ul class="attractions">
+  <li><strong><a href="https://www.booking.com/landmark/my/petronas-towers.html" target="_blank">Petronas Twin Towers</a></strong><br><img id="kualalumpurAttraction1" alt="Petronas Towers"></li>
+  <li><strong><a href="https://www.booking.com/landmark/my/batu-caves.html" target="_blank">Batu Caves</a></strong><br><img id="kualalumpurAttraction2" alt="Batu Caves"></li>
+  <li><strong><a href="https://www.booking.com/landmark/my/kl-tower.html" target="_blank">Menara KL Tower</a></strong><br><img id="kualalumpurAttraction3" alt="KL Tower"></li>
+  <li><strong><a href="https://www.booking.com/landmark/my/central-market-kuala-lumpur.html" target="_blank">Central Market</a></strong><br><img id="kualalumpurAttraction4" alt="Central Market"></li>
+  <li><strong><a href="https://www.booking.com/landmark/my/chinatown.html" target="_blank">Chinatown</a></strong><br><img id="kualalumpurAttraction5" alt="Chinatown"></li>
+</ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== DUBAI ===================== -->
+  <div data-aos="fade-left" class="blog-container">
+    <div class="blog-post" data-title="Dubai">
+      <div class="slider"><img src="https://cdn.pixabay.com/photo/2015/12/08/00/32/dubai-1081872_1280.jpg" alt="Dubai"></div>
+      <div class="blog-content">
+        <h2>Dubai <span class="weather-status" id="weather-Dubai">Loading...</span></h2>
+        <p>"Skyscrapers, desert adventures, luxury shopping, and beaches—Dubai redefines extravagance."</p>
+        <div class="destination-links">
+          <a href="https://www.booking.com/searchresults.html?ss=Dubai+food" target="_blank">Food</a> |
+          <a href="https://www.booking.com/searchresults.html?ss=Dubai+hotels" target="_blank">Hotels</a>
+        </div>
+        <div class="toggle-btn">Show Top 5 Attractions</div>
+     <ul class="attractions">
+  <li><strong><a href="https://www.booking.com/landmark/ae/burj-khalifa.html" target="_blank">Burj Khalifa</a></strong><br><img id="dubaiAttraction1" alt="Burj Khalifa"></li>
+  <li><strong><a href="https://www.booking.com/landmark/ae/palm-jumeirah.html" target="_blank">Palm Jumeirah</a></strong><br><img id="dubaiAttraction2" alt="Palm Jumeirah"></li>
+  <li><strong><a href="https://www.booking.com/landmark/ae/dubai-mall.html" target="_blank">Dubai Mall</a></strong><br><img id="dubaiAttraction3" alt="Dubai Mall"></li>
+  <li><strong><a href="https://www.booking.com/landmark/ae/dubai-marina.html" target="_blank">Dubai Marina</a></strong><br><img id="dubaiAttraction4" alt="Dubai Marina"></li>
+  <li><strong><a href="https://www.booking.com/landmark/ae/desert-safari.html" target="_blank">Desert Safari</a></strong><br><img id="dubaiAttraction5" alt="Desert Safari"></li>
+</ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== HONG KONG ===================== -->
+  <div data-aos="fade-right" class="blog-container">
+    <div class="blog-post" data-title="Hong Kong">
+      <div class="slider"><img src="https://cdn.pixabay.com/photo/2016/11/29/13/14/hong-kong-1867056_1280.jpg" alt="Hong Kong"></div>
+      <div class="blog-content">
+        <h2>Hong Kong <span class="weather-status" id="weather-HongKong">Loading...</span></h2>
+        <p>"A skyline like no other—Hong Kong is a thrilling mix of skyscrapers, markets, and Victoria Harbour views."</p>
+        <div class="destination-links">
+          <a href="https://www.booking.com/searchresults.html?ss=Hong+Kong+food" target="_blank">Food</a> |
+          <a href="https://www.booking.com/searchresults.html?ss=Hong+Kong+hotels" target="_blank">Hotels</a>
+        </div>
+        <div class="toggle-btn">Show Top 5 Attractions</div>
+     <ul class="attractions">
+  <li><strong><a href="https://www.booking.com/landmark/hk/victoria-peak.html" target="_blank">Victoria Peak</a></strong><br><img id="hongkongAttraction1" alt="Victoria Peak"></li>
+  <li><strong><a href="https://www.booking.com/landmark/hk/tsim-sha-tsui.html" target="_blank">Tsim Sha Tsui</a></strong><br><img id="hongkongAttraction2" alt="Tsim Sha Tsui"></li>
+  <li><strong><a href="https://www.booking.com/landmark/hk/disneyland.html" target="_blank">Hong Kong Disneyland</a></strong><br><img id="hongkongAttraction3" alt="Disneyland"></li>
+  <li><strong><a href="https://www.booking.com/landmark/hk/temple-street-night-market.html" target="_blank">Temple Street Night Market</a></strong><br><img id="hongkongAttraction4" alt="Temple Street"></li>
+  <li><strong><a href="https://www.booking.com/landmark/hk/ngong-ping-360.html" target="_blank">Ngong Ping 360</a></strong><br><img id="hongkongAttraction5" alt="Ngong Ping"></li>
+</ul>
+      </div>
+    </div>
+  </div>
+  <!-- ===================== SEOUL ===================== -->
+  <div data-aos="fade-left" class="blog-container">
+    <div class="blog-post" data-title="Seoul">
+      <div class="slider"><img src="https://cdn.pixabay.com/photo/2017/09/13/20/29/seoul-2748435_1280.jpg" alt="Seoul"></div>
+      <div class="blog-content">
+        <h2>Seoul <span class="weather-status" id="weather-Seoul">Loading...</span></h2>
+        <p>"Seoul pulses with K-pop, palaces, neon streets, and a culture both ancient and modern."</p>
+        <div class="destination-links">
+          <a href="https://www.booking.com/searchresults.html?ss=Seoul+food" target="_blank">Food</a> |
+          <a href="https://www.booking.com/searchresults.html?ss=Seoul+hotels" target="_blank">Hotels</a>
+        </div>
+        <div class="toggle-btn">Show Top 5 Attractions</div>
+     <ul class="attractions">
+  <li><strong><a href="https://www.booking.com/landmark/kr/gyeongbokgung-palace.html" target="_blank">Gyeongbokgung Palace</a></strong><br><img id="seoulAttraction1" alt="Gyeongbokgung"></li>
+  <li><strong><a href="https://www.booking.com/landmark/kr/n-seoul-tower.html" target="_blank">N Seoul Tower</a></strong><br><img id="seoulAttraction2" alt="N Seoul Tower"></li>
+  <li><strong><a href="https://www.booking.com/landmark/kr/myeongdong-shopping-street.html" target="_blank">Myeongdong Shopping Street</a></strong><br><img id="seoulAttraction3" alt="Myeongdong"></li>
+  <li><strong><a href="https://www.booking.com/landmark/kr/bukchon-hanok-village.html" target="_blank">Bukchon Hanok Village</a></strong><br><img id="seoulAttraction4" alt="Bukchon"></li>
+  <li><strong><a href="https://www.booking.com/landmark/kr/dongdaemun-design-plaza.html" target="_blank">Dongdaemun Design Plaza</a></strong><br><img id="seoulAttraction5" alt="DDP"></li>
+</ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== NEW DELHI ===================== -->
+  <div data-aos="fade-right" class="blog-container">
+    <div class="blog-post" data-title="New Delhi">
+      <div class="slider"><img src="https://cdn.pixabay.com/photo/2015/09/18/20/18/india-944350_1280.jpg" alt="New Delhi"></div>
+      <div class="blog-content">
+        <h2>New Delhi <span class="weather-status" id="weather-NewDelhi">Loading...</span></h2>
+        <p>"India’s bustling capital—a sensory explosion of history, food, and vibrant street life."</p>
+        <div class="destination-links">
+          <a href="https://www.booking.com/searchresults.html?ss=New+Delhi+food" target="_blank">Food</a> |
+          <a href="https://www.booking.com/searchresults.html?ss=New+Delhi+hotels" target="_blank">Hotels</a>
+        </div>
+        <div class="toggle-btn">Show Top 5 Attractions</div>
+       <ul class="attractions">
+  <li><strong><a href="https://www.booking.com/landmark/in/red-fort.html" target="_blank">Red Fort</a></strong><br><img id="newdelhiAttraction1" alt="Red Fort"></li>
+  <li><strong><a href="https://www.booking.com/landmark/in/india-gate.html" target="_blank">India Gate</a></strong><br><img id="newdelhiAttraction2" alt="India Gate"></li>
+  <li><strong><a href="https://www.booking.com/landmark/in/qutub-minar.html" target="_blank">Qutub Minar</a></strong><br><img id="newdelhiAttraction3" alt="Qutub Minar"></li>
+  <li><strong><a href="https://www.booking.com/landmark/in/lotus-temple.html" target="_blank">Lotus Temple</a></strong><br><img id="newdelhiAttraction4" alt="Lotus Temple"></li>
+  <li><strong><a href="https://www.booking.com/landmark/in/humayun-s-tomb.html" target="_blank">Humayun's Tomb</a></strong><br><img id="newdelhiAttraction5" alt="Humayun's Tomb"></li>
+</ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== FOOTER & SCRIPTS ===================== -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+
+  <footer>© 2025 TravelSafe. All rights reserved.</footer>
+
+  <script>
+  const apiKey = "d1ed7374e6c83872fd2507f682afea26";
+  function fetchWeather(city, elementId) {
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`)
+      .then(r => r.json())
+      .then(data => {
+        if (data.cod === 200) {
+          const temp = Math.round(data.main.temp);
+          const icon = data.weather[0].icon;
+          document.getElementById(elementId).innerHTML =
+            `${temp}°C <img src="https://openweathermap.org/img/wn/${icon}.png" style="width:20px;"/>`;
+        }
+      });
+  }
+  document.addEventListener("DOMContentLoaded", () => {
+    fetchWeather("Tokyo", "weather-Tokyo");
+    fetchWeather("Kyoto", "weather-Kyoto");
+    fetchWeather("Bangkok", "weather-Bangkok");
+    fetchWeather("Phuket", "weather-Phuket");
+    fetchWeather("Bali", "weather-Bali");
+    fetchWeather("Singapore", "weather-Singapore");
+    fetchWeather("Kuala Lumpur", "weather-KualaLumpur");
+    fetchWeather("Dubai", "weather-Dubai");
+    fetchWeather("Hong Kong", "weather-HongKong");
+    fetchWeather("Seoul", "weather-Seoul");
+    fetchWeather("New Delhi", "weather-NewDelhi");
+  });
+  </script>
+
+  <script>
+  const pixabayApiKey = "31496043-2fe9cd081b0b76a68243b7e3b";
+  function fetchPixabayImages(query, elementId) {
+    fetch(`https://pixabay.com/api/?key=${pixabayApiKey}&q=${encodeURIComponent(query)}&image_type=photo`)
+      .then(r => r.json())
+      .then(data => { if (data.hits.length) document.getElementById(elementId).src = data.hits[0].webformatURL; });
+  }
+  const asiaAttractions = {
+    tokyo: ["Tokyo Tower", "Sensoji Temple", "Shibuya Crossing", "Meiji Shrine", "Tokyo Disneyland"],
+    kyoto: ["Fushimi Inari Shrine", "Kinkakuji", "Arashiyama Bamboo Grove", "Gion Kyoto", "Nijo Castle"],
+    bangkok: ["Grand Palace Bangkok", "Wat Arun", "Chatuchak Market", "Khao San Road", "Bangkok Floating Market"],
+    phuket: ["Patong Beach", "Big Buddha Phuket", "Phi Phi Islands", "Phang Nga Bay", "Wat Chalong"],
+    bali: ["Tanah Lot", "Ubud Monkey Forest", "Tegallalang Rice Terrace", "Kuta Beach", "Uluwatu Temple"],
+    singapore: ["Marina Bay Sands", "Gardens by the Bay", "Sentosa", "Orchard Road", "Clarke Quay"],
+    kualalumpur: ["Petronas Towers", "Batu Caves", "KL Tower", "Central Market KL", "Chinatown KL"],
+    dubai: ["Burj Khalifa", "Palm Jumeirah", "Dubai Mall", "Dubai Marina", "Dubai Desert Safari"],
+    hongkong: ["Victoria Peak", "Tsim Sha Tsui", "Hong Kong Disneyland", "Temple Street Market", "Ngong Ping 360"],
+    seoul: ["Gyeongbokgung Palace", "N Seoul Tower", "Myeongdong", "Bukchon Hanok", "Dongdaemun Plaza"],
+    newdelhi: ["Red Fort Delhi", "India Gate", "Qutub Minar", "Lotus Temple", "Humayun Tomb"]
+  };
+  Object.entries(asiaAttractions).forEach(([city, attractions]) => {
+    attractions.forEach((a, i) => fetchPixabayImages(a, `${city}Attraction${i+1}`));
+  });
+  </script>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.toggle-btn').forEach(btn => {
+      const list = btn.nextElementSibling;
+      btn.addEventListener('click', () => {
+        list.classList.toggle('show');
+        btn.textContent = list.classList.contains('show')
+          ? 'Hide Attractions'
+          : 'Show Top 5 Attractions';
+      });
+    });
+  });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

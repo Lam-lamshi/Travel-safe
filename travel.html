@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
     <title>Travel website</title>
-    <link rel="stylesheet" href="deco.css">
-    <link rel="stylesheet" href="swiper-bundle.min.css">
+   <link rel="stylesheet" href="/styles/deco.css">
+<link rel="stylesheet" href="/styles/navbar.css">
+    <link rel="stylesheet" href="/styles/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
@@ -14,6 +15,7 @@
 <meta name="google-site-verification" content="mvxidW_l5LuRMdIquBLRKY5t9Wp9rSpYs1JEHyKnHFU" />
 
 <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+ <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 <header>
     
 </header>
@@ -27,9 +29,9 @@
       </div>
         <div class="links">
            <a href="#home" >Home</a>
-           <a href="about.html">About</a>
-           <a href="destination.html">Destinations</a>
-           <a href="blog.html">Blog</a>
+           <a href="/Pagestml/about.html">About</a>
+           <a href="/Pagestml/destination.html">Destinations</a>
+           <a href="/Pagestml/blog.html">Blog</a>
            
         </div>
         <div class="action_btn">
@@ -38,18 +40,18 @@
        
         <div class="dropdown_menu">
             <li><a href="#home" >Home</a></li>
-           <li><a href="about.html">About</a></li>
-            <li><a href="#destinations">Destinations</a></li>
-            <li><a href="blog.html">Blog</a></li>
+           <li><a href="/Pagestml/about.html">About</a></li>
+            <li><a href="/Pagestml/destination.html">Destinations</a></li>
+            <li><a href="/Pagestml/blog.html">Blog</a></li>
         </div>
        
     </nav>
-    <script src="html/js/nav.js" defer></script>
-    <script src="darkmode.js"></script>
-    <script src="background .js"></script>
+    <script src="/sripts/nav.js" defer></script>
+    <script src="/sripts/darkmode.js"></script>
+    <script src="/sripts/background .js"></script>
 
     <section id="home">
-        <div class="back_page">
+        <div class="back_page" >
            <backgrond-image id=""></background-image>
             <div class="text">
                 <h2 style="color: black;" id="heading;" font-style ="italics;">
@@ -81,13 +83,11 @@
                   overflow-y: auto;
                 "></ul>
               </div>
-            <div id="text-container">
-                <span id="typed-text"></span>
-            </div>
+      
         
         </div>
         </div>
-        <script src="search.js"></script>
+        <script src="/sripts/search.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const textToType = document.querySelector('.text h2').textContent.trim();
@@ -114,10 +114,8 @@
 
 </section>
 
-<section id="destinations">
+<section id="destinations" >
       
-
-
     <div class="destination_pic">
         
         <div data-aos="fade-up"
@@ -149,7 +147,7 @@
         <script>
   AOS.init();
 </script>
-            <script src="weather-destination.js"></script> 
+            <script src="sripts/weather-destination.js"></script> 
 </section>
 
 
@@ -159,23 +157,51 @@
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
   
-  <script src="all cards.js"></script>
+  <script src="/sripts/all cards.js cards.js"></script>
   
 
-  <section id="map-section" data-aos="zoom-in-up" style="padding: 3rem 1rem; background: #f0f8ff; border-top: 1px solid #ccc;" class="world" >
-    <h2 data-aos="zoom-out-up" style="text-align:center; font-size: 2rem; color: #0077b6; margin-bottom: 1rem;">
+  <section id="map-section" data-aos="zoom-in-up" class="world" >
+<div class="texting">
+    <h2 data-aos="zoom-out-up" class="heads">
       🌍 Explore the World
     </h2>
-    <p style="text-align:center; margin-bottom: 2rem; color: #555;">
+    <p class="para">
       Click on a country to view travel highlights
     </p>
-    <div data-aos="zoom-in-down" data-aos-duration="5000">
-    <div id="map" style="height: 400px; align-items:center; width: 80%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); " ></div>
+    <div data-aos="zoom-in-down" data-aos-duration="5000" id="map" class="map-section" ></div>
     </div>
+</div>
+        <!--<section id="map-section" class="map-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">🌍 Explore the World</h2>
+                <p class="section-subtitle">
+                    Click on any destination to discover what makes it special
+                </p>
+            </div>
+       <div class="map-card">
+                <div class="world-map" id="world-map">
+                     Map background --
+                    <div class="map-background">
+                       Simplified continents -
+                        <div class="continent continent-1"></div>
+                        <div class="continent continent-2"></div>
+                        <div class="continent continent-3"></div>
+                        <div class="continent continent-4"></div>
+                        <div class="continent continent-5"></div>
+                    </div>
+
+                   - Destination markers will be added by JavaScript -
+                    <div class="floating-icon">
+                        <i data-lucide="globe"></i>
+                    </div>
+                </div>-->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
   AOS.init();
 </script>
+
+         
   </section>
   
   <script>
@@ -185,7 +211,7 @@
       attribution: '&copy; OpenStreetMap'
     }).addTo(map);
   
-    const destinations = [
+    const destination = [
       { name: "Masai Mara, Kenya", coords: [-1.4, 35.1] },
       { name: "Tokyo, Japan", coords: [35.68, 139.76] },
       { name: "Paris, France", coords: [48.85, 2.35] },
@@ -195,51 +221,13 @@
       { name: "Antarctica", coords: [-75.25, -0.07] }
     ];
   
-    destinations.forEach(dest => {
+    destination.forEach(dest => {
       const marker = L.marker(dest.coords).addTo(map);
       marker.bindPopup(`<strong style="color:#0077b6">${dest.name}</strong><br><a href="destination.html" style="color:#00b4d8;">View Destination</a>`);
     });
   </script>
-  <section id="filterable-destinations" data-aos="zoom-in-up" style="padding: 1.5rem 1rem; background: grey;" class="dest">
-    <h2 data-aos="zoom-out-up" style="text-align:center; font-size: 2rem; color: #0077b6;">🔍 Find Your Perfect Destination</h2>
-    <p style="text-align:center; color: #555; margin-bottom: 2rem;">Use filters below to explore destinations based on your travel mood.</p>
-  
-    <div data-aos="fade-up-left" style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin-bottom:2rem; ">
-      <select id="regionFilter" class="filter-dropdown">
-        <option value="">🌐 Region</option>
-        <option value="Africa">Africa</option>
-        <option value="Asia">Asia</option>
-        <option value="Europe">Europe</option>
-        <option value="America">America</option>
-      </select>
-  
-      <select id="typeFilter" class="filter-dropdown">
-        <option value="">🏞️ Type</option>
-        <option value="City">City</option>
-        <option value="Nature">Nature</option>
-        <option value="Beach">Beach</option>
-      </select>
-  
-      <select id="budgetFilter" class="filter-dropdown">
-        <option value="">💰 Budget</option>
-        <option value="Budget">Budget</option>
-        <option value="Luxury">Luxury</option>
-      </select>
-    </div>
-      <div class="swiper mySwiper">
-    <div class="swiper-wrapper" id="destinationSlider">
-    </div>
- 
-     <div class="swiper-pagination"></div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-    
-  </div>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-  AOS.init();
-</script>
-  </section>
+ <!-- Destinations Section -->
+   
    
     <section data-aos="fade-up-left"class="container_1">
         <div class="testimonials-container myswiper">
@@ -248,7 +236,7 @@
         <div class="testimonial mySwiper">
             <div class="testi-content swiper-wrapper">
                 <div data-aos="flip-up" class="slide swiper-slide">
-                    <img src="member-2.png" class="image" alt="">
+                    <img src="/pictures/member-2.png" class="image" alt="">
                 <h4 id="paragraph_2">this is my review about this company</h4>
                 <i class="fa-solid fa-quote-left quote-icon"></i>
                     <div class="details_2">
@@ -260,7 +248,7 @@
                     </div>
                 </div>
                 <div  data-aos="flip-up"class="slide swiper-slide">
-                    <img src="member-1.png" class="image" alt="">
+                    <img src="/pictures/member-1.png" class="image" alt="">
                 <h4 id="paragraph_3">this is my review about this company</h4>
                 <i class="fa-solid fa-quote-left quote-icon"></i>
                     <div class="details_2">
@@ -272,7 +260,7 @@
                     </div>
                 </div>
                 <div data-aos="flip-up" class="slide swiper-slide">
-                    <img src="photo2.png" class="image" alt="">
+                    <img src="/pictures/photo2.png" class="image" alt="">
                     <h4 id="paragraph_4">"A truly exceptional service. The team was knowledgeable and responsive. Highly recommended!"</h4>
                 <i class="fa-solid fa-quote-left quote-icon"></i>
                     <div class="details_2">
@@ -284,7 +272,7 @@
                     </div>
                 </div>
                 <div data-aos="flip-up" class="slide swiper-slide">
-                    <img src="member-4.png" class="image" alt="">
+                    <img src="/pictures/member-4.png" class="image" alt="">
                 <h4 id="paragraph_">this is my review about this company</h4>
                 <i class="fa-solid fa-quote-left quote-icon"></i>
                     <div class="details_2">
@@ -296,7 +284,7 @@
                     </div>
                 </div>
                 <div data-aos="flip-up" class="slide swiper-slide">
-                    <img src="member-8.png" class="image" alt="">
+                    <img src="/pictures/member-8.png" class="image" alt="">
                     <h4 id="paragraph_5">"Professional, reliable, and always willing to go the extra mile. I couldn't be happier with my experience."</h4>
                 <i class="fa-solid fa-quote-left quote-icon"></i>
                     <div class="details_2">
@@ -308,7 +296,7 @@
                     </div>
                 </div>
                 <div data-aos="flip-up" class="slide swiper-slide">
-                    <img src="member-7.png" class="image" alt="">
+                    <img src="/pictures/member-7.png" class="image" alt="">
                 <h4 id="paragraph_">this is my review about this company</h4>
                 <i class="fa-solid fa-quote-left quote-icon"></i>
                     <div class="details_2">
@@ -334,13 +322,64 @@
   AOS.init();
 </script>
     </section>
+ <section id="destinations" class="destinations-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">🌍 Find Your Perfect Destination</h2>
+                <p class="section-subtitle">
+                    Discover amazing places around the world based on your travel preferences
+                </p>
+            </div>
 
-    <section class="About">
-        <div class="wht">
+            <!-- Filters -->
+            <div class="filters-container">
+                <select id="region-filter" class="filter-select" onchange="applyFilters()">
+                    <option value="">🌐 All Regions</option>
+                    <option value="Africa">Africa</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Europe">Europe</option>
+                    <option value="America">America</option>
+                    <option value="Oceania">Oceania</option>
+                </select>
+                
+                <select id="type-filter" class="filter-select" onchange="applyFilters()">
+                    <option value="">🏞️ All Types</option>
+                    <option value="City">City</option>
+                    <option value="Nature">Nature</option>
+                    <option value="Beach">Beach</option>
+                </select>
+                
+                <select id="budget-filter" class="filter-select" onchange="applyFilters()">
+                    <option value="">💰 All Budgets</option>
+                    <option value="Budget">Budget</option>
+                    <option value="Luxury">Luxury</option>
+                </select>
+                
+                <button id="clear-filters" class="btn btn-outline btn-sm" onclick="clearFilters()" style="display: none;">
+                    Clear Filters
+                </button>
+            </div>
 
+            <!-- Results Count -->
+            <div class="results-count">
+                <p id="results-text">Loading destinations...</p>
+            </div>
+
+            <!-- Destinations Grid -->
+            <div id="destinations-grid" class="destinations-grid">
+                <!-- Destinations will be loaded here by JavaScript -->
+            </div>
         </div>
+   
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+  AOS.init();
+</script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="/sripts/destination.js"></script>
 
-    </section>
+
+  </section>
    
    <footer data-aos="zoom-out" style="background: #065986; color: white; padding: 2rem 1rem;">
   <div style="display: flex; flex-wrap: wrap; justify-content: space-around; max-width: 1200px; margin: auto;">

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="/styles/gen_dest.css" rel="stylesheet"/>
+<link href="/styles/deco.css" rel="stylesheet"/>
+<link href="/styles/navbar.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<title>Australia</title>
+<style>
+  body { background-color: grey; }
+  .weather-widget {
+    margin: 20px auto;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  .attractions {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+  }
+  .attractions li {
+    margin-bottom: 10px;
+    list-style-type: disc;
+  }
+  .attractions.show {
+    max-height: 2000px;
+    transition: max-height 0.5s ease-in;
+  }
+  .attractions img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  .toggle-btn {
+    margin-top: 10px;
+    cursor: pointer;
+    color: #ffd700;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  .weather-status {
+    font-size: 0.9em;
+    font-weight: normal;
+    color: #ffd700;
+    margin-left: 10px;
+    display: inline-block;
+  }
+  .slider {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+  .slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 5px;
+  }
+</style>
+</head>
+<body>
+<nav class="navbar">
+  <div class="navbar-brand" style="color: #444;">Travel Safe</div>
+  <div class="links">
+    <a href="travel.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="destination.html">Destinations</a>
+    <a href="blog.html">Blog</a>
+  </div>
+  <div class="action_btn">
+    <i class="fa-solid fa-bars"></i>
+  </div>
+  <div class="dropdown_menu">
+    <li><a href="travel.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="destination.html">Destinations</a></li>
+    <li><a href="blog.html">Blog</a></li>
+  </div>
+  <script defer src="html/js/nav.js"></script>
+</nav>
+
+<div class="weather-widget">
+  🌏 Check the <a href="https://weather.com/weather/today" style="color: #ffd700; text-decoration: underline;" target="_blank">latest weather</a> for your Australian destination!
+</div>
+
+<!-- ===================== SYDNEY ===================== -->
+<div data-aos="fade-right" class="blog-container">
+  <div class="blog-post" data-title="Sydney">
+    <div class="slider">
+      <img alt="Sydney Opera House" src="https://cdn.pixabay.com/photo/2017/01/20/00/30/sydney-1990331_1280.jpg"/>
+    </div>
+    <div class="blog-content">
+      <h2>Sydney <span class="weather-status" id="weather-Sydney">Loading...</span></h2>
+      <p>"Watching the sun set behind the Opera House while ferries crossed the Harbour was unforgettable. Sydney’s energy is unmatched."</p>
+      <div class="destination-links">
+        <a href="https://www.booking.com/searchresults.html?ss=Sydney+food" target="_blank">Food</a> |
+        <a href="https://www.booking.com/searchresults.html?ss=Sydney+hotels" target="_blank">Hotels</a>
+      </div>
+      <div class="toggle-btn">Show Top 5 Attractions</div>
+   <!-- ===================== SYDNEY ATTRACTIONS ===================== -->
+<ul class="attractions">
+  <li><strong><a href="https://www.booking.com/landmark/au/sydney-opera-house.html" target="_blank">Sydney Opera House</a></strong><br><img id="sydneyAttraction1" alt="Sydney Opera House"></li>
+  <li><strong><a href="https://www.booking.com/landmark/au/sydney-harbour-bridge.html" target="_blank">Sydney Harbour Bridge</a></strong><br><img id="sydneyAttraction2" alt="Sydney Harbour Bridge"></li>
+  <li><strong><a href="https://www.booking.com/landmark/au/bondi-beach.html" target="_blank">Bondi Beach</a></strong><br><img id="sydneyAttraction3" alt="Bondi Beach"></li>
+  <li><strong><a href="https://www.booking.com/landmark/au/darling-harbour.html" target="_blank">Darling Harbour</a></strong><br><img id="sydneyAttraction4" alt="Darling Harbour"></li>
+  <li><strong><a href="https://www.booking.com/landmark/au/taronga-zoo.html" target="_blank">Taronga Zoo</a></strong><br><img id="sydneyAttraction5" alt="Taronga Zoo"></li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===================== MELBOURNE ===================== -->
+<div data-aos="fade-left" class="blog-container">
+  <div class="blog-post" data-title="Melbourne">
+    <div class="slider">
+      <img alt="Melbourne City" src="https://cdn.pixabay.com/photo/2017/01/20/00/30/melbourne-1990304_1280.jpg"/>
+    </div>
+    <div class="blog-content">
+      <h2>Melbourne <span class="weather-status" id="weather-Melbourne">Loading...</span></h2>
+      <p>"Melbourne’s laneways, coffee culture, and creative vibe made every walk an adventure. The Great Ocean Road was the perfect escape."</p>
+      <div class="destination-links">
+        <a href="https://www.booking.com/searchresults.html?ss=Melbourne+food" target="_blank">Food</a> |
+        <a href="https://www.booking.com/searchresults.html?ss=Melbourne+hotels" target="_blank">Hotels</a>
+      </div>
+      <div class="toggle-btn">Show Top 5 Attractions</div>
+      <!-- ===================== MELBOURNE ATTRACTIONS ===================== -->
+<ul class="attractions">
+  <li><strong><a href="https://www.booking.com/landmark/au/federation-square.html" target="_blank">Federation Square</a></strong><br><img id="melbourneAttraction1" alt="Federation Square"></li>
+  <li><strong><a href="https://www.booking.com/landmark/au/royal-botanic-gardens-melbourne.html" target="_blank">Royal Botanic Gardens</a></strong><br><img id="melbourneAttraction2" alt="Royal Botanic Gardens"></li>
+  <li><strong><a href="https://www.booking.com/landmark/au/melbourne-cricket-ground.html" target="_blank">Melbourne Cricket Ground</a></strong><br><img id="melbourneAttraction3" alt="MCG"></li>
+  <li><strong><a href="https://www.booking.com/landmark/au/queen-victoria-market.html" target="_blank">Queen Victoria Market</a></strong><br><img id="melbourneAttraction4" alt="Queen Victoria Market"></li>
+  <li><strong><a href="https://www.booking.com/landmark/au/great-ocean-road.html" target="_blank">Great Ocean Road</a></strong><br><img id="melbourneAttraction5" alt="Great Ocean Road"></li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===================== BRISBANE ===================== -->
+<div data-aos="fade-right" class="blog-container">
+  <div class="blog-post" data-title="Brisbane">
+    <div class="slider">
+      <img alt="Brisbane Skyline" src="https://cdn.pixabay.com/photo/2016/11/14/04/45/brisbane-1823685_1280.jpg"/>
+    </div>
+    <div class="blog-content">
+      <h2>Brisbane <span class="weather-status" id="weather-Brisbane">Loading...</span></h2>
+      <p>"Relaxing along South Bank by the river was a highlight. Brisbane mixes modern charm with laid-back vibes perfectly."</p>
+      <div class="destination-links">
+        <a href="https://www.booking.com/searchresults.html?ss=Brisbane+food" target="_blank">Food</a> |
+        <a href="https://www.booking.com/searchresults.html?ss=Brisbane+hotels" target="_blank">Hotels</a>
+      </div>
+      <div class="toggle-btn">Show Top 5 Attractions</div>
+     <!-- ===================== BRISBANE ATTRACTIONS ===================== -->
+<ul class="attractions">
+  <li><strong><a href="https://www.booking.com/landmark/au/south-bank-parklands.html" target="_blank">South Bank Parklands</a></strong><br><img id="brisbaneAttraction1" alt="South Bank Parklands"></li>
+  <li><strong><a href="https://www.booking.com/landmark/au/brisbane-city-botanic-gardens.html" target="_blank">City Botanic Gardens</a></strong><br><img id="brisbaneAttraction2" alt="City Botanic Gardens"></li>
+  <li><strong><a href="https://www.booking.com/landmark/au/brisbane-story-bridge.html" target="_blank">Story Bridge</a></strong><br><img id="brisbaneAttraction3" alt="Story Bridge"></li>
+  <li><strong><a href="https://www.booking.com/landmark/au/lone-pine-koala-sanctuary.html" target="_blank">Lone Pine Koala Sanctuary</a></strong><br><img id="brisbaneAttraction4" alt="Koala Sanctuary"></li>
+  <li><strong><a href="https://www.booking.com/landmark/au/roma-street-parkland.html" target="_blank">Roma Street Parkland</a></strong><br><img id="brisbaneAttraction5" alt="Roma Street Parkland"></li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===================== PERTH ===================== -->
+<div data-aos="fade-left" class="blog-container">
+  <div class="blog-post" data-title="Perth">
+    <div class="slider">
+      <img alt="Perth Skyline" src="https://cdn.pixabay.com/photo/2017/08/20/20/14/perth-2660466_1280.jpg"/>
+    </div>
+    <div class="blog-content">
+      <h2>Perth <span class="weather-status" id="weather-Perth">Loading...</span></h2>
+      <p>"From Kings Park to Cottesloe Beach, Perth’s natural beauty and sunshine left us in awe."</p>
+      <div class="destination-links">
+        <a href="https://www.booking.com/searchresults.html?ss=Perth+food" target="_blank">Food</a> |
+        <a href="https://www.booking.com/searchresults.html?ss=Perth+hotels" target="_blank">Hotels</a>
+      </div>
+      <div class="toggle-btn">Show Top 5 Attractions</div>
+    <!-- ===================== PERTH ATTRACTIONS ===================== -->
+<ul class="attractions">
+  <li><strong><a href="https://www.booking.com/landmark/au/kings-park.html" target="_blank">Kings Park & Botanic Garden</a></strong><br><img id="perthAttraction1" alt="Kings Park"></li>
+  <li><strong><a href="https://www.booking.com/landmark/au/elizabeth-quay.html" target="_blank">Elizabeth Quay</a></strong><br><img id="perthAttraction2" alt="Elizabeth Quay"></li>
+  <li><strong><a href="https://www.booking.com/landmark/au/perth-zoo.html" target="_blank">Perth Zoo</a></strong><br><img id="perthAttraction3" alt="Perth Zoo"></li>
+  <li><strong><a href="https://www.booking.com/landmark/au/cottesloe-beach.html" target="_blank">Cottesloe Beach</a></strong><br><img id="perthAttraction4" alt="Cottesloe Beach"></li>
+  <li><strong><a href="https://www.booking.com/landmark/au/rotterdam-island.html" target="_blank">Rottnest Island</a></strong><br><img id="perthAttraction5" alt="Rottnest Island"></li>
+</ul>
+
+    </div>
+  </div>
+</div>
+<!-- ===================== GREAT BARRIER REEF (Cairns / Whitsundays) ===================== -->
+<div data-aos="fade-right" class="blog-container">
+  <div class="blog-post" data-title="Great Barrier Reef">
+    <div class="slider">
+      <img alt="Great Barrier Reef" src="https://cdn.pixabay.com/photo/2017/04/04/17/58/great-barrier-reef-2206086_1280.jpg"/>
+    </div>
+    <div class="blog-content">
+      <h2>Great Barrier Reef <span class="weather-status" id="weather-Cairns">Loading...</span></h2>
+      <p>"Snorkelling the reef revealed an underwater world of colour — coral gardens, reef fish and turtles. A must for nature lovers."</p>
+      <div class="destination-links">
+        <a href="https://www.booking.com/searchresults.html?ss=Great+Barrier+Reef+food" target="_blank">Food</a> |
+        <a href="https://www.booking.com/searchresults.html?ss=Great+Barrier+Reef+hotels" target="_blank">Hotels</a>
+      </div>
+      <div class="toggle-btn">Show Top 5 Attractions</div>
+  <!-- ===================== GREAT BARRIER REEF ATTRACTIONS ===================== -->
+<ul class="attractions">
+  <li><strong><a href="https://www.booking.com/landmark/au/great-barrier-reef.html" target="_blank">Great Barrier Reef</a></strong><br><img id="reefAttraction1" alt="Great Barrier Reef"></li>
+  <li><strong><a href="https://www.booking.com/landmark/au/whitsunday-islands.html" target="_blank">Whitsunday Islands</a></strong><br><img id="reefAttraction2" alt="Whitsunday Islands"></li>
+  <li><strong><a href="https://www.booking.com/landmark/au/green-island.html" target="_blank">Green Island</a></strong><br><img id="reefAttraction3" alt="Green Island"></li>
+  <li><strong><a href="https://www.booking.com/landmark/au/hamilton-island.html" target="_blank">Hamilton Island</a></strong><br><img id="reefAttraction4" alt="Hamilton Island"></li>
+  <li><strong><a href="https://www.booking.com/landmark/au/whitehaven-beach.html" target="_blank">Whitehaven Beach</a></strong><br><img id="reefAttraction5" alt="Whitehaven Beach"></li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===================== ADELAIDE ===================== -->
+<div data-aos="fade-left" class="blog-container">
+  <div class="blog-post" data-title="Adelaide">
+    <div class="slider">
+      <img alt="Adelaide" src="https://cdn.pixabay.com/photo/2016/11/14/04/45/adelaide-1823688_1280.jpg"/>
+    </div>
+    <div class="blog-content">
+      <h2>Adelaide <span class="weather-status" id="weather-Adelaide">Loading...</span></h2>
+      <p>"Adelaide surprised us with vibrant markets, close-by wine regions and relaxed beaches — perfect for a chilled holiday."</p>
+      <div class="destination-links">
+        <a href="https://www.booking.com/searchresults.html?ss=Adelaide+food" target="_blank">Food</a> |
+        <a href="https://www.booking.com/searchresults.html?ss=Adelaide+hotels" target="_blank">Hotels</a>
+      </div>
+      <div class="toggle-btn">Show Top 5 Attractions</div>
+     <!-- ===================== ADELAIDE ATTRACTIONS ===================== -->
+<ul class="attractions">
+  <li><strong><a href="https://www.booking.com/landmark/au/adelaide-botanic-garden.html" target="_blank">Adelaide Botanic Garden</a></strong><br><img id="adelaideAttraction1" alt="Adelaide Botanic Garden"></li>
+  <li><strong><a href="https://www.booking.com/landmark/au/rundle-mall.html" target="_blank">Rundle Mall</a></strong><br><img id="adelaideAttraction2" alt="Rundle Mall"></li>
+  <li><strong><a href="https://www.booking.com/landmark/au/adelaide-zoo.html" target="_blank">Adelaide Zoo</a></strong><br><img id="adelaideAttraction3" alt="Adelaide Zoo"></li>
+  <li><strong><a href="https://www.booking.com/landmark/au/glenelg-beach.html" target="_blank">Glenelg Beach</a></strong><br><img id="adelaideAttraction4" alt="Glenelg Beach"></li>
+  <li><strong><a href="https://www.booking.com/landmark/au/adelaide-central-market.html" target="_blank">Adelaide Central Market</a></strong><br><img id="adelaideAttraction5" alt="Adelaide Central Market"></li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===================== CANBERRA ===================== -->
+<div data-aos="fade-right" class="blog-container">
+  <div class="blog-post" data-title="Canberra">
+    <div class="slider">
+      <img alt="Canberra" src="https://cdn.pixabay.com/photo/2016/03/27/22/28/australia-1281536_1280.jpg"/>
+    </div>
+    <div class="blog-content">
+      <h2>Canberra <span class="weather-status" id="weather-Canberra">Loading...</span></h2>
+      <p>"A calm and cultural city — museums, national galleries and the peaceful Lake Burley Griffin make Canberra a thoughtful escape."</p>
+      <div class="destination-links">
+        <a href="https://www.booking.com/searchresults.html?ss=Canberra+food" target="_blank">Food</a> |
+        <a href="https://www.booking.com/searchresults.html?ss=Canberra+hotels" target="_blank">Hotels</a>
+      </div>
+      <div class="toggle-btn">Show Top 5 Attractions</div>
+     <!-- ===================== CANBERRA ATTRACTIONS ===================== -->
+<ul class="attractions">
+  <li><strong><a href="https://www.booking.com/landmark/au/parliament-house.html" target="_blank">Parliament House</a></strong><br><img id="canberraAttraction1" alt="Parliament House"></li>
+  <li><strong><a href="https://www.booking.com/landmark/au/australian-war-memorial.html" target="_blank">Australian War Memorial</a></strong><br><img id="canberraAttraction2" alt="Australian War Memorial"></li>
+  <li><strong><a href="https://www.booking.com/landmark/au/lake-burley-griffin.html" target="_blank">Lake Burley Griffin</a></strong><br><img id="canberraAttraction3" alt="Lake Burley Griffin"></li>
+  <li><strong><a href="https://www.booking.com/landmark/au/national-gallery-of-australia.html" target="_blank">National Gallery of Australia</a></strong><br><img id="canberraAttraction4" alt="National Gallery of Australia"></li>
+  <li><strong><a href="https://www.booking.com/landmark/au/australian-national-botanic-gardens.html" target="_blank">National Botanic Gardens</a></strong><br><img id="canberraAttraction5" alt="National Botanic Gardens"></li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===================== DARWIN ===================== -->
+<div data-aos="fade-left" class="blog-container">
+  <div class="blog-post" data-title="Darwin">
+    <div class="slider">
+      <img alt="Darwin Waterfront" src="https://cdn.pixabay.com/photo/2016/11/14/04/45/darwin-1823687_1280.jpg"/>
+    </div>
+    <div class="blog-content">
+      <h2>Darwin <span class="weather-status" id="weather-Darwin">Loading...</span></h2>
+      <p>"Tropical Darwin is the gateway to national parks, amazing sunsets at Mindil Beach markets and real Aussie outback-adventures."</p>
+      <div class="destination-links">
+        <a href="https://www.booking.com/searchresults.html?ss=Darwin+food" target="_blank">Food</a> |
+        <a href="https://www.booking.com/searchresults.html?ss=Darwin+hotels" target="_blank">Hotels</a>
+      </div>
+      <div class="toggle-btn">Show Top 5 Attractions</div>
+     <!-- ===================== DARWIN ATTRACTIONS ===================== -->
+<ul class="attractions">
+  <li><strong><a href="https://www.booking.com/landmark/au/mindil-beach.html" target="_blank">Mindil Beach</a></strong><br><img id="darwinAttraction1" alt="Mindil Beach"></li>
+  <li><strong><a href="https://www.booking.com/landmark/au/darwin-waterfront.html" target="_blank">Darwin Waterfront</a></strong><br><img id="darwinAttraction2" alt="Darwin Waterfront"></li>
+  <li><strong><a href="https://www.booking.com/landmark/au/lichfield-national-park.html" target="_blank">Litchfield National Park</a></strong><br><img id="darwinAttraction3" alt="Litchfield National Park"></li>
+  <li><strong><a href="https://www.booking.com/landmark/au/crocodylus-park.html" target="_blank">Crocodylus Park</a></strong><br><img id="darwinAttraction4" alt="Crocodylus Park"></li>
+  <li><strong><a href="https://www.booking.com/landmark/au/northern-territory-museum.html" target="_blank">Museum & Art Gallery of NT</a></strong><br><img id="darwinAttraction5" alt="Darwin Museum"></li>
+</ul>
+
+    </div>
+  </div>
+</div>
+<!-- ===================== HOBART (Tasmania) ===================== -->
+<div data-aos="fade-right" class="blog-container">
+  <div class="blog-post" data-title="Hobart">
+    <div class="slider">
+      <img alt="Hobart" src="https://cdn.pixabay.com/photo/2016/11/14/04/45/hobart-1823689_1280.jpg"/>
+    </div>
+    <div class="blog-content">
+      <h2>Hobart (Tasmania) <span class="weather-status" id="weather-Hobart">Loading...</span></h2>
+      <p>"Hobart charmed us with its waterfront markets, the iconic MONA art museum and the views from Mount Wellington."</p>
+      <div class="destination-links">
+        <a href="https://www.booking.com/searchresults.html?ss=Hobart+food" target="_blank">Food</a> |
+        <a href="https://www.booking.com/searchresults.html?ss=Hobart+hotels" target="_blank">Hotels</a>
+      </div>
+      <div class="toggle-btn">Show Top 5 Attractions</div>
+    <!-- ===================== HOBART ATTRACTIONS ===================== -->
+<ul class="attractions">
+  <li><strong><a href="https://www.booking.com/landmark/au/salamanca-market.html" target="_blank">Salamanca Market</a></strong><br><img id="hobartAttraction1" alt="Salamanca Market"></li>
+  <li><strong><a href="https://www.booking.com/landmark/au/museum-of-old-and-new-art.html" target="_blank">MONA (Museum of Old and New Art)</a></strong><br><img id="hobartAttraction2" alt="MONA"></li>
+  <li><strong><a href="https://www.booking.com/landmark/au/mount-wellington.html" target="_blank">Mount Wellington</a></strong><br><img id="hobartAttraction3" alt="Mount Wellington"></li>
+  <li><strong><a href="https://www.booking.com/landmark/au/royal-tasmanian-botanical-gardens.html" target="_blank">Royal Tasmanian Botanical Gardens</a></strong><br><img id="hobartAttraction4" alt="Royal Tasmanian Gardens"></li>
+  <li><strong><a href="https://www.booking.com/landmark/au/tasmanian-museum-and-art-gallery.html" target="_blank">Tasmanian Museum & Art Gallery</a></strong><br><img id="hobartAttraction5" alt="Tasmanian Museum & Art Gallery"></li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===================== GOLD COAST ===================== -->
+<div data-aos="fade-left" class="blog-container">
+  <div class="blog-post" data-title="Gold Coast">
+    <div class="slider">
+      <img alt="Gold Coast" src="https://cdn.pixabay.com/photo/2017/03/10/23/04/gold-coast-2136171_1280.jpg"/>
+    </div>
+    <div class="blog-content">
+      <h2>Gold Coast <span class="weather-status" id="weather-GoldCoast">Loading...</span></h2>
+      <p>"Surfers Paradise lived up to the name — golden beaches, theme parks, nightlife and rainforest escapes nearby."</p>
+      <div class="destination-links">
+        <a href="https://www.booking.com/searchresults.html?ss=Gold+Coast+food" target="_blank">Food</a> |
+        <a href="https://www.booking.com/searchresults.html?ss=Gold+Coast+hotels" target="_blank">Hotels</a>
+      </div>
+      <div class="toggle-btn">Show Top 5 Attractions</div>
+      <!-- ===================== GOLD COAST ATTRACTIONS ===================== -->
+<ul class="attractions">
+  <li><strong><a href="https://www.booking.com/landmark/au/surfers-paradise.html" target="_blank">Surfers Paradise</a></strong><br><img id="goldcoastAttraction1" alt="Surfers Paradise"></li>
+  <li><strong><a href="https://www.booking.com/landmark/au/seaworld-gold-coast.html" target="_blank">Sea World</a></strong><br><img id="goldcoastAttraction2" alt="Sea World"></li>
+  <li><strong><a href="https://www.booking.com/landmark/au/dreamworld.html" target="_blank">Dreamworld</a></strong><br><img id="goldcoastAttraction3" alt="Dreamworld"></li>
+  <li><strong><a href="https://www.booking.com/landmark/au/currumbin-wildlife-sanctuary.html" target="_blank">Currumbin Wildlife Sanctuary</a></strong><br><img id="goldcoastAttraction4" alt="Currumbin Wildlife Sanctuary"></li>
+  <li><strong><a href="https://www.booking.com/landmark/au/broadbeach.html" target="_blank">Broadbeach</a></strong><br><img id="goldcoastAttraction5" alt="Broadbeach"></li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===================== BLUE MOUNTAINS ===================== -->
+<div data-aos="fade-right" class="blog-container">
+  <div class="blog-post" data-title="Blue Mountains">
+    <div class="slider">
+      <img alt="Blue Mountains" src="https://cdn.pixabay.com/photo/2016/11/14/04/45/blue-mountains-1823686_1280.jpg"/>
+    </div>
+    <div class="blog-content">
+      <h2>Blue Mountains <span class="weather-status" id="weather-BlueMountains">Loading...</span></h2>
+      <p>"The Blue Mountains were breathtaking — misty valleys, dramatic cliffs and the famous Three Sisters lookout."</p>
+      <div class="destination-links">
+        <a href="https://www.booking.com/searchresults.html?ss=Blue+Mountains+food" target="_blank">Food</a> |
+        <a href="https://www.booking.com/searchresults.html?ss=Blue+Mountains+hotels" target="_blank">Hotels</a>
+      </div>
+      <div class="toggle-btn">Show Top 5 Attractions</div>
+     <!-- ===================== BLUE MOUNTAINS ATTRACTIONS ===================== -->
+<ul class="attractions">
+  <li><strong><a href="https://www.booking.com/landmark/au/three-sisters-katoomba.html" target="_blank">Three Sisters (Katoomba)</a></strong><br><img id="bluemountainsAttraction1" alt="Three Sisters"></li>
+  <li><strong><a href="https://www.booking.com/landmark/au/scenic-world.html" target="_blank">Scenic World</a></strong><br><img id="bluemountainsAttraction2" alt="Scenic World"></li>
+  <li><strong><a href="https://www.booking.com/landmark/au/blue-mountains-national-park.html" target="_blank">Blue Mountains National Park</a></strong><br><img id="bluemountainsAttraction3" alt="Blue Mountains National Park"></li>
+  <li><strong><a href="https://www.booking.com/landmark/au/jenolan-caves.html" target="_blank">Jenolan Caves</a></strong><br><img id="bluemountainsAttraction4" alt="Jenolan Caves"></li>
+  <li><strong><a href="https://www.booking.com/landmark/au/govetts-leap.html" target="_blank">Govetts Leap Lookout</a></strong><br><img id="bluemountainsAttraction5" alt="Govetts Leap"></li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===================== FOOTER & SCRIPTS ===================== -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+
+<footer>© 2025 TravelSafe. All rights reserved.</footer>
+
+<script>
+const apiKey = "d1ed7374e6c83872fd2507f682afea26";
+function fetchWeather(city, elementId) {
+  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`)
+    .then(r => r.json())
+    .then(data => {
+      if (data.cod === 200) {
+        const temp = Math.round(data.main.temp);
+        const iconCode = data.weather[0].icon;
+        document.getElementById(elementId).innerHTML =
+          `${temp}°C <img src="https://openweathermap.org/img/wn/${iconCode}.png" style="width:20px;"/>`;
+      }
+    });
+}
+document.addEventListener("DOMContentLoaded", () => {
+  fetchWeather("Sydney", "weather-Sydney");
+  fetchWeather("Melbourne", "weather-Melbourne");
+  fetchWeather("Brisbane", "weather-Brisbane");
+  fetchWeather("Perth", "weather-Perth");
+  fetchWeather("Cairns", "weather-Cairns");
+  fetchWeather("Adelaide", "weather-Adelaide");
+  fetchWeather("Canberra", "weather-Canberra");
+  fetchWeather("Darwin", "weather-Darwin");
+  fetchWeather("Hobart", "weather-Hobart");
+  fetchWeather("Gold Coast", "weather-GoldCoast");
+  fetchWeather("Katoomba", "weather-BlueMountains"); // nearest weather for Blue Mtns
+});
+</script>
+
+<script>
+const pixabayApiKey = "31496043-2fe9cd081b0b76a68243b7e3b";
+function fetchPixabayImages(query, elementId) {
+  fetch(`https://pixabay.com/api/?key=${pixabayApiKey}&q=${encodeURIComponent(query)}&image_type=photo`)
+    .then(r => r.json())
+    .then(data => { if (data.hits.length) document.getElementById(elementId).src = data.hits[0].webformatURL; });
+}
+const australiaAttractions = {
+  sydney: ["Sydney Opera House", "Harbour Bridge", "Bondi Beach", "Taronga Zoo", "The Rocks"],
+  melbourne: ["Federation Square", "Royal Botanic Gardens Melbourne", "Melbourne Zoo", "Great Ocean Road", "Flinders Street Station"],
+  brisbane: ["South Bank Parklands", "Story Bridge", "Lone Pine Koala Sanctuary", "Mount Coot-tha", "Queensland Art Gallery"],
+  perth: ["Kings Park", "Cottesloe Beach", "Perth Zoo", "Swan River", "Fremantle"],
+  reef: ["Great Barrier Reef Snorkeling", "Green Island", "Hamilton Island", "Cairns Esplanade", "Whitsundays"],
+  adelaide: ["Adelaide Botanic Garden", "Glenelg Beach", "Adelaide Zoo", "Barossa Valley", "Art Gallery of South Australia"],
+  canberra: ["Australian War Memorial", "Parliament House", "Lake Burley Griffin", "National Gallery of Australia", "Mount Ainslie Lookout"],
+  darwin: ["Mindil Beach Markets", "Kakadu National Park", "Litchfield National Park", "Crocosaurus Cove", "Darwin Waterfront"],
+  hobart: ["MONA Museum", "Mount Wellington", "Salamanca Market", "Freycinet National Park", "Port Arthur"],
+  goldcoast: ["Surfers Paradise", "Sea World", "Dreamworld", "Lamington National Park", "Burleigh Heads"],
+  bluemountains: ["Three Sisters", "Scenic World Railway", "Wentworth Falls", "Jenolan Caves", "Govetts Leap Lookout"]
+};
+Object.entries(australiaAttractions).forEach(([city, attractions]) => {
+  attractions.forEach((a, i) => fetchPixabayImages(a, `${city}Attraction${i+1}`));
+});
+</script>
+
+<script>
+// Toggle buttons
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.toggle-btn').forEach(btn => {
+    const list = btn.nextElementSibling;
+    btn.addEventListener('click', () => {
+      list.classList.toggle('show');
+      btn.textContent = list.classList.contains('show')
+        ? 'Hide Attractions'
+        : 'Show Top 5 Attractions';
+    });
+  });
+});
+</script>
+</body>
+</html>
+
