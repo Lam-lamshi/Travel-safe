@@ -514,7 +514,7 @@ font: 1.05em sans-serif;
   opacity: 1;
 }
 .back_page{
-  background-image:url("/pictures/bacci.png");
+  background-image:url("../pictures/bacci.png");
   background-size: cover;
   height: 109vh;
   position: relative;
