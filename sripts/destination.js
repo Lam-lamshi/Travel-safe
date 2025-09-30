@@ -100,13 +100,18 @@ function renderDestinations() {
           </div>
         </div>
         
-        <div class="destination-highlights">
-          ${destination.highlights.slice(0, 3).map(highlight => `
-            <span class="highlight-badge">${highlight}</span>
-          `).join('')}
-        </div>
+       <div class="destination-highlights">
+  ${destination.highlights.slice(0, 3).map(highlight => `
+    <a href="https://en.wikipedia.org/wiki/Special:Search?search=${encodeURIComponent(highlight + ' ' + destination.name + ' ' + destination.country)}" 
+       target="_blank" onclick="return travel()" 
+       class="highlight-badge">
+       ${highlight}
+    </a>
+  `).join('')}
+</div>
+
         
-        <button class="btn btn-primary btn-full" onclick="exploreDestination('${destination.id}')">
+        <button class="btn btn-primary btn-full" onclick="return travel() exploreDestination('${destination.id}')">
           Explore Destination
         </button>
       </div>
@@ -186,19 +191,20 @@ function exploreDestination(destinationId) {
   const destination = destinations.find(d => d.id === destinationId);
   
   if (destination) {
-    showToast(
-      'Exploring Destination',
-      `Planning your adventure to ${destination.name}, ${destination.country}!`,
-      3000
-    );
-    
-    // Here you could redirect to a detailed destination page
-    // or show a modal with more information
-    setTimeout(() => {
-      scrollToSection('contact');
-    }, 1500);
+    let page = "";
+
+    if (destination.region === "Africa") page = "africa.html";
+    else if (destination.region === "Asia") page = "asia.html";
+    else if (destination.region === "Europe") page = "europe.html";
+    else if (destination.region === "America") page = "america.html";
+    else if (destination.region === "Oceania") page = "oceania.html";
+    else page = "destination.html"; // fallback
+
+    // Redirect immediately to the continent page
+    window.location.href = page;
   }
 }
+
 
 // Make functions globally available
 window.applyFilters = applyFilters;
@@ -241,7 +247,7 @@ const destinations = [
     region: "Europe",
     type: "City",
     budget: "Luxury",
-    image: "https://images.unsplash.com/photo-1502602898536-47ad22581b52?w=600&h=400&fit=crop",
+    image: "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fstatic.independent.co.uk%2F2025%2F04%2F25%2F13%2F42%2FiStock-1498516775.jpg&sp=1759207532Tb733c6100f6425aa0869810ebdc6af64d476278b3d9abcd5c530d245a93ff5a3",
     rating: 4.7,
     temperature: "15°C",
     highlights: ["Art", "Architecture", "Romance"],
@@ -288,3 +294,14 @@ const destinations = [
   }
 ];
 initializeDestinations();
+function travel(){
+  if (window.onunload=true){
+    if(confirm("do you want to leave this page ?")){
+    return true;
+        }else{
+    return false;
+      }
+  }
+  
+  
+};
