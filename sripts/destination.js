@@ -191,20 +191,42 @@ function exploreDestination(destinationId) {
   const destination = destinations.find(d => d.id === destinationId);
   
   if (destination) {
-    let page = "";
-
-    if (destination.region === "Africa") page = "africa.html";
-    else if (destination.region === "Asia") page = "asia.html";
-    else if (destination.region === "Europe") page = "europe.html";
-    else if (destination.region === "America") page = "america.html";
-    else if (destination.region === "Oceania") page = "oceania.html";
-    else page = "destination.html"; // fallback
-
-    // Redirect immediately to the continent page
-    window.location.href = page;
+    showToast(
+      'Exploring Destination',
+      `Planning your adventure to ${destination.name}, ${destination.country}!`,
+      3000
+    );
+    
+    if(destination){
+      let page = "destination.html";
+      switch (destination.region){
+        case "Africa":
+          page ="Africa.html";
+          break;
+        case "Asia":
+          page ="Asia.html";
+          break;
+        case "Europe":
+          page ="Europe.html";
+          break;
+        case "America":
+          page ="North America.html";
+          break;
+        case "Oceania":
+          page ="Oceania.html";
+          break;
+        default:
+          page ="destination.html";
+      }
+      window.location.href =page;
+    }
+    // Here you could redirect to a detailed destination page
+    // or show a modal with more information
+    setTimeout(() => {
+      scrollToSection('contact');
+    }, 1500);
   }
 }
-
 
 // Make functions globally available
 window.applyFilters = applyFilters;
@@ -247,7 +269,7 @@ const destinations = [
     region: "Europe",
     type: "City",
     budget: "Luxury",
-    image: "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fstatic.independent.co.uk%2F2025%2F04%2F25%2F13%2F42%2FiStock-1498516775.jpg&sp=1759207532Tb733c6100f6425aa0869810ebdc6af64d476278b3d9abcd5c530d245a93ff5a3",
+   image: "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.5HWVEh_5XzzgQZSFwBoqmwHaEL%3Fcb%3D12%26pid%3DApi&sp=1759627867Ta427fbe66b394d5266365e2da5557dbe9c2a409a19b44b3621120995897680f9",
     rating: 4.7,
     temperature: "15°C",
     highlights: ["Art", "Architecture", "Romance"],

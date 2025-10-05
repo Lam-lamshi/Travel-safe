@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="../styles/deco.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
   <title>Contact</title>
 
@@ -26,177 +26,118 @@
     }
 
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom, #798188, #5b5d60); /* Soft blue background */
+      font-family: "Segoe UI", sans-serif;
+      background: #f8fafc;
       color: #333;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;     /* vertical center */
-      justify-content: center; /* horizontal center */
-      padding: 2rem;
-      margin: 0;
+      line-height: 1.6;
+      padding: 2rem 1rem;
     }
-    
-    .contact {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      justify-content: center;
-      max-width: 1200px;
-      background: #ffffff;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0, 102, 204, 0.3); /* Blue shadow */
-      width: 100%;
-    }
-    
-
-    .us, .id-box {
-      flex: 1 1 400px;
-    }
-
-    .contact-title h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #0077b6;
-    }
-
-    .icon_sec, .mail {
-      display: flex;
-      align-items: center;
-      margin: 1rem 0;
-    }
-
-    .icon_sec img, .mail img {
-      width: 24px;
-      margin-right: 10px;
-    }
-
-    .icons a {
-      margin-right: 15px;
-      font-size: 1.5rem;
-      color: #0077b6;
-      transition: transform 0.3s, color 0.3s;
-    }
-
-    .icons a:hover {
-      color: #023e8a;
-      transform: scale(1.1);
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .input_box {
-      margin-bottom: 1.5rem;
-      position: relative;
-    }
-
-    .input_box input,
-    .input_box textarea {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 1rem;
-    }
-
-    .input_box label {
-      position: absolute;
-      top: -1.2rem;
-      left: 10px;
-      background: #fff;
-      padding: 0 5px;
-      font-size: 0.9rem;
-      color: #555;
-    }
-
-    input[type="submit"] {
-      background-color: #00b4d8;
-      color: white;
-      border: none;
-      padding: 0.75rem;
-      font-size: 1rem;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    input[type="submit"]:hover {
-      background-color: #0077b6;
-    }
-
-    @media (max-width: 768px) {
-      .contact {
-        flex-direction: column;
-        padding: 1rem;
-      }
-    }
+ 
   </style>
 </head>
 <body>
-  <nav class="navbar">
-    <div class="navbar-brand" style="color: white;">Travel safe</div>
-    <div class="links">
-       <a href="travel.html" >Home</a>
-       <a href="about.html">About</a>
-       <a href="destination.html">Destinations</a>
-       <a href="blog.html">Blog</a>
-    </div>
-    <div class="action_btn">
-        <i class="fa-solid fa-bars"></i>
-    </div>
-    <div class="dropdown_menu">
-        <li><a href="travel.html" >Home</a></li>
-       <li><a href="about.html">About</a></li>
-        <li><a href="destination.html">Destinations</a></li>
-        <li><a href="blog.html">Blog</a></li>
-    </div>
-</nav>
-<script src="html/js/nav.js" defer></script>
 
+  <section id="contact" class="contact-wrapper">
+    <!-- Left: Contact Information -->
+    <div class="contact-info">
+ <h2>Contact Information</h2>
+      <p>We’re here to help you plan the perfect adventure. Reach out to us through any of these channels.</p>
 
-  <div class="contact">
-    <div class="us">
-      <div class="contact-title">
-        <h2>Contact Me</h2>
+      <div class="info-block">
+        <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Phone Icon" />
+        <div>
+          <strong>Phone</strong>
+          <span>+234 902 561 8500</span><br>
+          <span>Mon–Fri 9AM–6PM WAT</span>
+        </div>
       </div>
-      <div class="icon_sec">
-        <img src="phone_bk (2).png" alt="Phone icon">
-        <p>+234 9025618500</p>
-      </div>
-      <div class="mail">
-        <img src="mail.png" alt="Mail icon">
-        <p>emmanuelwisdomolamide@gmail.com</p>
-      </div>
-      <div class="icons">
-        <a href="https://www.instagram.com/emmanuelwisdom8462/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://web.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-        <a href="https://x.com/Emmanuel176757" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-        <a href="https://github.com/Lam-lamshi" target="_blank"><i class="fa-brands fa-github"></i></a>
-      </div>
-    </div>
 
-    <div class="id-box">
-      <form id="contact-form">
-        <div class="input_box">
-          <input type="text" id="full_name" name="full_name" required>
-          <label for="full_name">Full Name:</label>
+      <div class="info-block">
+        <img src="https://cdn-icons-png.flaticon.com/512/561/561188.png" alt="Email Icon" />
+        <div>
+          <strong>Email</strong>
+          <span>info@travelsafe.com</span><br>
+          <span>We’ll respond within 24 hours</span>
         </div>
-        <div class="input_box">
-          <input type="email" id="email" name="email" required>
-          <label for="email">Email:</label>
+      </div>
+
+      <div class="info-block">
+        <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Office Icon" />
+        <div>
+          <strong>Office</strong>
+          <span>Lagos, Nigeria</span><br>
+          <span>Available for in-person consultations</span>
         </div>
-        <div class="input_box">
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+
+      <div class="info-block">
+        <img src="https://cdn-icons-png.flaticon.com/512/3523/3523063.png" alt="Clock Icon" />
+        <div>
+          <strong>Business Hours</strong>
+          <span>Mon–Fri: 9AM–6PM</span><br>
+          <span>Sat: 10AM–4PM</span><br>
+          <span>Sun: Closed</span>
         </div>
-        <input type="submit" value="Submit">
-      </form>
-    </div>
+      </div>
+
+      <div class="info-block">
+        <img src="https://cdn-icons-png.flaticon.com/512/3771/3771214.png" alt="Language Icon" />
+        <div>
+          <strong>Languages</strong>
+          <span>English, French, Swahili</span><br>
+          <span>Multilingual support available</span>
+        </div>
+      </div>
+        <div class="footer-social">
+    <p>Connect with us</p>
+    <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://x.com/" target="_blank"><i class="fab fa-x-twitter"></i></a>
+    <a href="mailto:info@travelsafe.com"><i class="fas fa-envelope"></i></a>
   </div>
+    </div>
+
+    <!-- Right: Contact Form -->
+    <div class="contact-form">
+      <h2>Send us a Message</h2>
+      <p>Tell us about your dream destination and we’ll help make it a reality.</p>
+
+      <form>
+        <div>
+          <label for="name">Full Name *</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        </div>
+
+        <div>
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+        </div>
+
+        <div>
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" placeholder="Tell us about your travel plans..." required></textarea>
+        </div>
+
+        <button type="submit" class="send-btn">
+          <i class="fas fa-paper-plane"></i> Send Message
+        </button>
+      </form>
+
+      <p class="privacy-note">
+        By submitting this form, you agree to our privacy policy and terms of service.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer Social Section -->
+  <div class="footer-social">
+    <p>Connect with us</p>
+    <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://x.com/" target="_blank"><i class="fab fa-x-twitter"></i></a>
+    <a href="mailto:info@travelsafe.com"><i class="fas fa-envelope"></i></a>
+  </div>
+
+  <!-- Font Awesome for Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
   <script>
     document.getElementById('contact-form').addEventListener('submit', function(e) {

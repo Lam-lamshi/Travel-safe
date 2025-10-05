@@ -8,6 +8,7 @@
    <link rel="stylesheet" href="styles/deco.css">
 <link rel="stylesheet" href="styles/navbar.css">
     <link rel="stylesheet" href="styles/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles/contac.t.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
@@ -60,7 +61,7 @@
          
             </div>
             <div class="gcse-searchresults-only">
-            <div data-aos="fade-up"data-aos-anchor-placement="center-center" class="box" style="position: relative; display: flex; align-items: center;">
+            <div  class="box" style="position: relative; display: flex; align-items: center; margin-top: -18rem; max-width: 400px; margin-left: auto; margin-right: auto;">
                 <input type="text" id="searchInput" placeholder="Search for a country..." style="padding-right: 40px;">
                 
                 <span id="searchBtn" style="position: absolute; right: 10px; cursor: pointer; color: #0077b6;">
@@ -68,7 +69,7 @@
                 </span>
                 <ul id="suggestions" style="
                   position: absolute;
-                  top: 100%;
+                  top: 80%;
                   left: 0;
                   right: 0;
                   background: white;
@@ -79,7 +80,7 @@
                   padding: 0;
                   margin: 0;
                   display: none;
-                  max-height: 200px;
+                  max-height: 150px;
                   overflow-y: auto;
                 "></ul>
               </div>
@@ -114,50 +115,70 @@
 
 </section>
 
-<section id="destinations" >
-      
-    <div class="destination_pic">
-        
-        <div data-aos="fade-up"
-     data-aos-anchor-placement="center-center" class="destina"><h2 id="heading_2">Top Destinations at the moment </h2>
-        </div>
-       <div data-aos="zoom-out-up" data-aos-duration="1000" >
-            <div class="containers">
-                <div class="sliding">
-                  
-                    <div id="suggestion">
-                        <span class="loader"></span> Fetching best weather destination...
-                      </div>
-                    
-                      <div class="sliding"></div>
-                      <div id="selected-continent" style="text-align:center; font-size:1.2rem; margin-bottom:2rem;">
-                        🌍 Displaying destinations in: <span id="continent-flag"></span>
-                      </div>
-                      
+ <section id="filterable-destinations" class="destinations-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">🌍 Find Your Perfect Destination</h2>
+                <p class="section-subtitle">
+                    Discover amazing places around the world based on your travel preferences
+                </p>
+            </div>
 
-                      <div class="popup" id="popup">
-                        <h3 id="popup-title"></h3>
-                        <p id="popup-description">
-                          Here's some amazing information about this destination. Enjoy the sights, food, and culture!
-                        </p>
-                        <button id="close-popup-btn">Close</button>
-                      </div>
+            <!-- Filters -->
+            <div class="filters-container">
+                <select id="region-filter" class="filter-select" onchange="applyFilters()">
+                    <option value="">🌐 All Regions</option>
+                    <option value="Africa">Africa</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Europe">Europe</option>
+                    <option value="America">America</option>
+                    <option value="Oceania">Oceania</option>
+                </select>
+                
+                <select id="type-filter" class="filter-select" onchange="applyFilters()">
+                    <option value="">🏞️ All Types</option>
+                    <option value="City">City</option>
+                    <option value="Nature">Nature</option>
+                    <option value="Beach">Beach</option>
+                </select>
+                
+                <select id="budget-filter" class="filter-select" onchange="applyFilters()">
+                    <option value="">💰 All Budgets</option>
+                    <option value="Budget">Budget</option>
+                    <option value="Luxury">Luxury</option>
+                </select>
+                
+                <button id="clear-filters" class="btn btn-outline btn-sm" onclick="clearFilters()" style="display: none;">
+                    Clear Filters
+                </button>
+            </div>
+
+            <!-- Results Count -->
+            <div class="results-count">
+                <p id="results-text">Loading destinations...</p>
+            </div>
+
+            <!-- Destinations Grid -->
+            <div id="destinations-grid" class="destinations-grid">
+                <!-- Destinations will be loaded here by JavaScript -->
+            </div>
         </div>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        
+   
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
   AOS.init();
 </script>
-            <script src="sripts/weather-destination.js"></script> 
-</section>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="sripts/destination.js"></script>
+
+
+  </section>
 
 
 
 
 
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-  
-  <script src="sripts/all cards.js cards.js"></script>
   
 
   <section id="map-section" data-aos="zoom-in-up" class="world" >
@@ -171,31 +192,8 @@
     <div data-aos="zoom-in-down" data-aos-duration="5000" id="map" class="map-section" ></div>
     </div>
 </div>
-        <!--<section id="map-section" class="map-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">🌍 Explore the World</h2>
-                <p class="section-subtitle">
-                    Click on any destination to discover what makes it special
-                </p>
-            </div>
-       <div class="map-card">
-                <div class="world-map" id="world-map">
-                     Map background --
-                    <div class="map-background">
-                       Simplified continents -
-                        <div class="continent continent-1"></div>
-                        <div class="continent continent-2"></div>
-                        <div class="continent continent-3"></div>
-                        <div class="continent continent-4"></div>
-                        <div class="continent continent-5"></div>
-                    </div>
-
-                   - Destination markers will be added by JavaScript -
-                    <div class="floating-icon">
-                        <i data-lucide="globe"></i>
-                    </div>
-                </div>-->
+       
+                     
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
   AOS.init();
@@ -229,7 +227,7 @@
  <!-- Destinations Section -->
    
    
-    <section data-aos="fade-up-left"class="container_1">
+    <section data-aos="fade-up-left" id="testimony" class="container_1">
         <div class="testimonials-container myswiper">
             <div class="testimonial-card swipper-wrapper">
             <div class="swiper-slide">
@@ -322,64 +320,68 @@
   AOS.init();
 </script>
     </section>
- <section id="filterable-destinations" class="destinations-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">🌍 Find Your Perfect Destination</h2>
-                <p class="section-subtitle">
-                    Discover amazing places around the world based on your travel preferences
-                </p>
-            </div>
 
-            <!-- Filters -->
-            <div class="filters-container">
-                <select id="region-filter" class="filter-select" onchange="applyFilters()">
-                    <option value="">🌐 All Regions</option>
-                    <option value="Africa">Africa</option>
-                    <option value="Asia">Asia</option>
-                    <option value="Europe">Europe</option>
-                    <option value="America">America</option>
-                    <option value="Oceania">Oceania</option>
-                </select>
-                
-                <select id="type-filter" class="filter-select" onchange="applyFilters()">
-                    <option value="">🏞️ All Types</option>
-                    <option value="City">City</option>
-                    <option value="Nature">Nature</option>
-                    <option value="Beach">Beach</option>
-                </select>
-                
-                <select id="budget-filter" class="filter-select" onchange="applyFilters()">
-                    <option value="">💰 All Budgets</option>
-                    <option value="Budget">Budget</option>
-                    <option value="Luxury">Luxury</option>
-                </select>
-                
-                <button id="clear-filters" class="btn btn-outline btn-sm" onclick="clearFilters()" style="display: none;">
-                    Clear Filters
-                </button>
-            </div>
 
-            <!-- Results Count -->
-            <div class="results-count">
-                <p id="results-text">Loading destinations...</p>
-            </div>
-
-            <!-- Destinations Grid -->
-            <div id="destinations-grid" class="destinations-grid">
-                <!-- Destinations will be loaded here by JavaScript -->
-            </div>
+    
+<section id="destinations" >
+      
+    <div class="destination_pic">
+        
+        <div data-aos="fade-up"
+     data-aos-anchor-placement="center-center" class="destina"><h2 id="heading_2">Top Destinations at the moment </h2>
         </div>
-   
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+       <div data-aos="zoom-out-up" data-aos-duration="1000" >
+            <div class="containers">
+                <div class="sliding">
+                  
+                    <div id="suggestion">
+                        <span class="loader"></span> Fetching best weather destination...
+                      </div>
+                    
+                      <div class="sliding"></div>
+                      <div id="selected-continent" style="text-align:center; font-size:1.2rem; margin-bottom:2rem;">
+                        🌍 Displaying destinations in: <span id="continent-flag"></span>
+                      </div>
+                      
+
+                      <div class="popup" id="popup">
+                        <h3 id="popup-title"></h3>
+                        <p id="popup-description">
+                          Here's some amazing information about this destination. Enjoy the sights, food, and culture!
+                        </p>
+                        <button id="close-popup-btn">Close</button>
+                      </div>
+        </div>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
   AOS.init();
 </script>
-<script src="https://unpkg.com/lucide@latest"></script>
-<script src="sripts/destination.js"></script>
+            <script src="sripts/weather-destination.js"></script> 
+</section>
 
+<section id="contact-us" style="padding: 4rem 1rem; background: #f8f9fa;">
+  <div class="container" style="max-width: 800px; margin: auto; text-align: center;">
+    <h2 style="font-size: 2rem; margin-bottom: 1rem; color: #065986;">📩 Contact Us</h2>
+    <p style="margin-bottom: 2rem; color: #444;">
+      Have questions or want to start planning your next adventure? Reach out to us!
+    </p>
 
-  </section>
+    <!-- Placeholder for dynamic content -->
+    <div id="contact-page">Loading contact details...</div>
+  </div>
+</section>
+<script>
+  fetch('pagestml/contact.html')
+  .then(Response => Response.text())
+  .then(data =>{
+    let parser = new DOMParser();
+    let doc = parser.parseFromString(data,'text/html');
+    let section = doc .querySelector('#contact');
+    document.getElementById('contact-page').innerHTML=section ? section.innerHTML :"section not found ";
+
+  })
+  .catch(Error =>console.error(Error));
+</script>
    
    <footer data-aos="zoom-out" style="background: #065986; color: white; padding: 2rem 1rem;">
   <div style="display: flex; flex-wrap: wrap; justify-content: space-around; max-width: 1200px; margin: auto;">
@@ -393,7 +395,7 @@
       <h4>Company</h4>
       <ul style="list-style: none; padding: 0;">
         <li><a href="about.html" style="color: white; text-decoration: none;">About Us</a></li>
-        <li><a href="contact.html" style="color: white; text-decoration: none;">Contact</a></li>
+        <li><a href="/Pagestml/contact.html" style="color: white; text-decoration: none;">Contact</a></li>
         <li><a href="terms and conditions.html" style="color: white; text-decoration: none;">Terms & Conditions</a></li>
         <li><a href="#" style="color: white; text-decoration: none;">Privacy Policy</a></li>
       </ul>
