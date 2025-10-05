@@ -376,7 +376,7 @@
   .then(data =>{
     let parser = new DOMParser();
     let doc = parser.parseFromString(data,'text/html');
-    let section = doc .querySelector('contact');
+    let section = doc .querySelector('#contact');
     document.getElementById('contact-page').innerHTML=section ? section.innerHTML :"section not found ";
 
   })
