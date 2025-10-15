@@ -1,0 +1,115 @@
+ * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #798188, #5b5d60); /* Soft blue background */
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;     /* vertical center */
+      justify-content: center; /* horizontal center */
+      padding: 2rem;
+      margin: 0;
+    }
+    
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      max-width: 1200px;
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 102, 204, 0.3); /* Blue shadow */
+      width: 100%;
+    }
+    
+
+    .us, .id-box {
+      flex: 1 1 400px;
+    }
+
+    .contact-title h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #0077b6;
+    }
+
+    .icon_sec, .mail {
+      display: flex;
+      align-items: center;
+      margin: 1rem 0;
+    }
+
+    .icon_sec img, .mail img {
+      width: 24px;
+      margin-right: 10px;
+    }
+
+    .icons a {
+      margin-right: 15px;
+      font-size: 1.5rem;
+      color: #0077b6;
+      transition: transform 0.3s, color 0.3s;
+    }
+
+    .icons a:hover {
+      color: #023e8a;
+      transform: scale(1.1);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .input_box {
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+
+    .input_box input,
+    .input_box textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .input_box label {
+      position: absolute;
+      top: -1.2rem;
+      left: 10px;
+      background: #fff;
+      padding: 0 5px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    input[type="submit"] {
+      background-color: #00b4d8;
+      color: white;
+      border: none;
+      padding: 0.75rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0077b6;
+    }
+
+    @media (max-width: 768px) {
+      .contact {
+        flex-direction: column;
+        padding: 1rem;
+      }
+    }

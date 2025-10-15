@@ -236,9 +236,9 @@ font: 1.05em sans-serif;
    Add at the bottom of deco.css
 =================== */
 
-/* Tablet and smaller screens */
+/* Tablet and smaller screens 
 @media (max-width: 1024px) {
-  /* Hero Section */
+ 
   .hero h1 {
     font-size: 2.2rem;
   }
@@ -246,17 +246,16 @@ font: 1.05em sans-serif;
     font-size: 1.1rem;
   }
 
-  /* Destinations grid → 2 columns */
+ 
   #destinations-grid {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 1rem;
   }
 
-  /* Map height */
   .map-container iframe {
     height: 320px;
   }
-}
+}/*
 
 /* Mobile */
 @media (max-width: 768px) {
@@ -705,7 +704,7 @@ font: 1.05em sans-serif;
     }
 
     /* Responsive */
-    @media (max-width: 900px) {
+    @media (max-width: 768px) {
       .contact-wrapper {
         flex-direction: column;
         padding: 1.5rem;
@@ -740,9 +739,7 @@ font: 1.05em sans-serif;
       }
     }
 
-  @media only screen and (max-width: 992px) {
-	
-  }
+
 
   .back_page .text {
     display: flex;
@@ -2292,18 +2289,18 @@ display: flex;
   }
 }
 
-@media (min-width: 1024px) {
+/*@media (min-width: 1024px) {
   .destinations-grid {
     grid-template-columns: repeat(3, 1fr);
   }
-}
+}*/
 
 .destination-card {
-  background: hsl(0, 0%, 100%); /* card */
+  background: hsl(0, 0%, 100%); 
   border-radius: 0.75rem;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* travel-shadow */
-  transition: all 0.3s ease; /* transition-smooth */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+  transition: all 0.3s ease; 
   border: none;
 }
 
@@ -2397,7 +2394,7 @@ display: flex;
   line-height: 1.5;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+ /* -webkit-line-clamp: 2;*/
   -webkit-box-orient: vertical;
 }
 
