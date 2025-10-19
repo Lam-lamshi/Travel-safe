@@ -16,7 +16,7 @@
       margin: 0;
     }
     
-    .contact {
+    #contact {
       display: flex;
       flex-wrap: wrap;
       gap: 2rem;
