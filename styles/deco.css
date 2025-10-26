@@ -528,10 +528,17 @@ font: 1.05em sans-serif;
   }
 
   #contact-us{
-  
-  background: linear-gradient(135deg, #0077b6, #023e8a);
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* subtle shadow */
+  transition: all 0.3s ease-in-out; /* smooth transition */
+    background: linear-gradient(to bottom, #266ac4, #789cef); 
+  border-radius: 0.75rem;
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23e5e7eb' fill-opacity='0.1' fill-rule='evenodd'%3E%3Cpath d='m0 40l40-40h-40z'/%3E%3C/g%3E%3C/svg%3E");
   padding: 60px 0;
   color: #333;
+
+}
+#contact-us ::hover{
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
 }
 
 .contact-wrapper{
@@ -545,9 +552,10 @@ font: 1.05em sans-serif;
   max-width: 180%;
   margin: 0 auto;
   border-radius: 8px;
+  color: black;
 }
 
-   .contact-info, 
+  .contact-info, 
 .contact-form {
   background: #fff;
   flex: 1 1 48%;
