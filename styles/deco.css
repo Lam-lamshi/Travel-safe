@@ -10,7 +10,7 @@ body {
 margin: 0;
 padding: 0;
 min-height: 100vh;
-background: hsl(0, 0%, 100%);   /* white */
+background: hsl(0, 0%, 60%);   /* white */
 color: hsl(222, 84%, 5%);     
 background-size: cover;
 background-position: center;
@@ -368,7 +368,7 @@ font: 1.05em sans-serif;
   padding: 15px;
   border-radius: 8px;
   border: 1px solid transparent;
-  color: white;
+  color: rgb(196, 192, 192);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -403,7 +403,7 @@ font: 1.05em sans-serif;
     margin-top: 4%;
     margin-bottom: 4%;
     padding: 3rem 1rem;
-  background: #f8f9fa;
+  background: #b4b4b4;
   text-align: center;
   }
   .map-section h2 {
@@ -537,9 +537,7 @@ font: 1.05em sans-serif;
   color: #333;
 
 }
-#contact-us ::hover{
-  box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
-}
+
 
 .contact-wrapper{
  display: flex;
@@ -554,10 +552,16 @@ font: 1.05em sans-serif;
   border-radius: 8px;
   color: black;
 }
+.contact-wrapper :hover{
+   box-shadow: 0 0 20px rgba(59, 130, 246, 0.6); /* travel-glow */
+  transform: translateY(-4px);
+}
 
   .contact-info, 
 .contact-form {
-  background: #fff;
+  background: #add8e6;
+  background-size: 10px 10px;
+  background-image: radial-gradient(white 1px,transparent 1px);
   flex: 1 1 48%;
   border-radius: 14px;
   padding: 2.5rem 2rem;
@@ -577,7 +581,7 @@ font: 1.05em sans-serif;
 }
     .contact-info p {
       font-size: 0.95rem;
-      color: #555;
+      color: #000;
       margin-bottom: 1.5rem;
     }
 .info-block {
@@ -1539,6 +1543,7 @@ textarea,
 select,
 .destination-card,
 #map,
+#contac-us,
 .review-box {
   transition: background-color 0.6s ease, color 0.6s ease, filter 0.6s ease, border-color 0.6s ease;
 }
@@ -1577,6 +1582,7 @@ body {
 .dark-mode .destination_pic,
 .dark-mode .testimonials-container,
 .dark-mode .dest,
+.dark-mode .contact-info p,
 .dark-mode .world{
   filter: brightness(0.6); /* Dim the background */
   transition: filter 0.3s ease;
@@ -1593,8 +1599,6 @@ body {
 /* Make sure headers and paragraphs are also bright in dark mode */
 .dark-mode h1,
 .dark-mode h3,
-
-.dark-mode span,
 .dark-mode a,
 .dark-mode select,
 .dark-mode option,
@@ -1611,9 +1615,18 @@ body {
 /* Lighten border colors in dark mode for visibility */
 .dark-mode select,
 .dark-mode textarea,
+.dark-mode .info-block label,
+.dark-mode .info-block strong,
+.dark-mode  .info-block span,
 .dark-mode input {
   border-color: #666;
   background-color:transparent;
+}
+.dark-mode .contact-info h2,
+.dark-mode p,
+.dark-mode i,
+.dark-mode .contact-form h2{
+  color: #000;
 }
 
 /* Lighten review text or other dynamic content */
