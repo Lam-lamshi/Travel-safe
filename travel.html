@@ -53,41 +53,21 @@
 
     <section id="home">
         <div class="back_page" >
-           <backgrond-image id=""></background-image>
+          
             <div class="text">
                 <h2 style="color: black;" id="heading;" font-style ="italics;">
                     Welcome to my travel page. Get inspiration for vacations. 
                 </h2>
          
             </div>
-            <div class="gcse-searchresults-only">
-            <div  class="box" style="position: relative; display: flex; align-items: center; margin-top: -18rem; max-width: 400px; margin-left: auto; margin-right: auto;">
-                <input type="text" id="searchInput" placeholder="Search for a country..." style="padding-right: 40px;">
-                
-                <span id="searchBtn" style="position: absolute; right: 10px; cursor: pointer; color: #0077b6;">
-                  <i class="fas fa-search"></i>
-                </span>
-                <ul id="suggestions" style="
-                  position: absolute;
-                  top: 80%;
-                  left: 0;
-                  right: 0;
-                  background: white;
-                  border: 1px solid #ccc;
-                  border-top: none;
-                  z-index: 9999;
-                  list-style: none;
-                  padding: 0;
-                  margin: 0;
-                  display: none;
-                  max-height: 150px;
-                  overflow-y: auto;
-                "></ul>
-              </div>
-      
-        
-        </div>
-        </div>
+          <div class="search-container">
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search destinations, countries..." autocomplete="off">
+        <button id="searchBtn"><i class="fas fa-search"></i></button>
+    </div>
+    <ul id="suggestions"></ul>
+</div>
+
         <script src="sripts/search.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -110,6 +90,9 @@
         typeText(); // Start typing as soon as the page is loaded
       });
     
+      windowunonlaod ==false;
+      alert="you have refreshed this page"
+
     
 </script>
 
@@ -191,7 +174,6 @@
     </p>
     <div data-aos="zoom-in-down" data-aos-duration="5000" id="map" class="map-section" ></div>
     </div>
-</div>
        
                      
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

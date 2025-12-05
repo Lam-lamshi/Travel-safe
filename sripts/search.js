@@ -1,70 +1,81 @@
-  const countries = [
-    "Kenya", "Japan", "France", "USA", "Peru", "Australia", "Antarctica",
-    "Masai Mara", "Tokyo", "Paris", "New York City", "Machu Picchu", "Sydney", "Antarctic Cruise",
-    "Africa", "Asia", "Europe", "North America", "South America", "Oceania", "Antarctica",
-  ];
+const input = document.getElementById("searchInput");
+const suggestions = document.getElementById("suggestions");
+const searchBtn = document.getElementById("searchBtn");
 
-  const input = document.getElementById("searchInput");
-  const suggestions = document.getElementById("suggestions");
-  const searchBtn = document.getElementById("searchBtn");
 
-  input.addEventListener("input", () => {
+input.addEventListener("input", () => {
     const value = input.value.toLowerCase();
     suggestions.innerHTML = "";
 
     if (!value) {
-      suggestions.style.display = "none";
-      return;
-    }
-
-    const matched = countries.filter(c => c.toLowerCase().includes(value));
-
-    if (matched.length === 0) {
-      suggestions.style.display = "none";
-      return;
-    }
-
-    matched.forEach(country => {
-      const li = document.createElement("li");
-      li.textContent = country;
-      li.style.padding = "8px";
-      li.style.cursor = "pointer";
-      li.addEventListener("click", () => {
-        input.value = country;
         suggestions.style.display = "none";
-        redirectToDestination(country);
-      });
-      suggestions.appendChild(li);
-    });
+        return;
+    }
 
-    suggestions.style.display = "block";
-  });
+    fetch("http://127.0.0.1:5000/search?q=" + value)
+        .then(res => res.json())
+        .then(data => {
+            const matched = data.results;
 
-  searchBtn.addEventListener("click", () => {
+            if (matched.length === 0) {
+                suggestions.style.display = "none";
+                return;
+            }
+
+            matched.forEach(item => {
+                const li = document.createElement("li");
+                li.textContent = item.name;    
+                li.style.padding = "8px";
+                li.style.cursor = "pointer";
+
+                li.addEventListener("click", () => {
+                    input.value = item.name;
+                    suggestions.style.display = "none";
+                    redirectToDestination(item);
+                });
+
+                suggestions.appendChild(li);
+            });
+
+            suggestions.style.display = "block";
+        })
+        .catch(err => console.error("Search error:", err));
+});
+
+
+searchBtn.addEventListener("click", () => {
     const val = input.value.trim().toLowerCase();
-    const found = countries.find(c => c.toLowerCase().includes(val));
-    if (found) {
-      redirectToDestination(found);
-    } else {
-      alert("No matching destination found.");
-    }
-  });
 
-  input.addEventListener("keydown", e => {
+    fetch("http://127.0.0.1:5000/search?q=" + val)
+        .then(res => res.json())
+        .then(data => {
+            if (data.results.length > 0) {
+                redirectToDestination(data.results[0]);
+            } else {
+                alert("No matching destination found.");
+            }
+        })
+        .catch(err => console.error("Button search error:", err));
+});
+
+
+input.addEventListener("keydown", e => {
     if (e.key === "Enter") {
-      e.preventDefault();
-      searchBtn.click();
+        e.preventDefault();
+        searchBtn.click();
     }
-  });
+});
 
-  function redirectToDestination(country) {
-    alert(`Redirecting to info about ${country}...`);
-    window.location.href = "destination.html";
-  }
 
-  document.addEventListener("click", e => {
-    if (!document.querySelector(".box").contains(e.target)) {
-      suggestions.style.display = "none";
+function redirectToDestination(item) {
+    alert(`Redirecting to info about ${item.name}...`);
+    window.location.href =
+        `Pagestml/destination.html?id=${item.id}`;
+}
+
+
+document.addEventListener("click", e => {
+    if (!document.querySelector(".search-container").contains(e.target)) {
+        suggestions.style.display = "none";
     }
-  });
-
+});
