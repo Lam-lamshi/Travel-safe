@@ -12,7 +12,7 @@ input.addEventListener("input", () => {
         return;
     }
 
-    fetch("http://127.0.0.1:5000/search?q=" + value)
+    fetch("https://YOUR-URL.onrender.com/search?q=" + value)
         .then(res => res.json())
         .then(data => {
             const matched = data.results;
@@ -46,7 +46,7 @@ input.addEventListener("input", () => {
 searchBtn.addEventListener("click", () => {
     const val = input.value.trim().toLowerCase();
 
-    fetch("http://127.0.0.1:5000/search?q=" + val)
+    fetch("https://YOUR-URL.onrender.com/search?q=" + val)
         .then(res => res.json())
         .then(data => {
             if (data.results.length > 0) {

@@ -1,3 +1,4 @@
+const { data } = require("browserslist");
 
   function filterPosts(query) {
     const posts = document.querySelectorAll('.blog-post');
@@ -21,4 +22,18 @@
   });
 
 
-
+fetch("https://YOUR-URL.onrender.com/news")
+.then(res => res.json())
+.then (data =>{
+  const blog = document.getElementById("blog-container");
+  data.articles.forEach(article =>{
+      blog.innerHTML += `
+        <div class="blog-card">
+          <img src="${article.urlToImage || 'default.jpg'}">
+          <h3>${article.title}</h3>
+          <p>${article.description || ''}</p>
+          <a href="${article.url}" target="_blank">Read more</a>
+        </div>
+      `;
+  });
+});

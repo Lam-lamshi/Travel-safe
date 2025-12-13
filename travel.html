@@ -17,9 +17,7 @@
 
 <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-<header>
-    
-</header>
+
 <script async src="https://cse.google.com/cse.js?cx=123456"></script>
 </head>
 <body>
@@ -60,16 +58,17 @@
                 </h2>
          
             </div>
+            
      <div class="search-wrapper">
-    <div class="search-container">
-        <div class="search-box">
-            <input type="text" id="searchInput" placeholder="Search destinations, countries..." autocomplete="off">
-            <button id="searchBtn"><i class="fas fa-search"></i></button>
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search destinations, countries..." autocomplete="off">
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+            <ul id="suggestions"></ul>
         </div>
-        <ul id="suggestions"></ul>
-    </div>
 </div>
-
+    
 
         <script src="sripts/search.js"></script>
 <script>
@@ -100,6 +99,7 @@
 </script>
 
 </section>
+
 
  <section id="filterable-destinations" class="destinations-section">
         <div class="container">

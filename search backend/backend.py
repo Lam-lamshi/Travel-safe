@@ -34,3 +34,14 @@ def get_destination(dest_id):
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+import requests
+NEWS_API_KEY = "70c71b55d502440784e247f0dc276fc8"
+@apps.route("/news")
+def news():
+    url = (
+        f"https://newsapi.org/v2/everything?"
+        f"q=travel OR tourism&language=en&apiKey={NEWS_API_KEY}"
+    ) 
+    res = requests.get(url)
+    return res.json()
