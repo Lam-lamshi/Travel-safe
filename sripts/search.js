@@ -12,7 +12,7 @@ input.addEventListener("input", () => {
         return;
     }
 
-    fetch("https://YOUR-URL.onrender.com/search?q=" + value)
+    fetch("https://travel-backend-qkfd.onrender.com/search?q=" + value)
         .then(res => res.json())
         .then(data => {
             const matched = data.results;

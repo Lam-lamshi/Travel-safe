@@ -200,21 +200,22 @@ function exploreDestination(destinationId) {
     if(destination){
       let page = "destination.html";
       switch (destination.region){
-        case "Africa":
+        case "1":
           page ="Africa.html";
           break;
-        case "Asia":
+        case "2":
           page ="Asia.html";
           break;
-        case "Europe":
+        case "3":
           page ="Europe.html";
           break;
-        case "America":
+        case "4":
           page ="North America.html";
           break;
-        case "Oceania":
+        case "5":
           page ="Oceania.html";
           break;
+      
         default:
           page ="destination.html";
       }

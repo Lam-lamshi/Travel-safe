@@ -22,7 +22,7 @@ const { data } = require("browserslist");
   });
 
 
-fetch("https://YOUR-URL.onrender.com/news")
+fetch("https://travel-backend-qkfd.onrender.com/news")
 .then(res => res.json())
 .then (data =>{
   const blog = document.getElementById("blog-container");
