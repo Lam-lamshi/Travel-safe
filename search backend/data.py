@@ -6,7 +6,7 @@ CONTINENTS = {
         {"id": "nigeria", "name": "Nigeria"},
         {"id": "kenya", "name": "Kenya"},
         {"id": "ghana", "name": "Ghana"},
-        {"id": "south-africa", "name": "South Africa"},
+        {"id": "south africa", "name": "South Africa"},
         {"id": "egypt", "name": "Egypt"}
     ],
 
