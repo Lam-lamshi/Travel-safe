@@ -68,10 +68,18 @@ input.addEventListener("keydown", e => {
 
 
 function redirectToDestination(item) {
-    alert(`Redirecting to info about ${item.name}...`);
-    window.location.href =
-        `Pagestml/destination.html?id=${item.id}`;
-}
+   const overlay= document.getElementById("search-overlay");
+   const text= document.getElementById("search-text");
+
+   text.textContent= `Loading ${item.name}...`;
+   overlay.classList.add("active");
+
+   setTimeout(() =>{
+    window.location.href = `pagestml/destination.html?id=${item.id}`;
+
+   },1500);
+   }
+
 
 
 document.addEventListener("click", e => {

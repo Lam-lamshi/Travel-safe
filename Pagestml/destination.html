@@ -236,10 +236,12 @@
 <script>
   const continentsData = [
     {
+      id:"Masai Mara, Kenya,Nigeria,Cape Town, South Africa,egypt,ghana",
       name: "Africa",
       emoji: "🌍",
       destinations: [
         {
+          id:"Masai Mara, Kenya,Nigeria,Cape Town, South Africa,egypt,ghana",
           name: "Masai Mara, Kenya",
           img: "https://media.cnn.com/api/v1/images/stellar/prod/180508141319-03-amazing-places-africa-victoria-falls.jpg?q=w_3080,h_1732,x_0,y_0,c_fill",
           desc: "Witness the Great Migration and explore wildlife.",
@@ -249,10 +251,12 @@
       ]
     },
     {
+      id:"Tokyo, Japan, Beijing, China,Bangkok,india, South korea, Thailand",
       name: "Asia",
       emoji: "🌏",
       destinations: [
         {
+          id:"Tokyo, Japan, Beijing, China,Bangkok,india, South korea, Thailand",
           name: "Tokyo, Japan",
           img: "https://media.timeout.com/images/105691367/750/562/image.jpg",
           desc: "Neon lights, sushi bars, and shrines.",
@@ -262,10 +266,12 @@
       ]
     },
     {
+       id:"Paris,France,germany,italy,spain,united kingdom",
       name: "Europe",
       emoji: "🌍",
       destinations: [
         {
+          id:"Paris,France,germany,italy,spain,united kingdom",
           name: "Paris, France",
           img: "https://res.cloudinary.com/djcyhbk2e/image/upload/c_fit,f_auto,h_800,q_35,w_800/v1/gvv/prod/jyg3ijyu7nnmjdghwclb",
           desc: "City of love, lights, and landmarks.",
@@ -285,10 +291,12 @@
       ]
     },
     {
+      id:"New York City, USA,Vancouver, Canada,Mexico City, Mexico",
       name: "North America",
       emoji: "🌎",
       destinations: [
         {
+          id:"New York City, USA,Vancouver, Canada,Mexico City, Mexico",
           name: "New York City, USA",
           img: "https://www.expedia.com/stories/wp-content/uploads/2021/09/22-ECOM-ViewfinderTopNorthAmerica-1000x667-VancouverBritishColumbia.jpg",
           desc: "Skyscrapers and nonstop energy.",
@@ -298,10 +306,12 @@
       ]
     },
     {
+      id:"Machu Picchu, Peru,Rio de Janeiro, Brazil,Buenos Aires, Argentina,chile",
       name: "South America",
       emoji: "🌎",
       destinations: [
         {
+          id:"Machu Picchu, Peru,Rio de Janeiro, Brazil,Buenos Aires, Argentina,chile",
           name: "Machu Picchu, Peru",
           img: "https://theabroadguide.com/wp-content/uploads/2025/02/uruguay_s_luxurious_coastal_destination.jpg",
           desc: "Hike to a mountaintop citadel.",
@@ -311,10 +321,12 @@
       ]
     },
     {
+      id:"Sydney, Australia,Auckland, New Zealand, Fiji",
       name: "Oceania",
       emoji: "🌏",
       destinations: [
         {
+          id:"Sydney, Australia,Auckland, New Zealand, Fiji",
           name: "Sydney, Australia",
           img: "https://afar.brightspotcdn.com/dims4/default/90ae472/2147483647/strip/false/crop/3584x2016+224+0/resize/1200x675!/quality/90/?url=https%3A%2F%2Fk3-prod-afar-media.s3.us-west-2.amazonaws.com%2Fbrightspot%2F7b%2F02%2F622498784a9090879c9c160fb6a2%2Faustralia-sydney-michelle-heimerman.jpg",
           desc: "Opera House and Bondi Beach.",
@@ -324,10 +336,12 @@
       ]
     },
     {
+      id:"Antarctic Cruise",
       name: "Antarctica",
       emoji: "❄️",
       destinations: [
         {
+          id:"Antarctic Cruise",
           name: "Antarctic Cruise",
           img: "https://res.cloudinary.com/rainforest-cruises/image/upload/c_fill,g_auto,w_325,h_325,dpr_2/c_fill,g_auto/f_auto,q_auto/v1688484068/Antarctica-Small-Groups-Hero_6136a4f37.jpg?_i=AA",
           desc: "Icebergs and penguins.",
@@ -337,6 +351,10 @@
       ]
     }
   ];
+const params = new URLSearchParams(window.location.search);
+const destinationId = params.get("id");
+
+console.log(destinationId);
 
   const container = document.getElementById("continents-container");
 
@@ -354,7 +372,10 @@
                 <h3>${dest.name}</h3>
                 <p>${dest.desc}</p>
                 <div class="more-info">${dest.more}</div>
-                <a href="${dest.link}" class="see-more" target="_blank">See more</a>
+                <button class="see-more" onclick='redirectToDestination(${JSON.stringify(dest)})'>
+  See more
+</button>
+
               
               </div>
             </div>
