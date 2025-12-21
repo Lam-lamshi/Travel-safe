@@ -87,12 +87,17 @@ function renderDestinations() {
           </div>
         </div>
         
-        <p class="destination-description">${destination.description}</p>
+        <p class="destination-description">
+        ${destination.description}</p>
+        <p class="description-more "style="display: none;">
+        ${destination.more}
+        </p>
         
         <div class="destination-details">
           <div class="destination-detail">
-            <i data-lucide="thermometer" style="width: 1rem; height: 1rem; margin-right: 0.25rem;"></i>
-            ${destination.temperature}
+            <button class="see-more" onclick="toggleSeeMore(this)">
+              See more
+            </button>
           </div>
           <div class="destination-detail">
             <i data-lucide="camera" style="width: 1rem; height: 1rem; margin-right: 0.25rem;"></i>
@@ -100,18 +105,18 @@ function renderDestinations() {
           </div>
         </div>
         
-       <div class="destination-highlights">
-  ${destination.highlights.slice(0, 3).map(highlight => `
-    <a href="https://en.wikipedia.org/wiki/Special:Search?search=${encodeURIComponent(highlight + ' ' + destination.name + ' ' + destination.country)}" 
-       target="_blank" onclick="return travel()" 
-       class="highlight-badge">
-       ${highlight}
-    </a>
-  `).join('')}
-</div>
-
+        <div class="destination-highlights">
+          ${destination.highlights.slice(0, 3).map(highlight => `
+            <a href="https://en.wikipedia.org/wiki/Special:Search?search=${encodeURIComponent(highlight + ' ' + destination.name + ' ' + destination.country)}"
+               target="_blank"
+               onclick="return travel()"
+               class="highlight-badge">
+               ${highlight}
+            </a>
+          `).join('')}
+        </div>
         
-        <button class="btn btn-primary btn-full" onclick="return travel() exploreDestination('${destination.id}')">
+        <button class="btn btn-primary btn-full" onclick="if (travel()) { exploreDestination('${destination.link}'); }">
           Explore Destination
         </button>
       </div>
@@ -121,6 +126,21 @@ function renderDestinations() {
   // Recreate Lucide icons
   if (typeof lucide !== 'undefined') {
     lucide.createIcons();
+  }
+}
+function toggleSeeMore(button){
+  const card = button.closest(".destination-card");
+  const moreText = card.querySelector(".description-more");
+
+  if (!moreText) return;
+ const isOpen = moreText.style.display ==="block";
+ moreText.style.display = isOpen ? "none" : "block";
+  button.textContent = isOpen ? "See more" : "See less";
+  if(!isOpen){
+    card.style.height ="auto";
+  }else{
+    card.style.height ="auto";
+ 
   }
 }
 
@@ -187,47 +207,16 @@ function updateResultsCount() {
   }
 }
 
-function exploreDestination(destinationId) {
-  const destination = destinations.find(d => d.id === destinationId);
-  
-  if (destination) {
-    showToast(
-      'Exploring Destination',
-      `Planning your adventure to ${destination.name}, ${destination.country}!`,
-      3000
-    );
-    
-    if(destination){
-      let page = "destination.html";
-      switch (destination.region){
-        case "1":
-          page ="Africa.html";
-          break;
-        case "2":
-          page ="Asia.html";
-          break;
-        case "3":
-          page ="Europe.html";
-          break;
-        case "4":
-          page ="North America.html";
-          break;
-        case "5":
-          page ="Oceania.html";
-          break;
-      
-        default:
-          page ="destination.html";
-      }
-      window.location.href =page;
-    }
-    // Here you could redirect to a detailed destination page
-    // or show a modal with more information
+function exploreDestination(link) {
+  if (!link) {
+    alert('Invalid destination link.');
+  }
+
+
     setTimeout(() => {
-      scrollToSection('contact');
+      window.location.href = link;
     }, 1500);
   }
-}
 
 // Make functions globally available
 window.applyFilters = applyFilters;
@@ -243,12 +232,14 @@ const destinations = [
     country: "Kenya",
     region: "Africa",
     type: "Nature",
+    more:"Home to lions, elephants, and more. Enjoy hot air balloon rides and traditional Maasai culture.",
     budget: "Luxury",
     image: "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=600&h=400&fit=crop",
     rating: 4.9,
     temperature: "24°C",
     highlights: ["Safari", "Wildlife", "Culture"],
-    description: "Experience the great migration and witness Africa's incredible wildlife in one of the world's most famous game reserves."
+    description: "Experience the great migration and witness Africa's incredible wildlife in one of the world's most famous game reserves.",
+    link:'../pagestml/Africa.html'
   },
   {
     id: "2",
@@ -256,12 +247,14 @@ const destinations = [
     country: "Japan",
     region: "Asia",
     type: "City",
+    more:"Explore ancient temples, cutting-edge technology, and vibrant pop culture in this dynamic metropolis.",
     budget: "Luxury",
     image: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=600&h=400&fit=crop",
     rating: 4.8,
     temperature: "18°C",
     highlights: ["Technology", "Culture", "Food"],
-    description: "Discover the perfect blend of traditional culture and modern innovation in Japan's bustling capital city."
+    description: "Discover the perfect blend of traditional culture and modern innovation in Japan's bustling capital city.",
+    link:'../pagestml/Asia.html'
   },
   {
     id: "3",
@@ -269,12 +262,14 @@ const destinations = [
     country: "France",
     region: "Europe",
     type: "City",
+    more:"Visit iconic landmarks like the Eiffel Tower and Louvre, and indulge in world-class cuisine and art.",
     budget: "Luxury",
    image: "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.5HWVEh_5XzzgQZSFwBoqmwHaEL%3Fcb%3D12%26pid%3DApi&sp=1759627867Ta427fbe66b394d5266365e2da5557dbe9c2a409a19b44b3621120995897680f9",
     rating: 4.7,
     temperature: "15°C",
     highlights: ["Art", "Architecture", "Romance"],
-    description: "The City of Light offers world-class museums, stunning architecture, and romantic atmosphere like nowhere else."
+    description: "The City of Light offers world-class museums, stunning architecture, and romantic atmosphere like nowhere else.",
+    link:'../pagestml/Europe.html'
   },
   {
     id: "4",
@@ -282,12 +277,14 @@ const destinations = [
     country: "Indonesia",
     region: "Asia",
     type: "Beach",
+    more:"Tropical paradise with stunning beaches, ancient temples, and rich cultural heritage waiting to be explored.",
     budget: "Budget",
     image: "https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?w=600&h=400&fit=crop",
     rating: 4.6,
     temperature: "28°C",
     highlights: ["Beaches", "Temples", "Culture"],
-    description: "Tropical paradise with stunning beaches, ancient temples, and rich cultural heritage waiting to be explored."
+    description: "Tropical paradise with stunning beaches, ancient temples, and rich cultural heritage waiting to be explored.",
+    link:'../pagestml/Asia.html'
   },
   {
     id: "5",
@@ -295,12 +292,14 @@ const destinations = [
     country: "Peru",
     region: "America",
     type: "Nature",
+    more:"Ancient Incan citadel nestled high in the Andes mountains, offering breathtaking views and rich history.",
     budget: "Budget",
     image: "https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=600&h=400&fit=crop",
     rating: 4.9,
     temperature: "16°C",
     highlights: ["History", "Hiking", "Mountains"],
-    description: "Ancient Incan citadel nestled high in the Andes mountains, offering breathtaking views and rich history."
+    description: "Ancient Incan citadel nestled high in the Andes mountains, offering breathtaking views and rich history.",
+    link:'../pagestml/North America.html'
   },
   {
     id: "6",
@@ -308,12 +307,14 @@ const destinations = [
     country: "Australia",
     region: "Oceania",
     type: "City",
+    more:"Iconic harbor city with stunning architecture, beautiful beaches, and vibrant cultural scene.",
     budget: "Luxury",
     image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop",
     rating: 4.8,
     temperature: "22°C",
     highlights: ["Opera House", "Beaches", "Harbor"],
-    description: "Iconic harbor city with stunning architecture, beautiful beaches, and vibrant cultural scene."
+    description: "Iconic harbor city with stunning architecture, beautiful beaches, and vibrant cultural scene.",
+    link:'../pagestml/Austrailia.html'
   }
 ];
 initializeDestinations();

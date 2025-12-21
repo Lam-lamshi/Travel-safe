@@ -1025,12 +1025,28 @@ font: 1.05em sans-serif;
 .text h2 span.typed {
   opacity: 1;
 }
+.destination-more {
+  margin-top: 0.75rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+  font-size: 0.95rem;
+  animation: fadeIn 0.25s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+#filterable-destinations{
+  scroll-margin-top: 100px;
+}
 #filterable-destinations .section-title {
   font-size: 2.2rem;    /* bigger heading */
   font-weight: 700;
   color: #065986;
   text-align: center;
   margin-bottom: 0.5rem;
+  
 }
 
 #filterable-destinations .section-subtitle {

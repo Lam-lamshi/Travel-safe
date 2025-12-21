@@ -1544,7 +1544,20 @@ button:hover {
 /* Destinations Section */
 .destinations-section {
   background: hsl(var(--muted) / 0.3);
+
+.destination-more {
+  margin-top: 0.75rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+  font-size: 0.95rem;
+  animation: fadeIn 0.25s ease-in;
 }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 
 .filters-container {
   display: flex;
