@@ -15,7 +15,7 @@ CONTINENTS = {
         {"id": "germany", "name": "Germany"},
         {"id": "italy", "name": "Italy"},
         {"id": "spain", "name": "Spain"},
-        {"id": "united-kingdom", "name": "United Kingdom"}
+        {"id": "united kingdom", "name": "United Kingdom"}
     ],
 
     "asia": [
@@ -23,7 +23,7 @@ CONTINENTS = {
         {"id": "china", "name": "China"},
         {"id": "india", "name": "India"},
         {"id": "thailand", "name": "Thailand"},
-        {"id": "south-korea", "name": "South Korea"}
+        {"id": "south korea", "name": "South Korea"}
     ],
 
     "north america": [

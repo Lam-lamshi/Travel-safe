@@ -20,6 +20,11 @@
 
 <script async src="https://cse.google.com/cse.js?cx=123456"></script>
 </head>
+<style>
+  html{
+    scroll-behavior: smooth;
+  }
+</style>
 <body>
     <nav class="navbar">
         <div class="navbar-brand" style="color: white;">Travel safe</div>
@@ -375,6 +380,27 @@
   })
   .catch(Error =>console.error(Error));
 </script>
+<a href="#home" id="backToTop"><i class="fa-solid fa-circle-chevron-up"></i></a>
+<script>
+  addEventListener("scroll",function(){
+    const button = document.getElementById("backToTop");
+    if (window.scrollY >300){
+      button.style.display="block";
+
+    }
+  else{
+    button.style.display="none";
+  }
+  });
+  document.getElementById("backToTop").addEventListener("click",function(){
+    e.preventDefault();
+    window.scrollTo({
+      top:0,
+      behavior:"smooth"
+    });
+  });
+</script>
+
    
    <footer data-aos="zoom-out" style="background: #065986; color: white; padding: 2rem 1rem;">
   <div style="display: flex; flex-wrap: wrap; justify-content: space-around; max-width: 1200px; margin: auto;">
